@@ -122,18 +122,26 @@ body.services-page {
 /* Service nav pills – redesigned */
 .service-badges {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 8px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 8px 12px;
   background: #f1f5f9;
   border-radius: 50px;
   width: fit-content;
+  max-width: 100%;
   margin: 0 auto 30px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.service-badges::-webkit-scrollbar {
+  display: none;
 }
 
 .service-badges button {
-  padding: 10px 22px;
+  padding: 10px 20px;
   border: none;
   background: transparent;
   color: #475569;
@@ -146,6 +154,8 @@ body.services-page {
   border-radius: 50px;
   letter-spacing: 0.5px;
   transition: all 0.25s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .service-badges button:hover {
@@ -248,7 +258,41 @@ body.services-page {
   }
 
   .services-page .banner {
-    min-height: 320px !important;
+    min-height: 260px !important;
+    margin-top: 70px !important;
+    border-radius: 0 0 16px 16px !important;
+  }
+
+  /* Show service-badges on mobile as a scrollable row */
+  .service-badges {
+    display: flex !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    border-radius: 12px !important;
+    padding: 6px 8px !important;
+    gap: 6px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    margin-bottom: 20px !important;
+  }
+
+  .service-badges button {
+    padding: 9px 16px !important;
+    font-size: 11px !important;
+    border-radius: 8px !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* Hide Bootstrap dropdown on mobile — using scrollable tabs instead */
+  .dropdown {
+    display: none !important;
+  }
+
+  .services-page .what-we-do {
+    width: 95%;
+    margin: 24px auto;
   }
 }
 
@@ -1373,9 +1417,7 @@ footer {
         width: 80%;
     }
 
-   .service-badges{
-    display: none;
-   }
+    /* service-badges is now a scrollable row on mobile — do NOT hide */
 
     .planter_images div {
         width: 100%;
@@ -1548,9 +1590,7 @@ footer {
     .pest_main_image .content p {
         text-align: center;
     }
-    .service-badges {
-       display: none;
-    }
+    /* service-badges handled by @media max-width 900px as scrollable row */
 
     .pest_main_services {
         width: 100%;
@@ -1729,4 +1769,152 @@ footer {
     .view-more button {
         white-space: nowrap;
     }
+}
+
+/* =============================================
+   MOBILE SERVICES PAGE – Comprehensive Fix
+   ============================================= */
+@media screen and (max-width: 900px) {
+
+  /* Fix services-category – remove excessive min-height */
+  .services-category {
+    min-height: auto !important;
+    margin-top: 20px;
+    border-radius: 12px;
+  }
+
+  /* Fix h4 overflow – allow wrapping */
+  .category-content .text-content h4 {
+    white-space: normal !important;
+    word-break: break-word;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /* Services page banner – proper mobile height */
+  .services-page .banner {
+    min-height: 200px !important;
+    max-height: 280px !important;
+    padding: 0 !important;
+    margin-top: 70px !important;
+    border-radius: 0 0 16px 16px !important;
+  }
+
+  .services-page .our-services h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+    letter-spacing: 2px;
+  }
+
+  /* What-we-do container on mobile */
+  .services-page .what-we-do {
+    width: 96%;
+    margin: 20px auto;
+  }
+
+  /* Category content – stack vertically on mobile */
+  .category-content {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .category-content .text-content {
+    width: 100%;
+    order: 2;
+    line-height: 26px;
+  }
+
+  .category-content .content-image {
+    width: 100%;
+    order: 1;
+  }
+
+  .category-content .image-gallery {
+    order: 3;
+  }
+
+  .category-content .view-more {
+    order: 4;
+  }
+
+  /* Image gallery – 2 columns on mobile */
+  .image-gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .image-gallery div {
+    min-width: calc(50% - 5px);
+    max-width: calc(50% - 5px);
+  }
+
+  /* Tree image */
+  .tree_image {
+    width: 75%;
+  }
+
+  /* EVDot hero fix */
+  .evdot-hero-inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .evdot-hero-image {
+    width: 100%;
+  }
+
+  .evdot-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px;
+  }
+
+  .evdot-bottom {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .evdot-value-icons {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Solar section fix */
+  .sol-section,
+  .pest-section,
+  .evdot-section,
+  .horticulture-section {
+    overflow-x: hidden;
+  }
+
+  /* Pest section */
+  .pest_main {
+    flex-direction: column;
+    margin: 10px auto;
+    width: 95%;
+    gap: 20px 0;
+  }
+
+  .pest_main_image {
+    width: 100%;
+  }
+
+  .pest_main_services {
+    width: 100%;
+  }
+
+  /* Tools section */
+  .tools-images {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .tools-images img {
+    width: 100%;
+  }
+
+  /* Footer on services page */
+  footer {
+    padding: 40px 20px 20px !important;
+    flex-direction: column;
+  }
 }
