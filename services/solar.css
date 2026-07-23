@@ -1,0 +1,110 @@
+body{
+    background-color: white;
+}
+.solar-section {
+  text-transform: capitalize;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.section-title {
+  text-align: center;
+  font-weight: 800;
+  padding: 24px 0;
+  color: #fff;
+  background: linear-gradient(135deg, #0f2c59, #1e40af);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+}
+
+.solar-energy {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(15, 44, 89, 0.1);
+  margin-top: 20px;
+}
+
+/* Logos */
+.logo-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-row img {
+  width: 150px;
+  max-width: 100%;
+}
+
+/* About */
+.about {
+  text-align: center;
+  margin: 20px;
+}
+
+.about h4 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.about p {
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* Info cards */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 20px;
+}
+
+.info-card {
+  border: 2px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.info-card img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+.info-card h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 900px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-row {
+    justify-content: center;
+  }
+  h4{
+    font-size: 16px;
+  }
+
+}

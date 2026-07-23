@@ -1,0 +1,381 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #eef2f7;
+    color: #102a43;
+}
+
+p, li {
+    font-weight: 500;
+    color: #334e68;
+}
+
+.headings {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
+}
+
+.banner {
+    background: linear-gradient(180deg, rgba(5, 34, 64, 0.90), rgba(7, 45, 83, 0.82)),
+        url(../assets/aboutBg.jpg) center/cover no-repeat !important;
+    min-height: 420px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    position: relative !important;
+}
+
+.banner-content {
+    text-align: center;
+    max-width: 850px;
+}
+
+.banner-content h1 {
+    color: #ffffff;
+    font-size: clamp(3.2rem, 5vw, 4.6rem);
+    line-height: 1.02;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+}
+
+.about-container {
+    max-width: 1180px;
+    margin: 40px auto 80px;
+    padding: 0 24px;
+}
+
+.about-container > .founders,
+.about-container > .bg-white,
+.about-container > .company-about,
+.about-container > .company-profile,
+.about-container > .company-team,
+.about-container > .geographical-presence {
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(15, 44, 89, 0.08);
+    padding: 34px 36px;
+    margin-bottom: 32px;
+}
+
+.about-container .title.headings {
+    font-size: 1.95rem;
+    color: #0f2c59;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.founders .founder-images {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    justify-items: center;
+}
+
+.founder-images div {
+    width: 100%;
+    max-width: 360px;
+    padding: 24px;
+    border-radius: 20px;
+    background: #f7fafc;
+    text-align: center;
+}
+
+.founder-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    margin-bottom: 18px;
+    box-shadow: 0 15px 35px rgba(15, 44, 89, 0.08);
+}
+
+.founder-images div h4 {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #102a43;
+}
+
+.founder-images div p {
+    margin: 0;
+    color: #627d98;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.about-container .bg-white {
+    padding: 36px;
+}
+
+.bg-white h3 {
+    margin-bottom: 24px !important;
+    color: #0f2c59 !important;
+}
+
+.bg-white .row {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.bg-white .col-md-5,
+.bg-white .col-md-7 {
+    min-width: 0;
+    width: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .bg-white .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .bg-white .col-md-7 {
+        width: 58.333333%;
+    }
+
+    .bg-white .col-md-5 {
+        width: 41.666667%;
+    }
+}
+
+.bg-white img {
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    box-shadow: 0 20px 40px rgba(15, 44, 89, 0.16);
+}
+
+.bg-white .p-2 {
+    padding: 0 !important;
+}
+
+.bg-white .fw-semibold {
+    color: #102a43;
+}
+
+.bg-white .text-secondary {
+    color: #627d98 !important;
+}
+
+.bg-white p {
+    color: #42526e;
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+.bg-white .d-flex {
+    gap: 18px;
+}
+
+.bg-white .img-fluid {
+    width: 82px;
+    height: auto;
+}
+
+.company-about {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 34px;
+    align-items: center;
+}
+
+.company-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.company-logo img {
+    width: 100%;
+    max-width: 230px;
+    object-fit: contain;
+}
+
+.company-logo h6 {
+    margin: 0;
+    font-weight: 700;
+    color: #0f2c59;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+.company-logo .certificate {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 18px;
+    box-shadow: 0 16px 40px rgba(15, 44, 89, 0.08);
+}
+
+.company-about-content {
+    line-height: 1.85;
+    color: #42526e;
+}
+
+.company-about-content p {
+    margin-bottom: 1rem;
+}
+
+.company-about-content strong {
+    color: #0f2c59;
+    font-size: 1rem;
+}
+
+.company-profile {
+    text-align: center;
+}
+
+.company-profile a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    border: 1px solid #0f2c59;
+    color: #0f2c59;
+    background: #ffffff;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    text-decoration: none;
+}
+
+.company-profile a:hover {
+    background: #0f2c59;
+    color: #ffffff;
+}
+
+.company-team,
+.geographical-presence,
+.founders,
+.bg-white {
+    position: relative;
+}
+
+.company-team p,
+.geographical-presence p {
+    margin: 0;
+    color: #42526e;
+    line-height: 1.9;
+}
+
+.company-team .title.headings,
+.geographical-presence .title.headings {
+    margin-bottom: 18px;
+}
+
+.footer-container {
+    padding-top: 40px;
+}
+
+footer.dark-footer {
+    background: #0f2c59;
+}
+
+footer.dark-footer p,
+footer.dark-footer li a,
+footer.dark-footer h5,
+footer.dark-footer .copyrights {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+footer.dark-footer a {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+footer.dark-footer a:hover {
+    color: #ffffff;
+}
+
+footer .footer-logo img {
+    max-width: 180px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    background: #0f2c59;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 36px rgba(15, 44, 89, 0.2);
+}
+
+.scroll-to-top a {
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+@media screen and (max-width: 992px) {
+    .company-about {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        margin: 32px auto 60px;
+    }
+
+    .about-container > .founders,
+    .about-container > .bg-white,
+    .about-container > .company-about,
+    .about-container > .company-profile,
+    .about-container > .company-team,
+    .about-container > .geographical-presence {
+        padding: 28px 20px;
+    }
+
+    .banner {
+        min-height: 320px !important;
+        padding: 32px 16px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .founder-images div {
+        max-width: 100%;
+    }
+
+    .company-logo {
+        gap: 14px;
+    }
+
+    .company-about-content {
+        font-size: 0.97rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .about-container {
+        padding: 0 16px;
+    }
+
+    .about-container > .founders,
+    .about-container > .bg-white,
+    .about-container > .company-about,
+    .about-container > .company-profile,
+    .about-container > .company-team,
+    .about-container > .geographical-presence {
+        padding: 20px 16px;
+    }
+}
