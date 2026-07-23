@@ -58,7 +58,7 @@ hamburger.addEventListener("click", () => {
     closeIcon.classList.toggle("close-icon-cng")
     menuIcon.classList.toggle("menu-icon-cng")
     body.classList.toggle("overflowLock")
-
+    hamburger.classList.toggle("active")
 })
 
 
