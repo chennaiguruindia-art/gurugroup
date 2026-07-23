@@ -1931,7 +1931,7 @@ body {
 @font-face {
   font-family:whatsapp;
   src: url(assets/Helvetica-Font/Helvetica-Bold.ttf);
-
+}
 
 .whatsapp_chatbot_container{
   position: fixed;
@@ -2070,22 +2070,48 @@ border: solid gray 1px;
   justify-content: center;
 }
 .headerfortestandblog {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 32px;
-  padding: 60px 5%;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 60px 0;
   background: var(--surface);
 }
 
-.blog-container {
-  position: relative;
+.headerfortestandblog .row {
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+.blog-container,
+.testimonial-section {
   background: var(--white);
   border-radius: var(--radius-lg);
   padding: 32px;
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+.blog-headline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.blog-headline .section-header {
+  text-align: left;
+  margin-bottom: 0;
+  flex: 1 1 280px;
+}
+
+.blog-slider {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.blog-slider::-webkit-scrollbar {
+  display: none;
 }
 
 .blog-item {
@@ -2096,18 +2122,50 @@ border: solid gray 1px;
   display: block;
 }
 
-.blog-img {
+.blog-card {
   width: 100%;
-  height: 220px;
+  min-width: auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(15, 44, 89, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+}
+
+.blog-card .blog-img {
+  width: 100%;
+  height: 340px;
   object-fit: cover;
-  border-radius: var(--radius);
-  margin-bottom: 20px;
+  display: block;
+  margin: 0;
+}
+
+.blog-card-body {
+  padding: 24px;
+}
+
+.blog-card-body h3 {
+  margin-bottom: 12px;
+  color: var(--primary-dark);
+  font-size: 1.55rem;
+}
+
+.blog-card-body p {
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 .blog-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 
 .blog-content .bs,
@@ -2115,38 +2173,38 @@ border: solid gray 1px;
   padding: 16px;
   background: var(--surface);
   border-radius: var(--radius-sm);
-  border-left: 3px solid var(--primary);
+  border-left: 4px solid var(--primary);
+}
+
+.blog-content .bn {
+  border-color: rgba(15, 44, 89, 0.9);
 }
 
 .blog-content p {
-  font-size: 13px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
 }
 
 .navicate {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
+  position: static;
   display: flex;
-  justify-content: space-between;
-  padding: 0 8px;
-  pointer-events: none;
-  z-index: 2;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: auto;
 }
 
 .nav-btn {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: var(--white);
-  border: none;
+  border: 1px solid rgba(15, 44, 89, 0.12);
   box-shadow: var(--shadow);
   color: var(--primary);
   cursor: pointer;
-  pointer-events: auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   transition: var(--transition);
@@ -2155,6 +2213,7 @@ border: solid gray 1px;
 .nav-btn:hover {
   background: var(--primary);
   color: var(--white);
+  transform: translateY(-1px);
 }
 
 .testimonial-section {
@@ -2170,11 +2229,10 @@ border: solid gray 1px;
   position: relative;
   overflow: hidden;
   padding: 40px 32px;
-  text-align: center;
-  min-height: 320px;
+  text-align: left;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
@@ -2191,27 +2249,36 @@ border: solid gray 1px;
   font-size: 32px;
   color: var(--primary);
   opacity: 0.3;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  text-align: center;
 }
 
 .testimonial-date {
-  display: inline-block;
-  padding: 4px 16px;
-  background: rgba(15, 44, 89, 0.08);
+  display: block;
+  padding: 8px 16px;
+  background: #ffffff;
   color: var(--primary);
-  border-radius: 50px;
-  font-size: 13px;
+  border-radius: 999px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(15, 44, 89, 0.12);
 }
 
 .testimonial p {
   font-size: 15px;
-  line-height: 1.8;
+  line-height: 1.9;
   color: var(--text);
-  max-width: 90%;
-  margin: 0 auto;
-  font-style: italic;
+  max-width: 100%;
+  margin: 0;
+  font-style: normal;
+}
+
+.testimonial p strong {
+  display: block;
+  margin-top: 16px;
+  color: var(--primary-dark);
+  font-weight: 700;
 }
 
 @keyframes fadeEffect {

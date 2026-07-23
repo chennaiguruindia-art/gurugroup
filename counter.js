@@ -31,12 +31,18 @@ let CounterObserver = new IntersectionObserver(
      let currentTestimonialIndex = 0;
      const testimonials = document.querySelectorAll(".testimonial");
 
-     function showNextTestimonial() {
-         testimonials[currentTestimonialIndex].classList.remove("active");
-         currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
-         testimonials[currentTestimonialIndex].classList.add("active");
+     function showTestimonial(index) {
+         testimonials.forEach((testimonial, i) => {
+             testimonial.classList.toggle("active", i === index);
+         });
      }
-setInterval(showNextTestimonial , 4000);
+
+     function showNextTestimonial() {
+         currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+         showTestimonial(currentTestimonialIndex);
+     }
+
+     setInterval(showNextTestimonial, 4000);
     //  setInterval(showNextTestimonial, 5000); // Change every 5 seconds
 
      // Blog Script
