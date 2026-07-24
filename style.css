@@ -249,7 +249,7 @@ footer ul li a:hover i { color: var(--orange); }
 
 /* Hamburger */
 .hamburger { display: none; }
-.nav-icon { display: none !important; }
+.nav-icon { display: inline-block !important; }
 
 /* ===== RESPONSIVE ===== */
 @media (min-width: 500px) and (max-width: 1050px) {
