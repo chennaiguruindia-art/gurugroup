@@ -20,7 +20,7 @@ p, li {
 .banner {
     background: linear-gradient(180deg, rgba(5, 34, 64, 0.90), rgba(7, 45, 83, 0.82)),
         url(../assets/aboutBg.jpg) center/cover no-repeat !important;
-    min-height: 420px !important;
+    min-height: 400px !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,6 +99,23 @@ p, li {
     color: #102a43;
 }
 
+.banner-quote {
+    color: white;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 500;
+    max-width: 640px;
+    margin: 14px auto 0;
+    text-shadow: 1px 1px 6px black;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .banner-quote {
+        font-size: 15px;
+        padding: 0 16px;
+    }
+}
 .founder-images div p {
     margin: 0;
     color: #627d98;
