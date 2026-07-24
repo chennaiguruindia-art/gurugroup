@@ -1,6 +1,7 @@
-body{
-    background-color: white;
+body {
+  background-color: white;
 }
+
 .solar-section {
   text-transform: capitalize;
   padding: 20px 0;
@@ -103,7 +104,8 @@ body{
   .logo-row {
     justify-content: center;
   }
-  h4{
+
+  h4 {
     font-size: 16px;
   }
 
