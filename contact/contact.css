@@ -1,489 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa+One:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Montserrat:wght@700&display=swap');
 
-p,
-li,
-label {
-    font-weight: 600;
+:root {
+    --brand-blue: #0f4a8a;
+    --brand-blue-dark: #0b3168;
 }
 
+/* ---------- Typography ---------- */
 .headings {
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.headings.title {
-    font-size: 30px !important;
-    text-align: left;
+.brand-text {
+    color: var(--brand-blue) !important;
 }
 
-
-.contact-page .banner {
-    background-image: url(../assets/contactBg.jpg) !important;
-    min-height: 520px !important;
+/* ---------- Banner ---------- */
+.contact-banner {
+    background-image: linear-gradient(180deg, rgba(6, 28, 73, 0.78), rgba(2, 16, 45, 0.78)), url(../assets/contactBg.jpg);
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative !important;
-    overflow: hidden;
-    margin-top: 0 !important;
-    padding: 0 !important;
+    min-height: 320px;
+    margin-top: 0;
 }
 
-.contact-page .banner::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(6, 28, 73, 0.78), rgba(2, 16, 45, 0.78));
-    pointer-events: none;
-}
-
-.our-services {
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-}
-
-.banner-content {
-    position: relative !important;
-    left: 0 !important;
-    z-index: 1;
-    text-align: center;
-}
-
-.our-services h1 {
-    color: white;
-    font-size: 50px;
+.contact-banner h1 {
     font-family: 'Changa One', cursive;
-    letter-spacing: 5PX;
-    font-weight: bold;
-    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: clamp(28px, 6vw, 50px);
     text-shadow: 2px 2px 10px black;
-    animation: title 0.5s forwards;
 }
 
-@keyframes title {
-    from {
-        font-size: 0;
-    }
-
-    to {
-        font-size: 50px;
+@media (min-width: 768px) {
+    .contact-banner {
+        min-height: 420px;
     }
 }
 
-.contact-container {
-    width: min(94%, 1280px);
-    margin: 36px auto 60px;
-    padding: 0;
-}
-
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1.16fr 0.86fr;
-    gap: 34px;
-    align-items: start;
-}
-
-.form-panel,
-.office-panel,
-.office-card {
-    width: 100%;
-}
-
-.form-panel {
-    background: #ffffff;
-    padding: 32px 32px;
-    border-radius: 24px;
-    box-shadow: 0 22px 48px rgba(15, 23, 42, 0.10);
-}
-
-.panel-heading p {
-    margin-top: 14px;
-    color: #4f5d73;
-    line-height: 1.75;
-    font-size: 0.96rem;
-}
-
-.form-group {
-    display: grid;
-    gap: 10px;
-    margin: 18px 0;
-}
-
-.form-group label {
-    font-weight: 700;
-    color: #1f2937;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid #d1d5db;
+/* ---------- Form ---------- */
+.form-control {
     border-radius: 12px;
+    padding: 12px 16px;
     background: #f8fafc;
-    color: #1f2937;
-    font-size: 0.95rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
+.form-control:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
-textarea {
-    min-height: 140px;
-    resize: vertical;
+.send-btn-cta {
+    background-color: var(--brand-blue);
+    border-color: var(--brand-blue);
 }
 
-.send-btn {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 14px;
+/* ---------- Head office card ---------- */
+.brand-gradient {
+    background: linear-gradient(135deg, var(--brand-blue-dark), var(--brand-blue));
 }
 
-.send-btn button {
-    background-color: #0f4a8a;
-    color: white;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 999px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    cursor: pointer;
+/* ---------- Media panels (image + map) ---------- */
+.office-image-wrap {
+    min-height: 200px;
 }
 
-.office-panel {
-    display: grid;
-    gap: 24px;
+.office-image-wrap img {
+    display: block;
 }
 
-.office-card {
-    background: #ffffff;
-    padding: 24px 26px;
-    border-radius: 22px;
-    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.09);
+.map-wrap {
+    aspect-ratio: 16 / 9;
 }
 
-.office-card h2 {
-    margin: 0 0 18px;
-    font-size: 22px;
-    color: #0f3460;
+@media (min-width: 768px) {
+    .map-wrap {
+        aspect-ratio: 21 / 9;
+    }
 }
 
-.contact-details {
-    display: grid;
-    gap: 14px;
-}
-
-.contact-details a {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    color: #0f4a8a;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.office-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 22px;
-    object-fit: cover;
-    min-height: 260px;
-}
-
-.branch-section {
-    margin-top: 42px;
-}
-
-.section-header {
-    max-width: 680px;
-    margin-bottom: 18px;
-}
-
-.branch-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-}
-
-.branch-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    padding: 24px 20px;
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
-    min-height: 140px;
-}
-
+/* ---------- Branch cards ---------- */
 .branch-card h4 {
-    margin: 0 0 10px;
-    color: #0f4a8a;
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.branch-card span {
-    color: #64748b;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-.map-panel {
-    margin-top: 34px;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
-}
-
-.map {
-    width: 100%;
-    min-height: 420px;
-    border: none;
-}
-
-.line {
-    max-width: 1px;
-    min-height: 100%;
-    background-color: rgba(128, 128, 128, 0.363);
-}
-
-.branch-section {
-    margin: 24px 0 30px;
-    display: grid;
-    gap: 18px;
-    width: 100%;
-}
-
-.branch-intro {
-    margin: 10px 0 10px;
-    max-width: 620px;
-    color: #4f5d73;
-    font-size: 0.98rem;
-    line-height: 1.75;
-}
-
-.main-branch-card {
-    background: linear-gradient(135deg, #0b3168, #0f4b90);
-    color: #fff;
-    border-radius: 20px;
-    padding: 32px 30px 28px;
-    box-shadow: 0 18px 40px rgba(8, 26, 62, 0.18);
-    min-height: 240px;
-}
-
-.branch-badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 14px;
-}
-
-.main-branch-card h3 {
-    margin: 0 0 12px;
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-}
-
-.main-branch-card p {
-    margin: 0 0 20px;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.95);
-}
-
-.branch-contact-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-}
-
-.branch-contact-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.branch-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(220px, 1fr));
-    gap: 16px;
-}
-
-.branch-card {
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 18px;
-    padding: 22px 18px;
-    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
-    min-height: 140px;
-}
-
-.branch-card h4 {
-    margin: 0 0 10px;
-    color: var(--blue);
-    font-size: 18px;
-    font-weight: 800;
-}
-
-.branch-card span {
-    color: #64748b;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-details div {
-    min-width: 100%;
-}
-
-.contact-details div a {
-    margin: 15px 0;
-    min-width: 100%;
-    display: flex;
-    color: var(--blue);
-    font-weight: 600;
-    align-items: center;
-}
-
-.contact-details div a i {
-    margin-right: 5px;
-}
-
-.contact-links article {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 28px;
-    width: 100%;
-    margin-top: 30px;
-    align-items: start;
-}
-
-.contact-links article .contact-details {
-    width: 100%;
-    padding-right: 0;
-}
-
-.contact-links article .office-image {
-    width: 100%;
-    min-height: 260px;
-}
-
-.office-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 18px;
-}
-
-.map {
-    width: 100%;
-    max-height: 450px;
-    margin-top: 26px;
-    border-radius: 18px;
-    border: 1px solid rgba(148, 163, 184, 0.25);
-}
-
-.contact-details div a i {
-    margin-right: 8px;
-}
-
-.fa-whatsapp {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-@media screen and (max-width:1050px) {
-    .branch-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .contact-links article {
-        grid-template-columns: 1fr;
-    }
-
-    .form-section {
-        flex-direction: column;
-    }
-
-    .contact-container .form-section div {
-        width: 100%;
-    }
-
-    form {
-        width: 100%;
-    }
-
-    form div {
-        flex-direction: column;
-
-    }
-
-    .contact-links .headings.title {
-        font-size: 20px !important;
-        white-space: nowrap;
-        text-align: center;
-    }
-
-    form div label {
-        margin-bottom: 10px;
-    }
-
-    form div input,
-    textarea {
-        min-width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    .send-btn {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    article {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .map {
-        width: 100%;
-    }
-
-    .contact-details {
-        padding-right: 0 !important;
-    }
-
-    .contact-details div {
-        max-width: fit-content;
-        margin: auto;
-    }
-
-    .contact-details div a {
-
-        justify-content: center;
-    }
-
+    font-size: 17px;
 }
