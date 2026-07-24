@@ -4,414 +4,458 @@
 
 /* ===== Services Page – Modern Layout ===== */
 body.services-page {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /* Mega Menu – What We Do */
 .nav-mega-item {
-  position: relative;
+    position: relative;
 }
 
-.nav-mega-item > a {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.nav-mega-item>a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.nav-mega-item > a .mega-chevron {
-  font-size: 10px;
-  transition: transform 0.2s;
+.nav-mega-item>a .mega-chevron {
+    font-size: 10px;
+    transition: transform 0.2s;
 }
 
-.nav-mega-item.mega-open > a .mega-chevron,
-.nav-mega-item:hover > a .mega-chevron {
-  transform: rotate(180deg);
+.nav-mega-item.mega-open>a .mega-chevron,
+.nav-mega-item:hover>a .mega-chevron {
+    transform: rotate(180deg);
 }
 
 .mega-menu-panel {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 20px 60px rgba(15, 44, 89, 0.18);
-  border: 1px solid rgba(15, 44, 89, 0.08);
-  min-width: 680px;
-  z-index: 99999999;
-  padding: 0;
-  overflow: hidden;
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(15, 44, 89, 0.18);
+    border: 1px solid rgba(15, 44, 89, 0.08);
+    min-width: 680px;
+    z-index: 99999999;
+    padding: 0;
+    overflow: hidden;
 }
 
 .nav-mega-item.mega-open .mega-menu-panel,
 .nav-mega-item:hover .mega-menu-panel {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
 }
 
 .mega-menu-header {
-  background: linear-gradient(135deg, #0f2c59, #1e40af);
-  color: #fff;
-  padding: 16px 24px;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    background: linear-gradient(135deg, #0f2c59, #1e40af);
+    color: #fff;
+    padding: 16px 24px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .mega-menu-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
-  padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    padding: 8px;
 }
 
 .mega-menu-link {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px;
-  text-decoration: none;
-  color: #0f2c59;
-  border-radius: 10px;
-  transition: background 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    text-decoration: none;
+    color: #0f2c59;
+    border-radius: 10px;
+    transition: background 0.2s;
 }
 
 .mega-menu-link:hover {
-  background: rgba(34, 197, 94, 0.08);
-  color: #0f2c59;
+    background: rgba(34, 197, 94, 0.08);
+    color: #0f2c59;
 }
 
 .mega-menu-link .mega-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
-.mega-icon.horti { background: rgba(34, 197, 94, 0.15); color: #16a34a; }
-.mega-icon.evdot { background: rgba(34, 197, 94, 0.2); color: #15803d; }
-.mega-icon.solar { background: rgba(249, 115, 22, 0.15); color: #ea580c; }
-.mega-icon.pest { background: rgba(239, 68, 68, 0.12); color: #dc2626; }
-.mega-icon.tools { background: rgba(59, 130, 246, 0.12); color: #2563eb; }
+.mega-icon.horti {
+    background: rgba(34, 197, 94, 0.15);
+    color: #16a34a;
+}
+
+.mega-icon.evdot {
+    background: rgba(34, 197, 94, 0.2);
+    color: #15803d;
+}
+
+.mega-icon.solar {
+    background: rgba(249, 115, 22, 0.15);
+    color: #ea580c;
+}
+
+.mega-icon.pest {
+    background: rgba(239, 68, 68, 0.12);
+    color: #dc2626;
+}
+
+.mega-icon.tools {
+    background: rgba(59, 130, 246, 0.12);
+    color: #2563eb;
+}
 
 .mega-menu-link strong {
-  display: block;
-  font-size: 0.88rem;
-  font-weight: 700;
-  margin-bottom: 3px;
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin-bottom: 3px;
 }
 
 .mega-menu-link span {
-  font-size: 0.75rem;
-  color: #64748b;
-  font-weight: 500;
-  line-height: 1.4;
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
 /* Service nav pills – Premium Redesign */
 .service-badges {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px;
-  background: #f1f5f9;
-  border-radius: 60px;
-  width: fit-content;
-  max-width: 100%;
-  margin: 0 auto 36px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  box-shadow: 0 2px 12px rgba(15, 44, 89, 0.08);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    background: #f1f5f9;
+    border-radius: 60px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 36px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    box-shadow: 0 2px 12px rgba(15, 44, 89, 0.08);
 }
 
 .service-badges::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .service-badges button {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 10px 20px;
-  border: none;
-  background: transparent;
-  color: #475569;
-  font-size: 13px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  margin: 0;
-  cursor: pointer;
-  text-transform: uppercase;
-  font-weight: 700;
-  border-radius: 50px;
-  letter-spacing: 0.5px;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  white-space: nowrap;
-  flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    color: #475569;
+    font-size: 13px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    margin: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .service-badges button .svc-icon {
-  font-size: 14px;
-  transition: transform 0.25s;
+    font-size: 14px;
+    transition: transform 0.25s;
 }
 
 .service-badges button:hover {
-  background: rgba(15, 44, 89, 0.08);
-  color: #0f2c59;
+    background: rgba(15, 44, 89, 0.08);
+    color: #0f2c59;
 }
 
 .service-badges button:hover .svc-icon {
-  transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 /* Active state per service */
 .service-badges button.service-active {
-  background: #0f2c59 !important;
-  color: #fff !important;
-  box-shadow: 0 4px 16px rgba(15, 44, 89, 0.3);
+    background: #0f2c59 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 16px rgba(15, 44, 89, 0.3);
 }
 
 .service-badges .hor.service-active {
-  background: linear-gradient(135deg, #16a34a, #22c55e) !important;
-  box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4) !important;
+    background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+    box-shadow: 0 4px 16px rgba(34, 197, 94, 0.4) !important;
 }
 
 .service-badges .evdot.service-active {
-  background: linear-gradient(135deg, #0f2c59, #1e40af) !important;
-  box-shadow: 0 4px 16px rgba(15, 44, 89, 0.4) !important;
+    background: linear-gradient(135deg, #0f2c59, #1e40af) !important;
+    box-shadow: 0 4px 16px rgba(15, 44, 89, 0.4) !important;
 }
 
 .service-badges .sol.service-active {
-  background: linear-gradient(135deg, #ea580c, #f97316) !important;
-  box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4) !important;
+    background: linear-gradient(135deg, #ea580c, #f97316) !important;
+    box-shadow: 0 4px 16px rgba(249, 115, 22, 0.4) !important;
 }
 
 .service-badges .pest.service-active {
-  background: linear-gradient(135deg, #b91c1c, #dc2626) !important;
-  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4) !important;
+    background: linear-gradient(135deg, #b91c1c, #dc2626) !important;
+    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4) !important;
 }
 
 .service-badges .toool.service-active {
-  background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
-  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4) !important;
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.4) !important;
 }
 
 /* Banner refresh */
 .services-page .banner {
-  background-image: url(../assets/service-banner.jpg) !important;
-  background-size: cover !important;
-  background-position: center !important;
-  min-height: 420px !important;
-  border-radius: 0 0 24px 24px;
-  margin-top: 80px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+    background-image: url(../assets/service-banner.jpg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    min-height: 420px !important;
+    border-radius: 0 0 24px 24px;
+    margin-top: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .services-page .banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(6, 29, 58, 0.55), rgba(6, 29, 58, 0.25));
-  z-index: 1;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6, 29, 58, 0.55), rgba(6, 29, 58, 0.25));
+    z-index: 1;
 }
 
 .services-page .banner-content {
-  position: relative;
-  z-index: 2;
-  max-width: 980px;
-  padding: 0 24px;
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    padding: 0 24px;
 }
 
 .services-page .our-services h1 {
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  letter-spacing: 3px;
-  font-size: clamp(2rem, 5vw, 3rem) !important;
-  color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    letter-spacing: 3px;
+    font-size: clamp(2rem, 5vw, 3rem) !important;
+    color: #fff;
 }
 
 .services-page .banner-content p {
-  color: rgba(255, 255, 255, 0.9);
-  margin-top: 14px;
-  font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 14px;
+    font-size: 1rem;
 }
 
 .services-page .what-we-do {
-  width: 94%;
-  max-width: 1400px;
-  margin: 40px auto;
+    width: 94%;
+    max-width: 1400px;
+    margin: 40px auto;
 }
 
 .evdot-section {
-  display: none;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 8px 40px rgba(15, 44, 89, 0.1);
-  margin-top: 20px;
+    display: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(15, 44, 89, 0.1);
+    margin-top: 20px;
 }
 
 .interior-section,
 .ren-section {
-  display: none !important;
+    display: none !important;
 }
 
 @media (max-width: 900px) {
-  .mega-menu-panel {
-    min-width: 90vw;
-    left: 0;
-    transform: translateX(0) translateY(8px);
-  }
+    .mega-menu-panel {
+        min-width: 90vw;
+        left: 0;
+        transform: translateX(0) translateY(8px);
+    }
 
-  .nav-mega-item.mega-open .mega-menu-panel,
-  .nav-mega-item:hover .mega-menu-panel {
-    transform: translateX(0) translateY(0);
-  }
+    .nav-mega-item.mega-open .mega-menu-panel,
+    .nav-mega-item:hover .mega-menu-panel {
+        transform: translateX(0) translateY(0);
+    }
 
-  .mega-menu-grid {
-    grid-template-columns: 1fr;
-  }
+    .mega-menu-grid {
+        grid-template-columns: 1fr;
+    }
 
-  .services-page .banner {
-    min-height: 220px !important;
-    max-height: 260px !important;
-    margin-top: 70px !important;
-    border-radius: 0 0 20px 20px !important;
-    padding: 0 !important;
-  }
+    .services-page .banner {
+        min-height: 220px !important;
+        max-height: 260px !important;
+        margin-top: 70px !important;
+        border-radius: 0 0 20px 20px !important;
+        padding: 0 !important;
+    }
 
-  .services-page .our-services h1 {
-    font-size: clamp(1.4rem, 6vw, 2rem) !important;
-    letter-spacing: 2px;
-  }
+    .services-page .our-services h1 {
+        font-size: clamp(1.4rem, 6vw, 2rem) !important;
+        letter-spacing: 2px;
+    }
 
-  /* ── MOBILE SERVICE TABS: Premium Card Grid ── */
-  .service-badges {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 10px !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    border-radius: 16px !important;
-    background: transparent !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    margin-bottom: 24px !important;
-    overflow-x: unset !important;
-  }
+    .service-badges {
+        position: relative;
+        z-index: 5;
+    }
 
-  .service-badges button {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 6px !important;
-    padding: 14px 8px !important;
-    font-size: 10px !important;
-    letter-spacing: 0.3px !important;
-    border-radius: 14px !important;
-    white-space: normal !important;
-    text-align: center !important;
-    background: #fff !important;
-    color: #475569 !important;
-    border: 2px solid #e2e8f0 !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06) !important;
-    font-weight: 700 !important;
-    transition: all 0.2s !important;
-    line-height: 1.3 !important;
-  }
+    .service-badges button {
+        position: relative;
+        z-index: 6;
+        pointer-events: auto;
+    }
 
-  .service-badges button .svc-icon {
-    font-size: 20px !important;
-    margin-bottom: 2px;
-  }
+    /* ── MOBILE SERVICE TABS: Premium Card Grid ── */
+    .service-badges {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 16px !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin-bottom: 24px !important;
+        overflow-x: unset !important;
+    }
 
-  /* Each tab gets its own color theme */
-  .service-badges .hor .svc-icon { color: #16a34a; }
-  .service-badges .evdot .svc-icon { color: #1e40af; }
-  .service-badges .sol .svc-icon { color: #ea580c; }
-  .service-badges .pest .svc-icon { color: #dc2626; }
-  .service-badges .toool .svc-icon { color: #2563eb; }
+    .service-badges button {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        padding: 14px 8px !important;
+        font-size: 10px !important;
+        letter-spacing: 0.3px !important;
+        border-radius: 14px !important;
+        white-space: normal !important;
+        text-align: center !important;
+        background: #fff !important;
+        color: #475569 !important;
+        border: 2px solid #e2e8f0 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+        font-weight: 700 !important;
+        transition: all 0.2s !important;
+        line-height: 1.3 !important;
+    }
 
-  /* Active state per service on mobile */
-  .service-badges .hor.service-active {
-    background: linear-gradient(135deg, #16a34a, #22c55e) !important;
-    border-color: #16a34a !important;
-    color: #fff !important;
-    box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4) !important;
-  }
+    .service-badges button .svc-icon {
+        font-size: 20px !important;
+        margin-bottom: 2px;
+    }
 
-  .service-badges .evdot.service-active {
-    background: linear-gradient(135deg, #0f2c59, #1e40af) !important;
-    border-color: #0f2c59 !important;
-    color: #fff !important;
-    box-shadow: 0 4px 14px rgba(15, 44, 89, 0.4) !important;
-  }
+    /* Each tab gets its own color theme */
+    .service-badges .hor .svc-icon {
+        color: #16a34a;
+    }
 
-  .service-badges .sol.service-active {
-    background: linear-gradient(135deg, #ea580c, #f97316) !important;
-    border-color: #ea580c !important;
-    color: #fff !important;
-    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4) !important;
-  }
+    .service-badges .evdot .svc-icon {
+        color: #1e40af;
+    }
 
-  .service-badges .pest.service-active {
-    background: linear-gradient(135deg, #b91c1c, #dc2626) !important;
-    border-color: #b91c1c !important;
-    color: #fff !important;
-    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4) !important;
-  }
+    .service-badges .sol .svc-icon {
+        color: #ea580c;
+    }
 
-  .service-badges .toool.service-active {
-    background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
-    border-color: #1d4ed8 !important;
-    color: #fff !important;
-    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4) !important;
-  }
+    .service-badges .pest .svc-icon {
+        color: #dc2626;
+    }
 
-  .service-badges button.service-active .svc-icon {
-    color: #fff !important;
-  }
+    .service-badges .toool .svc-icon {
+        color: #2563eb;
+    }
 
-  /* Last button (Tools) spans full remaining column */
-  .service-badges button:last-child {
-    grid-column: 3 / 4;
-  }
+    /* Active state per service on mobile */
+    .service-badges .hor.service-active {
+        background: linear-gradient(135deg, #16a34a, #22c55e) !important;
+        border-color: #16a34a !important;
+        color: #fff !important;
+        box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4) !important;
+    }
 
-  /* Hide Bootstrap dropdown on mobile */
-  .dropdown {
-    display: none !important;
-  }
+    .service-badges .evdot.service-active {
+        background: linear-gradient(135deg, #0f2c59, #1e40af) !important;
+        border-color: #0f2c59 !important;
+        color: #fff !important;
+        box-shadow: 0 4px 14px rgba(15, 44, 89, 0.4) !important;
+    }
 
-  .services-page .what-we-do {
-    width: 95%;
-    margin: 20px auto;
-  }
+    .service-badges .sol.service-active {
+        background: linear-gradient(135deg, #ea580c, #f97316) !important;
+        border-color: #ea580c !important;
+        color: #fff !important;
+        box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4) !important;
+    }
 
-  /* Section header strip */
-  .services-category .title {
-    padding: 14px 16px;
-    border-radius: 0;
-  }
+    .service-badges .pest.service-active {
+        background: linear-gradient(135deg, #b91c1c, #dc2626) !important;
+        border-color: #b91c1c !important;
+        color: #fff !important;
+        box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4) !important;
+    }
 
-  .services-category .title h2 {
-    font-size: 16px !important;
-    letter-spacing: 2px;
-  }
+    .service-badges .toool.service-active {
+        background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
+        border-color: #1d4ed8 !important;
+        color: #fff !important;
+        box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4) !important;
+    }
+
+    .service-badges button.service-active .svc-icon {
+        color: #fff !important;
+    }
+
+    /* Last button (Tools) spans full remaining column */
+    .service-badges button:last-child {
+        grid-column: 3 / 4;
+    }
+
+    /* Hide Bootstrap dropdown on mobile */
+    .dropdown {
+        display: none !important;
+    }
+
+    .services-page .what-we-do {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    /* Section header strip */
+    .services-category .title {
+        padding: 14px 16px;
+        border-radius: 0;
+    }
+
+    .services-category .title h2 {
+        font-size: 16px !important;
+        letter-spacing: 2px;
+    }
 }
 
 p,
@@ -659,12 +703,13 @@ footer {
     scale: 1.05;
     transition: ease-in 0.3s;
 }
+
 .image-gallery img {
     transition: ease-in 0.3s;
     width: 100%;
 }
 
- 
+
 .view-more {
     display: flex;
     width: 100%;
@@ -698,7 +743,9 @@ footer {
 .interior-section,
 .planters-section,
 .tools-section,
-.pest-section,.ren-section,.sol-section {
+.pest-section,
+.ren-section,
+.sol-section {
     animation: section-show 0.5s;
 }
 
@@ -1112,7 +1159,8 @@ footer {
         height: 1px;
         background-color: rgba(128, 128, 128, 0.418);
     }
-    .dropdown{
+
+    .dropdown {
         display: none;
     }
 
@@ -1312,11 +1360,12 @@ footer {
 }
 
 
-.dropdown{
+.dropdown {
     width: 90%;
     margin: auto;
 }
-.dropdown-toggle{
+
+.dropdown-toggle {
     width: 100%;
     margin: auto;
     position: relative;
@@ -1326,49 +1375,59 @@ footer {
     text-transform: uppercase;
     font-weight: 600 !important;
 }
+
 .dropdown-toggle::after {
     position: absolute;
     right: 20px;
     top: 40%;
 
 }
-.dropdown-menu{
+
+.dropdown-menu {
     width: 100%;
     text-transform: uppercase;
 }
-.dropdown-menu li a{
+
+.dropdown-menu li a {
     font-weight: 600 !important;
 }
-.dropdown-menu li a:hover{
+
+.dropdown-menu li a:hover {
     color: var(--blue);
 }
-.dropdown-menu li{
+
+.dropdown-menu li {
     border-bottom: solid rgba(128, 128, 128, 0.432) 1px;
     padding: 10px 0;
 }
 
-.ren-section .category-content{
-    display:inherit !important;
+.ren-section .category-content {
+    display: inherit !important;
     padding: 20px !important;
 }
 
-.ren-section ._service h4,._why_choose h4,._get_started h4{
+.ren-section ._service h4,
+._why_choose h4,
+._get_started h4 {
     text-align: center;
     font-weight: 600;
     font-size: 25px;
     margin-bottom: 30px;
 }
-.ren_sec>div h3{
+
+.ren_sec>div h3 {
     font-weight: 600;
     font-size: 22px;
     text-align: center;
 }
-.ren_sec>div{
+
+.ren_sec>div {
     position: relative;
     padding-bottom: 15px;
     margin: 25px 0;
 }
-.ren_sec>div::after{
+
+.ren_sec>div::after {
     position: absolute;
     content: "";
     left: 0;
@@ -1377,27 +1436,33 @@ footer {
     height: 1.5px;
     width: 100%;
 }
-.ren_sec>div p{
+
+.ren_sec>div p {
     width: 50%;
     margin: auto;
     text-align: center;
 }
-.ren_sec>div .images{
+
+.ren_sec>div .images {
     display: flex;
     justify-content: space-between;
     margin: 30px 0;
 }
-.ren_sec>div .images img{
+
+.ren_sec>div .images img {
     width: 30%;
 }
-._why_choose{
+
+._why_choose {
     margin-top: 50px;
 }
-._why_choose ._badges{
+
+._why_choose ._badges {
     display: flex;
     justify-content: space-between;
 }
-._why_choose ._badges ._badge{
+
+._why_choose ._badges ._badge {
     width: 24%;
     display: flex;
     flex-direction: column;
@@ -1408,7 +1473,8 @@ footer {
     border-radius: 5px;
     overflow: hidden;
 }
-._why_choose ._badges ._badge h5{
+
+._why_choose ._badges ._badge h5 {
     font-size: 20px;
     font-weight: 600;
     background-color: brown;
@@ -1416,29 +1482,36 @@ footer {
     padding: 20px;
     width: 100%;
 }
-._why_choose ._badges ._badge p{
+
+._why_choose ._badges ._badge p {
     padding: 20px;
 }
-._get_started{
+
+._get_started {
     margin-top: 50px;
 }
-._get_started p{
+
+._get_started p {
     text-align: center;
 }
+
 @media screen and (max-width:500px) {
     .ren_sec>div p {
         width: 100%;
-    
+
     }
+
     ._why_choose ._badges {
         display: flex;
         gap: 20px 0;
         flex-direction: column;
     }
+
     ._why_choose ._badges ._badge {
         width: 100%;
-       
+
     }
+
     .pest_main {
         display: flex;
         flex-direction: column;
@@ -1446,11 +1519,13 @@ footer {
         width: 95%;
         gap: 30px 0;
     }
-    .query .sub_title{
+
+    .query .sub_title {
         width: 90%;
         margin: auto;
         line-height: 20px !important;
-        }
+    }
+
     .pest_main_image {
         width: 100%;
     }
@@ -1567,7 +1642,7 @@ footer {
     }
 
 
- 
+
 
     .category-content .text-content h4 {
         white-space: nowrap;
@@ -1698,18 +1773,21 @@ footer {
 
     .ren_sec>div p {
         width: 100%;
-    
+
     }
+
     ._why_choose ._badges {
         display: flex;
         flex-wrap: wrap;
         gap: 20px 0;
-    
+
     }
+
     ._why_choose ._badges ._badge {
         width: 48%;
-       
+
     }
+
     .pest_main {
         display: flex;
         flex-direction: column;
@@ -1724,6 +1802,7 @@ footer {
     .pest_main_image .content p {
         text-align: center;
     }
+
     /* service-badges handled by @media max-width 900px as scrollable row */
 
     .pest_main_services {
@@ -1735,9 +1814,11 @@ footer {
         align-items: center;
         justify-content: center;
     }
-    .pest_solutions_container{
+
+    .pest_solutions_container {
         margin-top: 30px;
     }
+
     .pest_solutions_container div {
         width: 45%;
         display: flex;
@@ -1746,37 +1827,46 @@ footer {
         text-align: center;
         padding: 10px;
     }
-    .work_cards{
+
+    .work_cards {
         margin-top: 60px;
         flex-direction: column;
         align-items: center;
         gap: 40px 0;
     }
-    .work_cards .work_card{
+
+    .work_cards .work_card {
         max-width: 60%;
     }
+
     .assesment {
         margin: 50px auto;
         width: 90%;
     }
-    .assesment_container{
+
+    .assesment_container {
         flex-direction: column;
     }
+
     .assesment_container div {
         width: 100%;
     }
-    .assesment_container .content{
+
+    .assesment_container .content {
         width: 100%;
     }
-    .query .sub_title{
-    width: 90%;
-    margin: auto;
+
+    .query .sub_title {
+        width: 90%;
+        margin: auto;
     }
+
     .query .accordion {
         width: 90%;
         margin: auto;
     }
-    .pest-section .download_profiles{
+
+    .pest-section .download_profiles {
         margin-top: 30px;
     }
 
@@ -1910,145 +2000,145 @@ footer {
    ============================================= */
 @media screen and (max-width: 900px) {
 
-  /* Fix services-category – remove excessive min-height */
-  .services-category {
-    min-height: auto !important;
-    margin-top: 20px;
-    border-radius: 12px;
-  }
+    /* Fix services-category – remove excessive min-height */
+    .services-category {
+        min-height: auto !important;
+        margin-top: 20px;
+        border-radius: 12px;
+    }
 
-  /* Fix h4 overflow – allow wrapping */
-  .category-content .text-content h4 {
-    white-space: normal !important;
-    word-break: break-word;
-    font-size: 15px;
-    text-align: center;
-  }
+    /* Fix h4 overflow – allow wrapping */
+    .category-content .text-content h4 {
+        white-space: normal !important;
+        word-break: break-word;
+        font-size: 15px;
+        text-align: center;
+    }
 
-  /* Services page banner – proper mobile height */
-  .services-page .banner {
-    min-height: 200px !important;
-    max-height: 280px !important;
-    padding: 0 !important;
-    margin-top: 70px !important;
-    border-radius: 0 0 16px 16px !important;
-  }
+    /* Services page banner – proper mobile height */
+    .services-page .banner {
+        min-height: 200px !important;
+        max-height: 280px !important;
+        padding: 0 !important;
+        margin-top: 70px !important;
+        border-radius: 0 0 16px 16px !important;
+    }
 
-  .services-page .our-services h1 {
-    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
-    letter-spacing: 2px;
-  }
+    .services-page .our-services h1 {
+        font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+        letter-spacing: 2px;
+    }
 
-  /* What-we-do container on mobile */
-  .services-page .what-we-do {
-    width: 96%;
-    margin: 20px auto;
-  }
+    /* What-we-do container on mobile */
+    .services-page .what-we-do {
+        width: 96%;
+        margin: 20px auto;
+    }
 
-  /* Category content – stack vertically on mobile */
-  .category-content {
-    flex-direction: column;
-    padding: 16px;
-    gap: 16px;
-  }
+    /* Category content – stack vertically on mobile */
+    .category-content {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+    }
 
-  .category-content .text-content {
-    width: 100%;
-    order: 2;
-    line-height: 26px;
-  }
+    .category-content .text-content {
+        width: 100%;
+        order: 2;
+        line-height: 26px;
+    }
 
-  .category-content .content-image {
-    width: 100%;
-    order: 1;
-  }
+    .category-content .content-image {
+        width: 100%;
+        order: 1;
+    }
 
-  .category-content .image-gallery {
-    order: 3;
-  }
+    .category-content .image-gallery {
+        order: 3;
+    }
 
-  .category-content .view-more {
-    order: 4;
-  }
+    .category-content .view-more {
+        order: 4;
+    }
 
-  /* Image gallery – 2 columns on mobile */
-  .image-gallery {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+    /* Image gallery – 2 columns on mobile */
+    .image-gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 
-  .image-gallery div {
-    min-width: calc(50% - 5px);
-    max-width: calc(50% - 5px);
-  }
+    .image-gallery div {
+        min-width: calc(50% - 5px);
+        max-width: calc(50% - 5px);
+    }
 
-  /* Tree image */
-  .tree_image {
-    width: 75%;
-  }
+    /* Tree image */
+    .tree_image {
+        width: 75%;
+    }
 
-  /* EVDot hero fix */
-  .evdot-hero-inner {
-    flex-direction: column;
-    gap: 16px;
-  }
+    /* EVDot hero fix */
+    .evdot-hero-inner {
+        flex-direction: column;
+        gap: 16px;
+    }
 
-  .evdot-hero-image {
-    width: 100%;
-  }
+    .evdot-hero-image {
+        width: 100%;
+    }
 
-  .evdot-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 12px;
-  }
+    .evdot-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px;
+    }
 
-  .evdot-bottom {
-    flex-direction: column !important;
-    gap: 20px;
-  }
+    .evdot-bottom {
+        flex-direction: column !important;
+        gap: 20px;
+    }
 
-  .evdot-value-icons {
-    grid-template-columns: 1fr 1fr !important;
-  }
+    .evdot-value-icons {
+        grid-template-columns: 1fr 1fr !important;
+    }
 
-  /* Solar section fix */
-  .sol-section,
-  .pest-section,
-  .evdot-section,
-  .horticulture-section {
-    overflow-x: hidden;
-  }
+    /* Solar section fix */
+    .sol-section,
+    .pest-section,
+    .evdot-section,
+    .horticulture-section {
+        overflow-x: hidden;
+    }
 
-  /* Pest section */
-  .pest_main {
-    flex-direction: column;
-    margin: 10px auto;
-    width: 95%;
-    gap: 20px 0;
-  }
+    /* Pest section */
+    .pest_main {
+        flex-direction: column;
+        margin: 10px auto;
+        width: 95%;
+        gap: 20px 0;
+    }
 
-  .pest_main_image {
-    width: 100%;
-  }
+    .pest_main_image {
+        width: 100%;
+    }
 
-  .pest_main_services {
-    width: 100%;
-  }
+    .pest_main_services {
+        width: 100%;
+    }
 
-  /* Tools section */
-  .tools-images {
-    flex-direction: column;
-    gap: 12px;
-  }
+    /* Tools section */
+    .tools-images {
+        flex-direction: column;
+        gap: 12px;
+    }
 
-  .tools-images img {
-    width: 100%;
-  }
+    .tools-images img {
+        width: 100%;
+    }
 
-  /* Footer on services page */
-  footer {
-    padding: 40px 20px 20px !important;
-    flex-direction: column;
-  }
+    /* Footer on services page */
+    footer {
+        padding: 40px 20px 20px !important;
+        flex-direction: column;
+    }
 }
