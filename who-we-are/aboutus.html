@@ -25,12 +25,13 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
-        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <div id="tophere"></div>
+    <div class="top-accent"></div>
 
     <header>
         <div class="logo">
@@ -82,6 +83,7 @@
             </ul>
         </nav>
     </header>
+
     <div class="banner">
         <div class="our-services banner-content">
             <h1>WHO WE ARE</h1>
@@ -89,17 +91,42 @@
         </div>
     </div>
 
+    <!-- ===== STATS BAR ===== -->
+    <section class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">25<span>+</span></div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500<span>+</span></div>
+                <div class="stat-label">Projects Delivered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1000<span>+</span></div>
+                <div class="stat-label">Expert Professionals</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">PAN India</div>
+                <div class="stat-label">Pan-India Presence</div>
+            </div>
+        </div>
+    </section>
+
+   
     <div class="about-container">
+
+        <!-- ===== FOUNDERS ===== -->
         <div class="founders">
             <h3 class="title headings mb-3">THE FOUNDERS</h3>
             <div class="founder-images">
                 <div>
-                    <img src="../assets/founder (1).png">
+                    <img src="../assets/founder (1).png" alt="Gurusamy Alagarsamy">
                     <h4>GURUSAMY ALAGARSAMY</h4>
                     <p>FOUNDER</p>
                 </div>
                 <div>
-                    <img style="background-color: white;" src="../assets/founder (2).png">
+                    <img style="background-color: white;" src="../assets/founder (2).png" alt="Thangakumar Gurusamy">
                     <h4>THANGAKUMAR GURUSAMY</h4>
                     <p>CO-FOUNDER</p>
                 </div>
@@ -108,89 +135,184 @@
 
         <hr class="my-5">
 
+        <!-- ===== CHAIRMAN'S MESSAGE ===== -->
         <div class="bg-white">
             <h3 class="text-center title headings">Chairman's Message</h3>
 
             <div class="row align-items-center">
-                <!-- Left Side - Image -->
                 <div class="col-md-5 text-center mb-4 mb-md-0">
-                    <img src="../assets/clients/chairman.png" alt="Chairman" class="rounded-circle shadow img-fluid"
-                        style="width: 230px; height: 230px; object-fit: cover;" />
+                    <div class="chairman-img-wrapper">
+                        <img src="../assets/clients/MD.jpeg" alt="Chairman Rajesh Gurusamy"
+                            class="rounded-circle shadow img-fluid"
+                            style="width: 230px; height: 230px; object-fit: cover;" />
+                    </div>
                     <div class="mt-3">
                         <h5 class="fw-semibold text-dark mb-1">Rajesh Gurusamy</h5>
-                        <p class="text-muted mb-0">Chairman</p>
+                        <div class="chairman-role"><i class="fa-solid fa-crown"></i> Chairman, AGR Group</div>
                     </div>
                 </div>
 
-                <!-- Right Side - Message -->
                 <div class="col-md-7">
                     <div class="p-2">
                         <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
                             <div>
-                                <h4 style="color: rgb(32, 139, 32);" class="fw-semibold">🎄 AGR Group</h4>
+                                <h4 style="color: rgb(32, 139, 32);" class="fw-semibold"> AGR Group</h4>
                                 <h6 class="text-secondary mb-0">Empowering Growth Across India</h6>
                             </div>
-                            <img src="../assets/agr black logo.png" alt="AGR Logo" class="img-fluid"
-                                style="width: 80px;" />
                         </div>
                         <p>
-                            At <strong>AGR Group</strong>, we believe in turning ambition into action and vision
-                            into impact. Our mission is to empower growth across India through
-                            innovation, integrity, and hard work — creating a legacy of
-                            businesses that serve people and sustain progress.
+                            At AGR Group, we believe that every great achievement begins with a dream, followed by
+                            dedication, discipline, and the courage to take the first step. Our journey has been built
+                            on the values of integrity, innovation, and an unwavering commitment to excellence. Today,
+                            we proudly stand as a diversified group of companies serving multiple industries and
+                            creating opportunities that contribute to India's growth.
+                        </p>
+                        <blockquote>&ldquo;Believe in yourself and never stop learning. The future belongs to those who embrace change and turn challenges into opportunities.&rdquo;</blockquote>
+                        <p>
+                            India is entering a new era of innovation, entrepreneurship, and sustainable development. As
+                            young leaders, professionals, and entrepreneurs, you have the responsibility to shape a
+                            brighter future. Think beyond personal success &mdash; focus on creating value for society,
+                            protecting our environment, generating employment, and making a positive impact in every
+                            community you serve.
+                        </p>
+                        <p>
+                            At AGR Group, we are committed to empowering people, fostering innovation, and building
+                            businesses that create lasting value. Together, we can build a stronger, greener, and more
+                            prosperous India for generations to come.
+                        </p>
+                        <p>
+                            Remember, dream with purpose, work with passion, lead with integrity, and never stop
+                            believing in your potential. The future is yours to create, and AGR Group will continue to
+                            stand as a partner in your journey toward excellence.
+                            <strong>Together, let's empower growth, inspire innovation, and build the India of tomorrow.</strong>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <hr class="my-5">
+
+        <!-- ===== COMPANY ABOUT ===== -->
         <h3 class="title headings">GURU</h3>
         <div class="company-about">
             <div class="company-logo">
                 <img style="width: 13vw;" loading="lazy" src="../assets/guru.png">
-                <h6>Horticulture Expert 360°</h6>
-                <!-- <img  loading="lazy" class="certificate" src="../assets/CERTIFICATE.jpg"> -->
+                <h6>Horticulture Expert 360&deg;</h6>
                 <img loading="lazy" class="certificate" src="../assets/plant-democ.jpg">
-
             </div>
             <div class="company-about-content">
-                <p><strong>Guru</strong> is an award-winning Landscaping firm which is specialized in Landscape
-                    Design, Execution and AMC
-                    Services with passion for design and a drive for excellence.
-                    The Team comprises of members having distinction in various fields such as Landscape Architects,
-                    Horticulturists, Civil Engineers, Electrical and Mechanical Engineers, Draughtsman, Project
-                    managers,
-                    Quality Assurance & Quality Control Managers, Planning and Co-ordination Managers etc, such that our
-                    works for clients goes as a comprehensive package with total solutions and services for the
-                    landscape
-                    needs.
-                    With over 25 years of experience in landscape design and project development, Guru has developed a
-                    celebrated reputation in the field of landscape industry and a long list of satisfied clients.
-                    Our Landscape Design & Development practice is well known for its high-quality detailing and
-                    customized
-                    landscape design solutions especially for Natural Environments, Corporate Spaces, Campus
-                    Developments,
-                    Green field Projects, Children’s Park, Sensory Gardens, Hospitality, Industrial and Institutional
-                    spaces
-                    and other areas in public domain.
-                    <br>
-                    Our mission at Guru is to make a positive difference in the quality of life.
-                    It’s about the artistry of blending our client’s vision with architecture and nature.
-                    <br>
-                    Every client and property has a unique expression and we strive to find the balance & bring them to
-                    life.
-                </p>
+                <p># GURU INTEGRATED SERVICES INDIA PVT. LTD.</p>
 
+                <h1>Engineering Sustainable Landscapes. Creating Green Legacies.</h1>
+
+                <p>Guru Integrated Services India Pvt. Ltd. is one of India's leading and award-winning landscape engineering companies, delivering innovative, sustainable, and technically advanced landscape solutions for more than 25 years. We specialize in <strong>Landscape Design, Landscape Execution, Horticulture Development, Irrigation Systems, Water Features, Green Infrastructure, and Annual Maintenance (AMC)</strong>, providing complete turnkey solutions from concept to long-term maintenance.</p>
+
+                <p>Our expertise combines <strong>engineering precision, horticultural science, environmental sustainability, and architectural aesthetics</strong> to transform outdoor spaces into vibrant, functional, and environmentally responsible landscapes.</p>
+
+                <p>With a proven track record across India, Guru has successfully executed projects for <strong>Corporate Campuses, IT Parks, Residential Townships, Commercial Developments, Government Infrastructure, Educational Institutions, Healthcare Facilities, Hospitality Projects, Industrial Parks, Smart Cities, Public Parks, and High-End Residential Properties.</strong></p>
+
+                <h3>Why Guru?</h3>
+                <ul>
+                    <li>25+ Years of Industry Excellence</li>
+                    <li>Award-Winning Landscape Specialists</li>
+                    <li>Complete Turnkey Landscape Solutions</li>
+                    <li>PAN India Project Execution</li>
+                    <li>In-house Design, Engineering &amp; Execution Team</li>
+                    <li>Sustainable &amp; Climate-Responsive Landscape Solutions</li>
+                    <li>International Quality Standards</li>
+                    <li>Strong Project Management &amp; Quality Assurance</li>
+                    <li>Dedicated Post-Completion AMC Services</li>
+                    <li>Trusted by Leading Developers, Industries &amp; Institutions</li>
+                </ul>
             </div>
-
-
         </div>
-        <div class="company-profile d-none">
-            <a href="../assets/bronchure/GURU GROUPS.pdf"><i class="fa-solid fa-download me-2"></i>Our Company
-                Profile</a>
-        </div>
+
+        <!-- ===== CORE VALUES ===== -->
+        <section class="values-section">
+            <div class="section-title">
+                <h3 class="title headings">OUR CORE VALUES</h3>
+                <p class="section-subtitle">The principles that drive everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon navy"><i class="fa-solid fa-leaf"></i></div>
+                    <h4>Sustainability</h4>
+                    <p>Every project is designed to improve environmental resilience while enhancing human well-being.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon gold"><i class="fa-solid fa-star"></i></div>
+                    <h4>Excellence</h4>
+                    <p>We uphold international quality standards in every phase, from design to long-term maintenance.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon green"><i class="fa-solid fa-users"></i></div>
+                    <h4>Innovation</h4>
+                    <p>Combining engineering precision with creative creativity to deliver transformative landscape solutions.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon slate"><i class="fa-solid fa-handshake"></i></div>
+                    <h4>Integrity</h4>
+                    <p>Building lasting relationships through transparency, reliability, and commitment to our clients.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <!-- ===== COMPANY STORY TIMELINE ===== -->
+        <section class="timeline-section">
+            <div class="section-title">
+                <h3 class="title headings">OUR JOURNEY</h3>
+                <p class="section-subtitle">Three decades of growth, innovation, and green legacies</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2001</span>
+                        <h4>Foundation</h4>
+                        <p>Guru Integrated Services was established with a vision to transform outdoor spaces through sustainable landscape engineering and horticulture.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2005</span>
+                        <h4>Rapid Expansion</h4>
+                        <p>Expanded operations across multiple states in India, serving corporate clients, residential townships, and government infrastructure projects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2012</span>
+                        <h4>Industry Recognition</h4>
+                        <p>Awarded as one of India's leading landscape engineering companies, recognized for innovation in sustainable design and turnkey solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2018</span>
+                        <h4>Diversification</h4>
+                        <p>Extended services to include EV charging solutions, solar energy, pest management, and facility management under the AGR Group umbrella.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h4>Pan India &amp; Beyond</h4>
+                        <p>With 1000+ professionals and PAN India presence, we are now venturing into overseas operations, bringing Indian landscaping expertise to the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <!-- ===== COMPANY TEAM ===== -->
         <div class="company-team">
             <h3 class="title headings">OUR TEAM</h3>
             <p>A. Gurusamy is the Principle and Founder of the Company under whom a total team of around 100 plus
@@ -198,12 +320,29 @@
                 service, other than site level force, all put together 1000 plus work force at any given point of time.
                 We have our strong presence in a range of diversified projects, from Star Hotels and Resorts, IT Parks,
                 Campus development, Condominiums, Townships, Industrial parks, Institutions, Beach Homes and Villas,
-                Malls & Commercial spaces, Green Field Projects, Airports, Consulates & Embassies, etc.</p>
+                Malls &amp; Commercial spaces, Green Field Projects, Airports, Consulates &amp; Embassies, etc.</p>
         </div>
+
+        <!-- ===== GEOGRAPHICAL PRESENCE ===== -->
         <div class="geographical-presence">
             <h3 class="title headings">GEOGRAPHICAL PRESENCE</h3>
-            <P>We are having a PAN India presence with diversified clientele throughout the country and now have
-                ventured in to overseas operations also.</P>
+            <p>We are having a PAN India presence with diversified clientele throughout the country and now have
+                ventured into overseas operations also.</p>
+        </div>
+
+        <!-- ===== CTA SECTION ===== -->
+        <section class="cta-section">
+            <h3>Ready to Transform Your Outdoor Space?</h3>
+            <p>Partner with India's leading landscape engineering company. Let us bring your vision to life with sustainable, world-class solutions.</p>
+            <div>
+                <a href="../contact/contact.html" class="cta-btn"><i class="fa-solid fa-paper-plane"></i> Get in Touch</a>
+                <a href="../services/services.html" class="cta-btn-secondary"><i class="fa-solid fa-arrow-right"></i> Explore Services</a>
+            </div>
+        </section>
+
+        <!-- ===== COMPANY PROFILE ===== -->
+        <div class="company-profile">
+            <a href="../assets/bronchure/GURU GROUPS.pdf"><i class="fa-solid fa-download me-2"></i>Our Company Profile</a>
         </div>
 
     </div>
@@ -213,7 +352,7 @@
             <div class="footer-brand">
                 <div class="footer-logo">
                     <img alt="guru integrated services" loading="lazy" src="../assets/guru.png" width="160">
-                    <h6>Horticulture & Facility Expert 360°</h6>
+                    <h6>Horticulture &amp; Facility Expert 360&deg;</h6>
                 </div>
                 <p class="footer-desc">We are an ISO 9001-2015 certified integrated facility management company,
                     dedicated to providing exceptional landscaping, horticulture, and property services across India.
@@ -238,16 +377,16 @@
                 <ul>
                     <li><a href="../services/services.html?view=horticulture-section"><i
                                 class="fa-solid fa-chevron-right"></i> Horticulture Services</a></li>
-                    <li><a href="../services/services.html?view=evdot-section"><i
-                                class="fa-solid fa-chevron-right"></i> EVDot</a></li>
+                    <li><a href="../services/services.html?view=evdot-section"><i class="fa-solid fa-chevron-right"></i>
+                            EVDot</a></li>
                     <li><a href="../services/services.html?view=planters-section"><i
                                 class="fa-solid fa-chevron-right"></i> Garden Boutique</a></li>
                     <li><a href="../services/services.html?view=pest-section"><i class="fa-solid fa-chevron-right"></i>
                             Pest Control Services</a></li>
                     <li><a href="../services/services.html?view=ren-section"><i class="fa-solid fa-chevron-right"></i>
-                            Renovation & Remodelling</a></li>
+                            Renovation &amp; Remodelling</a></li>
                     <li><a href="../services/services.html?view=tools-section"><i class="fa-solid fa-chevron-right"></i>
-                            Tools & Equipment</a></li>
+                            Tools &amp; Equipment</a></li>
                 </ul>
             </div>
             <div class="footer-column footer-contact-info">
@@ -272,7 +411,7 @@
                         class="fa-brands fa-instagram"></i></a>
                 <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
-            <p class="copyrights">Copyright © 2011 Guru Integrated Services India Pvt Ltd. All Rights Reserved.</p>
+            <p class="copyrights">Copyright &copy; 2011 Guru Integrated Services India Pvt Ltd. All Rights Reserved.</p>
         </div>
     </footer>
     <div class="scroll-to-top">
