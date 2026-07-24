@@ -938,7 +938,7 @@ footer {
     max-width: 15%;
 }
 
-.services-page .nav-icon { display: inline-block !important; font-size: 14px; margin-right: 6px; }
+
 
 .service-active {
     background-color: var(--blue);

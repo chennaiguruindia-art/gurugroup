@@ -68,7 +68,7 @@ body { background: var(--surface); color: var(--text); overflow-x: hidden; }
   .navbar-main .dropdown:hover .dropdown-menu { display: block; }
 }
 
-.nav-icon { display: none; }
+.nav-icon { display: inline-block; margin-right: 6px; font-size: 14px; }
 
 @media (max-width: 991px) {
   .navbar-main { min-height: 64px; }
