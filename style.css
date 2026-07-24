@@ -418,19 +418,20 @@ header nav ul li.nav-mega-item.mega-open>a .mega-chevron {
 }
 
 .mega-menu-panel {
-  position: absolute;
-  top: calc(100% + 12px);
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.25s, transform 0.25s, visibility 0.25s;
   background: #fff;
-  border-radius: 18px;
+  border-radius: 0 0 18px 18px;
   box-shadow: 0 20px 60px rgba(15, 44, 89, 0.18);
   border: 1px solid rgba(15, 44, 89, 0.08);
-  width: min(760px, 92vw);
+  border-top: none;
+  width: 100%;
   z-index: 9999;
   padding: 0;
   overflow: hidden;
@@ -441,7 +442,6 @@ header nav ul li.nav-mega-item.mega-open .mega-menu-panel {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(0);
 }
 
 .mega-menu-header {
@@ -456,7 +456,7 @@ header nav ul li.nav-mega-item.mega-open .mega-menu-panel {
 
 .mega-menu-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 8px;
   padding: 12px;
 }
@@ -527,10 +527,10 @@ header nav ul li.nav-mega-item.mega-open .mega-menu-panel {
 
 @media (max-width: 900px) {
   .mega-menu-panel {
-    left: 8px;
-    right: 8px;
-    width: auto;
-    transform: translateX(0) translateY(8px);
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 12px 12px;
   }
 
   .mega-menu-grid {
