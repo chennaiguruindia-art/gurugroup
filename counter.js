@@ -29,7 +29,7 @@ let CounterObserver = new IntersectionObserver(
     }
 );
      let currentTestimonialIndex = 0;
-     const testimonials = document.querySelectorAll(".testimonial");
+     const testimonials = document.querySelectorAll(".testimonial-item");
 
      function showTestimonial(index) {
          testimonials.forEach((testimonial, i) => {

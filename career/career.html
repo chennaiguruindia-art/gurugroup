@@ -10,11 +10,9 @@
     <title>Career | Guru Integrated Services India Pvt Ltd</title>
     <meta name="keywords"
         content="Horticulture, Garden Design, Plant Care,Landscaping,Garden Maintenance,Garden Planning,Organic Gardening,Garden Supplies
-    Garden Tools,Irrigation Systems,Greenhouse Gardening,,Composting,Landscape Architecture,Garden Lighting,Garden Pests,Garden Diseases
-    Hydroponics,,Garden Consultancy,Garden Education,Garden Therapy,gurugroup,guru integrated services,rajesh gurusamy">
+        Garden Tools,Irrigation Systems,Greenhouse Gardening,Composting,Landscape Architecture,Garden Lighting,Garden Pests,Garden Diseases
+        Hydroponics,Garden Consultancy,Garden Education,Garden Therapy,gurugroup,guru integrated services,rajesh gurusamy">
     <meta name="author" content="T.Rithish Abinav">
-    <script src="../js/script.js" defer></script>
-    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
@@ -25,163 +23,129 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../js/script.js"></script>
 </head>
 
 <body>
     <div id="tophere"></div>
 
-    <header>
-        <div class="logo">
-            <img alt="guru integrated services" loading="lazy" src="../assets/guru.png" width="100%" />
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-main">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img alt="guru integrated services" loading="lazy" src="../assets/guru.png" height="48"></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars fs-4"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="../index.html"><i class="fa-solid fa-house nav-icon"></i>Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../who-we-are/aboutus.html"><i class="fa-solid fa-user-tie nav-icon"></i>Who We Are</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../services/services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-screwdriver-wrench nav-icon"></i>What We Do
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-mega">
+                            <li><a class="dropdown-item" href="../services/services.html?view=horticulture-section"><i class="fa-solid fa-seedling text-success me-2"></i>Horticulture</a></li>
+                            <li><a class="dropdown-item" href="../services/services.html?view=evdot-section"><i class="fa-solid fa-charging-station text-success me-2"></i>EVDot</a></li>
+                            <li><a class="dropdown-item" href="../services/services.html?view=sol-section"><i class="fa-solid fa-solar-panel text-warning me-2"></i>Solar Energy</a></li>
+                            <li><a class="dropdown-item" href="../services/services.html?view=pest-section"><i class="fa-solid fa-bug-slash text-danger me-2"></i>Pest Control</a></li>
+                            <li><a class="dropdown-item" href="../services/services.html?view=tools-section"><i class="fa-solid fa-toolbox text-primary me-2"></i>Tools</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="../services/services.html"><i class="fa-solid fa-arrow-right me-2"></i>All Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../clients/clients.html"><i class="fa-solid fa-users nav-icon"></i>Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../gallery/gallery.html"><i class="fa-regular fa-image nav-icon"></i>Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active" href=""><i class="fa-solid fa-briefcase nav-icon"></i>Career</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../contact/contact.html"><i class="fa-solid fa-phone nav-icon"></i>Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="hamburger">
-            <i class="fa-solid fa-bars menu-icon"></i>
-            <i class="fa-solid fa-xmark close-icon"></i>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html"><i class="fa-solid fa-house nav-icon"></i>Home</a> </li>
-                <li><a href="../who-we-are/aboutus.html"><i class="fa-solid fa-user-tie nav-icon"></i>Who We Are</a>
-                </li>
-                <li class="nav-mega-item">
-                    <a href="../services/services.html"><i class="fa-solid fa-screwdriver-wrench nav-icon"></i>What We
-                        Do <i class="fa-solid fa-chevron-down mega-chevron"></i></a>
-                    <div class="mega-menu-panel">
-                        <div class="mega-menu-header">Our Services — Guru Living Assets</div>
-                        <div class="mega-menu-grid">
-                            <a href="../services/services.html?view=horticulture-section" class="mega-menu-link">
-                                <div class="mega-icon horti"><i class="fa-solid fa-seedling"></i></div>
-                                <div><strong>Horticulture</strong><span>Landscaping, garden design & plant care</span>
-                                </div>
-                            </a>
-                            <a href="../services/services.html?view=evdot-section" class="mega-menu-link">
-                                <div class="mega-icon evdot"><i class="fa-solid fa-charging-station"></i></div>
-                                <div><strong>EVDot</strong><span>Smart EV charging solutions</span></div>
-                            </a>
-                            <a href="../services/services.html?view=sol-section" class="mega-menu-link">
-                                <div class="mega-icon solar"><i class="fa-solid fa-solar-panel"></i></div>
-                                <div><strong>Solar Energy</strong><span>Clean power for homes & agriculture</span></div>
-                            </a>
-                            <a href="../services/services.html?view=pest-section" class="mega-menu-link">
-                                <div class="mega-icon pest"><i class="fa-solid fa-bug-slash"></i></div>
-                                <div><strong>Pest Control</strong><span>Safe pest management solutions</span></div>
-                            </a>
-                            <a href="../services/services.html?view=tools-section" class="mega-menu-link">
-                                <div class="mega-icon tools"><i class="fa-solid fa-toolbox"></i></div>
-                                <div><strong>Tools</strong><span>Professional garden & landscaping equipment</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="../clients/clients.html"><i class="fa-solid fa-users nav-icon"></i>Clients</a> </li>
-                <li><a href="../gallery/gallery.html"><i class="fa-regular fa-image nav-icon"></i>Gallery</a> </li>
-                <li><a href=""><i class="fa-solid fa-briefcase nav-icon"></i>Career</a></li>
-                <li><a href="../contact/contact.html"><i class="fa-solid fa-phone nav-icon"></i>Contact</a> </li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
 
-    <div class="banner">
-        <div class="our-services banner-content">
-            <h1>CAREER</h1>
-            <p class="banner-subtitle">Join our team and grow with us — we are always looking for talented individuals to be part of our journey.</p>
+    <!-- Banner -->
+    <div class="page-banner" style="background:linear-gradient(135deg,#0f2c59,#1e40af);">
+        <div class="container d-flex flex-column align-items-center justify-content-center text-center" style="min-height:300px;padding-top:76px;">
+            <h1 class="text-white fw-bold display-5">CAREER</h1>
+            <p class="text-white-50 mt-2" style="max-width:600px;">Join our team and grow with us — we are always looking for talented individuals to be part of our journey.</p>
         </div>
     </div>
 
+    <!-- Content -->
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <span class="section-tag">Coming Soon</span>
-                    <h2 class="fw-bold mb-3" style="color: #0f2c59;">We're Building Something Great</h2>
-                    <p class="text-muted mb-4" style="font-size: 1.1rem; line-height: 1.8;">
+                    <span class="section-tag-corp">Coming Soon</span>
+                    <h2 class="fw-bold mb-3" style="color:var(--primary);">We're Building Something Great</h2>
+                    <p class="text-muted mb-4" style="font-size:1.1rem;line-height:1.8;">
                         At Guru Integrated Services, we believe in nurturing talent and building careers. 
                         Our career page is currently under development. We invite you to check back soon 
                         for exciting opportunities across horticulture, facility management, operations, 
                         and corporate functions.
                     </p>
-                    <div class="p-4 rounded-4 bg-light" style="border-left: 4px solid #0f2c59;">
+                    <div class="p-4 rounded-4 bg-light" style="border-left:4px solid var(--primary);">
                         <p class="mb-2"><strong>For any inquiries, reach out to us at:</strong></p>
-                        <p class="mb-0"><i class="fa-solid fa-envelope me-2" style="color: #0f2c59;"></i> careers@gurugroup.co.in</p>
+                        <p class="mb-0"><i class="fa-solid fa-envelope me-2" style="color:var(--primary);"></i> careers@gurugroup.co.in</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="mt-0 dark-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <div class="footer-logo">
-                    <img alt="guru integrated services" loading="lazy" src="../assets/guru.png" width="160">
-                    <h6>Horticulture & Facility Expert 360°</h6>
+    <!-- Footer -->
+    <footer class="footer-corp">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <img alt="guru integrated services" loading="lazy" src="../assets/guru.png" height="48" class="mb-3">
+                    <p class="small text-white-50 mb-3">We are an ISO 9001-2015 certified integrated facility management company, dedicated to providing exceptional landscaping, horticulture, and property services across India.</p>
+                    <div class="d-flex gap-2">
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100092637406934&mibextid=ZbWKwL" class="social-icon-corp" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/guru_integrated_services/" class="social-icon-corp" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon-corp" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
                 </div>
-                <p class="footer-desc">We are an ISO 9001-2015 certified integrated facility management company,
-                    dedicated to providing exceptional landscaping, horticulture, and property services across India.
-                </p>
-            </div>
-            <div class="footer-column">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="../index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
-                    <li><a href="../who-we-are/aboutus.html"><i class="fa-solid fa-chevron-right"></i> Who We Are</a>
-                    </li>
-                    <li><a href="../services/services.html"><i class="fa-solid fa-chevron-right"></i> Our Services</a>
-                    </li>
-                    <li><a href="../clients/clients.html"><i class="fa-solid fa-chevron-right"></i> Clients</a></li>
-                    <li><a href="../gallery/gallery.html"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
-                    <li><a href="../career/career.html"><i class="fa-solid fa-chevron-right"></i> Career</a></li>
-                    <li><a href="../contact/contact.html"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h5>Our Services</h5>
-                <ul>
-                    <li><a href="../services/services.html?view=horticulture-section"><i
-                                class="fa-solid fa-chevron-right"></i> Horticulture Services</a></li>
-                    <li><a href="../services/services.html?view=evdot-section"><i class="fa-solid fa-chevron-right"></i>
-                            EVDot</a></li>
-                    <li><a href="../services/services.html?view=planters-section"><i
-                                class="fa-solid fa-chevron-right"></i> Garden Boutique</a></li>
-                    <li><a href="../services/services.html?view=pest-section"><i class="fa-solid fa-chevron-right"></i>
-                            Pest Control Services</a></li>
-                    <li><a href="../services/services.html?view=ren-section"><i class="fa-solid fa-chevron-right"></i>
-                            Renovation & Remodelling</a></li>
-                    <li><a href="../services/services.html?view=tools-section"><i class="fa-solid fa-chevron-right"></i>
-                            Tools & Equipment</a></li>
-                </ul>
-            </div>
-            <div class="footer-column footer-contact-info">
-                <h5>Working Hours</h5>
-                <p><i class="fa-regular fa-clock"></i> Mon - Sat: 09:30 - 19:30</p>
-                <p><i class="fa-solid fa-calendar-check"></i> Sunday: Closed</p>
-                <div class="tollfree-box">
-                    <i class="fa-solid fa-headset"></i>
-                    <div>
-                        <span>Toll-Free Helpline</span>
-                        <strong>1800 123 2434</strong>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-3">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="../who-we-are/aboutus.html" class="text-white-50 text-decoration-none">Who We Are</a></li>
+                        <li class="mb-2"><a href="../services/services.html" class="text-white-50 text-decoration-none">Our Services</a></li>
+                        <li class="mb-2"><a href="../clients/clients.html" class="text-white-50 text-decoration-none">Clients</a></li>
+                        <li class="mb-2"><a href="../gallery/gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="../career/career.html" class="text-white-50 text-decoration-none">Career</a></li>
+                        <li class="mb-2"><a href="../contact/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Our Services</h6>
+                    <ul class="list-unstyled small">
+                        <li class="mb-2"><a href="../services/services.html?view=horticulture-section" class="text-white-50 text-decoration-none">Horticulture Services</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=evdot-section" class="text-white-50 text-decoration-none">EVDot</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=planters-section" class="text-white-50 text-decoration-none">Garden Boutique</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=pest-section" class="text-white-50 text-decoration-none">Pest Control Services</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=ren-section" class="text-white-50 text-decoration-none">Renovation &amp; Remodelling</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=tools-section" class="text-white-50 text-decoration-none">Tools &amp; Equipment</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="text-white fw-bold mb-3">Working Hours</h6>
+                    <div class="d-flex align-items-center gap-2 mb-2 text-white-50 small"><i class="fa-regular fa-clock text-warning"></i>Mon - Sat: 09:30 - 19:30</div>
+                    <div class="d-flex align-items-center gap-2 mb-3 text-white-50 small"><i class="fa-solid fa-calendar-check text-warning"></i>Sunday: Closed</div>
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
+                        <i class="fa-solid fa-headset fs-2 text-warning"></i>
+                        <div><span class="text-white-50 small d-block">Toll-Free Helpline</span><strong class="text-white">1800 123 2434</strong></div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="social-links">
-            <div class="social-icons">
-                <a target="_blank" href="https://www.facebook.com/profile.php?id=100092637406934&mibextid=ZbWKwL"
-                    aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a target="_blank" href="https://www.instagram.com/guru_integrated_services/" aria-label="Instagram"><i
-                        class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <div class="border-top border-white border-opacity-10 mt-5 pt-4 text-center">
+                <p class="small text-white-50 mb-0">Copyright &copy; 2011 Guru Integrated Services India Pvt Ltd. All Rights Reserved.</p>
             </div>
-            <p class="copyrights">Copyright © 2011 Guru Integrated Services India Pvt Ltd. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <div class="scroll-to-top">
-        <a href="#tophere"> <i class="fa-solid fa-chevron-up"></i></a>
-    </div>
-
+    <div class="scroll-to-top"><a href="#tophere"><i class="fa-solid fa-chevron-up"></i></a></div>
 </body>
-
 </html>
