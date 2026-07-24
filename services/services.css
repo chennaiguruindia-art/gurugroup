@@ -284,10 +284,7 @@ body.services-page {
     margin-top: 20px;
 }
 
-.interior-section,
-.ren-section {
-    display: none !important;
-}
+/* interior-section and ren-section visibility controlled by JS */
 
 @media (max-width: 900px) {
     .mega-menu-panel {
@@ -551,25 +548,7 @@ footer {
     margin: 30px auto;
 }
 
-.service-badges {
-    width: fit-content;
-    margin: auto;
-}
-
-.service-badges button {
-    padding: 7px 15px;
-    border: none;
-    background-color: white;
-    color: var(--blue);
-    font-size: 14px;
-    margin: 15px 10px;
-    cursor: pointer;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.432);
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 3px;
-    letter-spacing: 1px;
-}
+/* service-badges styles managed by premium rules above */
 
 .services-category {
     margin-top: 50px;
@@ -959,9 +938,11 @@ footer {
     max-width: 15%;
 }
 
+.services-page .nav-icon { display: inline-block !important; font-size: 14px; margin-right: 6px; }
+
 .service-active {
-    background-color: var(--blue) !important;
-    color: white !important;
+    background-color: var(--blue);
+    color: white;
 }
 
 .bronchure-download-btn {

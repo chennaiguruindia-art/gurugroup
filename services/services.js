@@ -5,6 +5,7 @@ $(document).ready(function () {
     ".tools-section",
     ".pest-section",
     ".sol-section",
+    ".planters-section",
   ];
 
   const serviceMap = {
@@ -13,6 +14,9 @@ $(document).ready(function () {
     "tools-section": { cls: ".toool", text: "Tools" },
     "pest-section": { cls: ".pest", text: "Pest Control" },
     "sol-section": { cls: ".sol", text: "Solar Energy" },
+    "planters-section": { cls: ".hor", text: "Plants & Planters" },
+    "interior-section": { cls: ".hor", text: "Horticulture" },
+    "ren-section": { cls: ".hor", text: "Horticulture" },
   };
 
   const params = new URLSearchParams(window.location.search);
@@ -28,17 +32,23 @@ $(document).ready(function () {
   $(".pg-1").show();
   $(".pg-2, .pg-3, .pg-4, .pg-5, .pg-6").hide();
 
-  if (view && $("." + view).length) {
-    $("." + view).show();
+  const aliasMap = {
+    "interior-section": "horticulture-section",
+    "ren-section": "horticulture-section",
+  };
+  const resolvedView = aliasMap[view] || view;
+
+  if (resolvedView && $("." + resolvedView).length) {
+    $("." + resolvedView).show();
   } else {
     $(".horticulture-section").show();
   }
 
   /* Active badge state */
   $(".service").removeClass("service-active");
-  if (view && serviceMap[view]) {
-    $(serviceMap[view].cls).addClass("service-active");
-    $(".dropdown-toggle").html(serviceMap[view].text);
+  if (resolvedView && serviceMap[resolvedView]) {
+    $(serviceMap[resolvedView].cls).addClass("service-active");
+    $(".dropdown-toggle").html(serviceMap[resolvedView].text);
   } else {
     $(".hor").addClass("service-active");
   }
