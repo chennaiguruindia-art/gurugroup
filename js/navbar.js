@@ -47,9 +47,25 @@
       `<div class="collapse navbar-collapse" id="mainNav">` +
       `<ul class="navbar-nav ms-auto align-items-lg-center gap-1">` +
       `<li class="nav-item"><a class="nav-link" href="${root}index.html">Home</a></li>` +
-      `<li class="nav-item"><a class="nav-link" href="${root}who-we-are/aboutus.html">Who We Are</a></li>` +
-      `<li class="nav-item nav-mega-item">` +
-      `<a class="nav-link nav-mega-trigger" href="${svc}">What We Do <i class="fa-solid fa-chevron-down mega-chevron"></i></a>` +
+      `<li class="nav-item nav-mega-item" id="aboutMegaItem">` +
+      `<a class="nav-link nav-mega-trigger" href="${root}who-we-are/aboutus.html">About Us <i class="fa-solid fa-chevron-down mega-chevron"></i></a>` +
+      `<div class="mega-menu-panel mega-menu-panel-about" role="menu" aria-label="About Us">` +
+      `<div class="mega-menu-inner">` +
+      `<div class="mega-menu-header">About Us — Guru Living Assets</div>` +
+      `<div class="mega-menu-grid mega-menu-grid-about">` +
+      `<a class="mega-menu-link" href="${root}who-we-are/aboutus.html">` +
+      `<div class="mega-icon about-icon"><i class="fa-solid fa-building fa-lg"></i></div>` +
+      `<div><strong>About Us</strong><span>Learn about our company, mission & vision</span></div></a>` +
+      `<a class="mega-menu-link" href="${root}gallery/gallery.html">` +
+      `<div class="mega-icon gallery-icon"><i class="fa-solid fa-images fa-lg"></i></div>` +
+      `<div><strong>Gallery</strong><span>Explore our project portfolio & work showcase</span></div></a>` +
+      `<a class="mega-menu-link" href="${root}career/career.html">` +
+      `<div class="mega-icon career-icon"><i class="fa-solid fa-briefcase fa-lg"></i></div>` +
+      `<div><strong>Careers</strong><span>Join our team & grow your career with us</span></div></a>` +
+      `</div>` +
+      `</div></div></li>` +
+      `<li class="nav-item nav-mega-item" id="servicesMegaItem">` +
+      `<a class="nav-link nav-mega-trigger" href="${svc}">Services <i class="fa-solid fa-chevron-down mega-chevron"></i></a>` +
       `<div class="mega-menu-panel" role="menu" aria-label="Our Services">` +
       `<div class="mega-menu-inner">` +
       `<div class="mega-menu-header">Our Services — Guru Living Assets</div>` +
@@ -58,7 +74,6 @@
       `<a href="${svc}" class="mega-menu-all"><i class="fa-solid fa-arrow-right"></i> View All Services</a>` +
       `</div></div></div></li>` +
       `<li class="nav-item"><a class="nav-link" href="${root}clients/clients.html">Clients</a></li>` +
-      `<li class="nav-item"><a class="nav-link" href="${root}gallery/gallery.html">Gallery</a></li>` +
       `<li class="nav-item"><a class="nav-link" href="${root}contact/contact.html">Contact</a></li>` +
       `</ul></div></div></nav>` +
       `<div class="mega-menu-backdrop" id="megaBackdrop" aria-hidden="true"></div>`

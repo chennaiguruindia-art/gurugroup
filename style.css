@@ -231,8 +231,36 @@ body.mega-menu-open .mega-menu-backdrop {
   color: var(--primary);
 }
 
+/* About Us Mega Menu */
+.mega-menu-panel-about {
+  max-width: 100%;
+}
+
+.mega-menu-grid-about {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.mega-icon.about-icon {
+  background: rgba(15, 44, 89, 0.12);
+  color: var(--primary);
+}
+
+.mega-icon.gallery-icon {
+  background: rgba(34, 197, 94, 0.15);
+  color: #16a34a;
+}
+
+.mega-icon.career-icon {
+  background: rgba(249, 115, 22, 0.15);
+  color: #ea580c;
+}
+
 @media (max-width: 1199px) {
   .mega-menu-grid { grid-template-columns: repeat(3, 1fr); }
+  .mega-menu-grid-about { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 991px) {
@@ -275,6 +303,11 @@ body.mega-menu-open .mega-menu-backdrop {
     padding: 8px;
   }
 
+  .mega-menu-grid-about {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
   .mega-menu-link { padding: 12px; }
 
   .nav-mega-trigger .mega-chevron { display: inline-block; }
@@ -305,7 +338,7 @@ body.mega-menu-open .mega-menu-backdrop {
   height: 100%; 
   width: 100%; 
   object-fit: cover; 
-  filter: brightness(0.55); 
+  filter: brightness(0.75); 
 }
 
 .hero-overlay-corp {
@@ -313,8 +346,10 @@ body.mega-menu-open .mega-menu-backdrop {
   inset: 0;
   z-index: 2;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 40%, transparent 70%);
+  padding: 0 0 48px 0;
 }
 
 .hero-badge-corp {
@@ -333,16 +368,17 @@ body.mega-menu-open .mega-menu-backdrop {
 
 .hero-title-corp {
   color: #fff;
-  font-size: clamp(30px, 5vw, 54px);
+  font-size: clamp(26px, 4vw, 44px);
   font-weight: 800;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+  line-height: 1.2;
 }
 
 .hero-subtitle-corp {
   color: rgba(255,255,255,0.9);
-  font-size: clamp(14px, 2vw, 17px);
-  margin-bottom: 28px;
+  font-size: clamp(13px, 1.8vw, 16px);
+  margin-bottom: 24px;
   font-weight: 500;
 }
 

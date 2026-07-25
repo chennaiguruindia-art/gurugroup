@@ -28,67 +28,91 @@ function initActiveNav() {
 }
 
 function initMegaMenu() {
-  const megaItem = document.querySelector('.nav-mega-item');
-  const megaPanel = document.querySelector('.mega-menu-panel');
+  const megaItems = document.querySelectorAll('.nav-mega-item');
   const backdrop = document.getElementById('megaBackdrop');
-  const trigger = document.querySelector('.nav-mega-trigger');
-  if (!megaItem || !megaPanel) return;
+  if (!megaItems.length) return;
 
-  let closeTimer;
   const isDesktop = () => window.matchMedia('(min-width: 992px)').matches;
 
-  function openMega() {
-    clearTimeout(closeTimer);
-    megaItem.classList.add('mega-open');
-    document.body.classList.add('mega-menu-open');
-    if (trigger) trigger.setAttribute('aria-expanded', 'true');
-  }
-
-  function closeMega() {
-    megaItem.classList.remove('mega-open');
-    document.body.classList.remove('mega-menu-open');
-    if (trigger) trigger.setAttribute('aria-expanded', 'false');
-  }
-
-  function scheduleClose() {
-    clearTimeout(closeTimer);
-    closeTimer = setTimeout(closeMega, 180);
-  }
-
-  megaItem.addEventListener('mouseenter', () => {
-    if (isDesktop()) openMega();
-  });
-
-  megaItem.addEventListener('mouseleave', () => {
-    if (isDesktop()) scheduleClose();
-  });
-
-  megaPanel.addEventListener('mouseenter', () => {
-    if (isDesktop()) openMega();
-  });
-
-  megaPanel.addEventListener('mouseleave', () => {
-    if (isDesktop()) scheduleClose();
-  });
-
-  if (trigger) {
-    trigger.setAttribute('aria-haspopup', 'true');
-    trigger.setAttribute('aria-expanded', 'false');
-
-    trigger.addEventListener('click', (e) => {
-      if (!isDesktop()) {
-        e.preventDefault();
-        megaItem.classList.contains('mega-open') ? closeMega() : openMega();
-      }
+  function closeAllMegas() {
+    megaItems.forEach(item => {
+      item.classList.remove('mega-open');
+      const t = item.querySelector('.nav-mega-trigger');
+      if (t) t.setAttribute('aria-expanded', 'false');
     });
+    document.body.classList.remove('mega-menu-open');
   }
+
+  megaItems.forEach(megaItem => {
+    const trigger = megaItem.querySelector('.nav-mega-trigger');
+    const panel = megaItem.querySelector('.mega-menu-panel');
+    if (!panel) return;
+
+    let closeTimer;
+
+    function openThis() {
+      clearTimeout(closeTimer);
+      // Close other mega menus first
+      megaItems.forEach(other => {
+        if (other !== megaItem) {
+          other.classList.remove('mega-open');
+          const ot = other.querySelector('.nav-mega-trigger');
+          if (ot) ot.setAttribute('aria-expanded', 'false');
+        }
+      });
+      megaItem.classList.add('mega-open');
+      document.body.classList.add('mega-menu-open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeThis() {
+      megaItem.classList.remove('mega-open');
+      if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      // Check if any mega is still open
+      const anyOpen = document.querySelector('.nav-mega-item.mega-open');
+      if (!anyOpen) document.body.classList.remove('mega-menu-open');
+    }
+
+    function scheduleClose() {
+      clearTimeout(closeTimer);
+      closeTimer = setTimeout(closeThis, 180);
+    }
+
+    megaItem.addEventListener('mouseenter', () => {
+      if (isDesktop()) openThis();
+    });
+
+    megaItem.addEventListener('mouseleave', () => {
+      if (isDesktop()) scheduleClose();
+    });
+
+    panel.addEventListener('mouseenter', () => {
+      if (isDesktop()) openThis();
+    });
+
+    panel.addEventListener('mouseleave', () => {
+      if (isDesktop()) scheduleClose();
+    });
+
+    if (trigger) {
+      trigger.setAttribute('aria-haspopup', 'true');
+      trigger.setAttribute('aria-expanded', 'false');
+
+      trigger.addEventListener('click', (e) => {
+        if (!isDesktop()) {
+          e.preventDefault();
+          megaItem.classList.contains('mega-open') ? closeThis() : openThis();
+        }
+      });
+    }
+  });
 
   if (backdrop) {
-    backdrop.addEventListener('click', closeMega);
+    backdrop.addEventListener('click', closeAllMegas);
   }
 
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMega();
+    if (e.key === 'Escape') closeAllMegas();
   });
 
   window.addEventListener('resize', () => {
