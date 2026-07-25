@@ -320,6 +320,15 @@ body.mega-menu-open .mega-menu-backdrop {
   }
 }
 
+/* Disable AOS transforms on mobile to prevent horizontal overflow */
+@media (max-width: 991px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* Hero */
 .hero-section {
   height: 92vh;
@@ -447,12 +456,8 @@ body.mega-menu-open .mega-menu-backdrop {
   color: var(--primary);
 }
 
-/* Make design full width */
-.container { max-width: 100%; padding-left: 0; padding-right: 0; }
-
-@media (min-width: 576px) {
-  .container { padding-left: 16px; padding-right: 16px; }
-}
+/* Make design full width while keeping Bootstrap row gutters contained */
+.container { max-width: 100%; padding-left: 16px; padding-right: 16px; }
 
 @media (min-width: 992px) {
   .container { padding-left: 24px; padding-right: 24px; }
@@ -834,7 +839,7 @@ body.mega-menu-open .mega-menu-backdrop {
 /* Mobile */
 @media (max-width: 768px) {
   .hero-section { height: 75vh; min-height: 420px; margin-top: 64px; }
-  .hero-section .carousel-item img { height: 75vh; min-height: 420px; }
+  .hero-section .carousel-item img { height: 75vh; min-height: 420px; object-position: left center; }
   .hero-title-corp { font-size: clamp(24px, 6vw, 32px); }
   .hero-badge-corp { font-size: 11px; padding: 6px 14px; }
   .btn-primary-corp, .btn-outline-corp { padding: 10px 20px; font-size: 13px; }

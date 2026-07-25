@@ -79,6 +79,13 @@
     }
 }
 
+@media (max-width: 767px) {
+    .map-wrap {
+        aspect-ratio: auto !important;
+        height: 280px !important;
+    }
+}
+
 /* ---------- Branch cards ---------- */
 .branch-card h4 {
     font-size: 17px;

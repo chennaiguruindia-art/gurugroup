@@ -44,7 +44,14 @@
 </head>
 
 <body>
-    <script>AOS.init();</script>
+    <script>
+        AOS.init({
+            disable: function () {
+                return window.innerWidth < 992;
+            },
+            once: true
+        });
+    </script>
     <div id="tophere"></div>
 
     <div id="site-navbar"></div>
