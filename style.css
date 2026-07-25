@@ -846,8 +846,11 @@ body.mega-menu-open .mega-menu-backdrop {
 /* Page Banner (inner pages) */
 .page-banner { min-height: 300px; display: flex; align-items: center; justify-content: center; text-align: center; margin-top: 76px; }
 
+.page-banner .container { padding-top: 76px; }
+
 @media (max-width: 768px) {
   .page-banner { min-height: 200px; margin-top: 64px; }
+  .page-banner .container { padding-top: 64px; }
   .page-banner h1 { font-size: 28px !important; }
 }
 
