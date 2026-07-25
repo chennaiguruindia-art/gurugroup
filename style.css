@@ -728,7 +728,7 @@ body.mega-menu-open .mega-menu-backdrop {
 
 /* Footer */
 .footer-corp {
-  background: linear-gradient(135deg, #0f2c59 0%, #14375f 45%, #166534 100%);
+  background: linear-gradient(135deg, #647fa8 0%, #14375f 45%, #166534 100%);
   padding: 60px 0 30px;
   border-top: 3px solid var(--accent);
 }
