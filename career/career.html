@@ -24,9 +24,34 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="career.css">
     <script defer src="../js/navbar.js"></script>
     <script defer src="../js/script.js"></script>
 </head>
+<style>
+    .job-card {
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .job-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12) !important;
+    }
+
+    .job-modal-header {
+        background: linear-gradient(135deg, #0f2c59, #1e40af);
+        color: #fff;
+        border-radius: 1rem 1rem 0 0;
+        align-items: flex-start;
+        padding: 1.5rem;
+        border-bottom: none;
+    }
+
+    .job-modal-header .modal-title {
+        color: #fff;
+    }
+</style>
 
 <body>
     <div id="tophere"></div>
@@ -35,9 +60,11 @@
 
     <!-- Banner -->
     <div class="page-banner" style="background:linear-gradient(135deg,#0f2c59,#1e40af);">
-        <div class="container d-flex flex-column align-items-center justify-content-center text-center" style="min-height:300px;padding-top:76px;">
+        <div class="container d-flex flex-column align-items-center justify-content-center text-center"
+            style="min-height:300px;padding-top:76px;">
             <h1 class="text-white fw-bold display-5">CAREER</h1>
-            <p class="text-white-50 mt-2" style="max-width:600px;">Join our team and grow with us — we are always looking for talented individuals to be part of our journey.</p>
+            <p class="text-white-50 mt-2" style="max-width:600px;">Join our team and grow with us — we are always
+                looking for talented individuals to be part of our journey.</p>
         </div>
     </div>
 
@@ -47,52 +74,110 @@
             <div class="text-center mb-5">
                 <span class="section-tag-corp">Current Openings</span>
                 <h2 class="fw-bold mb-3" style="color:var(--primary);">Join Our Team</h2>
-                <p class="text-muted" style="max-width:700px;margin:0 auto;">Exciting opportunities are available across multiple locations. Send your resume to be part of Guru Integrated Services.</p>
+                <p class="text-muted" style="max-width:700px;margin:0 auto;">Exciting opportunities are available across
+                    multiple locations. Click on any role to view the full requirement, or send your resume directly to
+                    apply.</p>
             </div>
 
             <!-- Job 1: Admin Executive -->
-            <div class="card mb-3 border-0 shadow-sm rounded-3">
+            <div class="card job-card mb-3 border-0 shadow-sm rounded-3" data-bs-toggle="modal"
+                data-bs-target="#jobModal1" role="button">
                 <div class="card-body p-4">
                     <div class="row align-items-center g-3">
                         <div class="col-md-8">
-                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2" style="color:var(--primary);"></i>Admin Executive</h5>
-                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2" style="color:var(--primary);"></i>Bangalore &amp; Coimbatore</p>
-                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2" style="color:var(--primary);"></i>Any Degree &nbsp;|&nbsp; <i class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>0-1 Year Experience</p>
+                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2"
+                                    style="color:var(--primary);"></i>Admin Executive</h5>
+                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"
+                                    style="color:var(--primary);"></i>Bangalore &amp; Coimbatore</p>
+                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2"
+                                    style="color:var(--primary);"></i>Any Degree &nbsp;|&nbsp; <i
+                                    class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>0-1 Year Experience
+                            </p>
                         </div>
-                        <div class="col-md-4 text-md-end">
-                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Admin%20Executive%20-%20Guru%20Integrated%20Services" class="btn btn-primary rounded-pill px-4">Apply Now</a>
+                        <div class="col-md-4 text-md-end d-flex gap-2 justify-content-md-end">
+                            <span class="btn btn-outline-primary rounded-pill px-3"><i
+                                    class="fa-solid fa-eye me-1"></i>View Details</span>
+                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Admin%20Executive%20-%20Guru%20Integrated%20Services"
+                                class="btn btn-primary rounded-pill px-4" onclick="event.stopPropagation()">Apply
+                                Now</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Job 2: Field Executive -->
-            <div class="card mb-3 border-0 shadow-sm rounded-3">
+            <div class="card job-card mb-3 border-0 shadow-sm rounded-3" data-bs-toggle="modal"
+                data-bs-target="#jobModal2" role="button">
                 <div class="card-body p-4">
                     <div class="row align-items-center g-3">
                         <div class="col-md-8">
-                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2" style="color:var(--primary);"></i>Field Executive</h5>
-                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2" style="color:var(--primary);"></i>Bangalore</p>
-                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2" style="color:var(--primary);"></i>Any Degree &nbsp;|&nbsp; <i class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>0-1 Year Experience</p>
+                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2"
+                                    style="color:var(--primary);"></i>Field Executive</h5>
+                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"
+                                    style="color:var(--primary);"></i>Bangalore</p>
+                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2"
+                                    style="color:var(--primary);"></i>Any Degree &nbsp;|&nbsp; <i
+                                    class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>0-1 Year Experience
+                            </p>
                         </div>
-                        <div class="col-md-4 text-md-end">
-                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Field%20Executive%20-%20Guru%20Integrated%20Services" class="btn btn-primary rounded-pill px-4">Apply Now</a>
+                        <div class="col-md-4 text-md-end d-flex gap-2 justify-content-md-end">
+                            <span class="btn btn-outline-primary rounded-pill px-3"><i
+                                    class="fa-solid fa-eye me-1"></i>View Details</span>
+                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Field%20Executive%20-%20Guru%20Integrated%20Services"
+                                class="btn btn-primary rounded-pill px-4" onclick="event.stopPropagation()">Apply
+                                Now</a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Job 3: HR Executive -->
-            <div class="card mb-3 border-0 shadow-sm rounded-3">
+            <div class="card job-card mb-3 border-0 shadow-sm rounded-3" data-bs-toggle="modal"
+                data-bs-target="#jobModal3" role="button">
                 <div class="card-body p-4">
                     <div class="row align-items-center g-3">
                         <div class="col-md-8">
-                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2" style="color:var(--primary);"></i>HR Executive</h5>
-                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2" style="color:var(--primary);"></i>Chennai</p>
-                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2" style="color:var(--primary);"></i>Any Degree &nbsp;|&nbsp; <i class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>0-1 Year Experience</p>
+                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2"
+                                    style="color:var(--primary);"></i>HR Executive</h5>
+                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"
+                                    style="color:var(--primary);"></i>Chennai</p>
+                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2"
+                                    style="color:var(--primary);"></i>Any Degree &nbsp;|&nbsp; <i
+                                    class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>0-1 Year Experience
+                            </p>
                         </div>
-                        <div class="col-md-4 text-md-end">
-                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20HR%20Executive%20-%20Guru%20Integrated%20Services" class="btn btn-primary rounded-pill px-4">Apply Now</a>
+                        <div class="col-md-4 text-md-end d-flex gap-2 justify-content-md-end">
+                            <span class="btn btn-outline-primary rounded-pill px-3"><i
+                                    class="fa-solid fa-eye me-1"></i>View Details</span>
+                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20HR%20Executive%20-%20Guru%20Integrated%20Services"
+                                class="btn btn-primary rounded-pill px-4" onclick="event.stopPropagation()">Apply
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job 4: Digital Marketing Executive -->
+            <div class="card job-card mb-3 border-0 shadow-sm rounded-3" data-bs-toggle="modal"
+                data-bs-target="#jobModal4" role="button">
+                <div class="card-body p-4">
+                    <div class="row align-items-center g-3">
+                        <div class="col-md-8">
+                            <h5 class="fw-bold mb-1"><i class="fa-solid fa-briefcase me-2"
+                                    style="color:var(--primary);"></i>Digital Marketing Executive</h5>
+                            <p class="text-muted mb-1"><i class="fa-solid fa-location-dot me-2"
+                                    style="color:var(--primary);"></i>Bangalore</p>
+                            <p class="text-muted mb-0"><i class="fa-solid fa-graduation-cap me-2"
+                                    style="color:var(--primary);"></i>Any Degree / Marketing Background &nbsp;|&nbsp; <i
+                                    class="fa-solid fa-clock me-2" style="color:var(--primary);"></i>1+ Years Experience
+                            </p>
+                        </div>
+                        <div class="col-md-4 text-md-end d-flex gap-2 justify-content-md-end">
+                            <span class="btn btn-outline-primary rounded-pill px-3"><i
+                                    class="fa-solid fa-eye me-1"></i>View Details</span>
+                            <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Digital%20Marketing%20Executive%20-%20Guru%20Integrated%20Services"
+                                class="btn btn-primary rounded-pill px-4" onclick="event.stopPropagation()">Apply
+                                Now</a>
                         </div>
                     </div>
                 </div>
@@ -101,64 +186,287 @@
             <!-- Contact Info -->
             <div class="p-4 rounded-4 bg-light mt-4" style="border-left:4px solid var(--primary);">
                 <p class="mb-2"><strong>Send your resume to get your future bright with Guru:</strong></p>
-                <p class="mb-1"><i class="fa-solid fa-envelope me-2" style="color:var(--primary);"></i><a href="mailto:hr@gurugroup.co.in" class="text-decoration-none" style="color:inherit;">hr@gurugroup.co.in</a></p>
-                <p class="mb-0"><i class="fa-brands fa-whatsapp me-2" style="color:#25D366;"></i><a href="https://wa.me/9176625631" target="_blank" class="text-decoration-none" style="color:inherit;">9176625631</a></p>
+                <p class="mb-1"><i class="fa-solid fa-envelope me-2" style="color:var(--primary);"></i><a
+                        href="mailto:hr@gurugroup.co.in" class="text-decoration-none"
+                        style="color:inherit;">hr@gurugroup.co.in</a></p>
+                <p class="mb-0"><i class="fa-brands fa-whatsapp me-2" style="color:#25D366;"></i><a
+                        href="https://wa.me/9176625631" target="_blank" class="text-decoration-none"
+                        style="color:inherit;">9176625631</a></p>
             </div>
         </div>
     </section>
+
+    <!-- ===================== JOB DETAIL MODALS ===================== -->
+
+    <!-- Modal 1: Admin Executive -->
+    <div class="modal fade" id="jobModal1" tabindex="-1" aria-labelledby="jobModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header job-modal-header">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="jobModal1Label">Admin Executive</h5>
+                        <div class="d-flex flex-wrap gap-3 mt-2 small text-white-50">
+                            <span><i class="fa-solid fa-location-dot me-1"></i>Bangalore &amp; Coimbatore</span>
+                            <span><i class="fa-solid fa-clock me-1"></i>0-1 Year Experience</span>
+                            <span><i class="fa-solid fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold mb-2">About the Role</h6>
+                    <p class="text-muted">We're looking for an organized Admin Executive to manage day-to-day office
+                        administration, documentation, and coordination between departments and branch offices.</p>
+
+                    <h6 class="fw-bold mb-2 mt-4">Key Responsibilities</h6>
+                    <ul class="text-muted">
+                        <li>Handle daily office administration, filing, and record-keeping.</li>
+                        <li>Coordinate with branch offices for reports and documentation.</li>
+                        <li>Manage vendor communication, purchase orders, and stock records.</li>
+                        <li>Assist with scheduling, correspondence, and front-desk support.</li>
+                        <li>Maintain attendance and basic staff records.</li>
+                    </ul>
+
+                    <h6 class="fw-bold mb-2 mt-4">Requirements</h6>
+                    <ul class="text-muted">
+                        <li>Any Degree (Commerce/Business Administration preferred).</li>
+                        <li>0-1 year of experience; freshers welcome.</li>
+                        <li>Good communication skills in English, Tamil, and/or Kannada.</li>
+                        <li>Working knowledge of MS Office (Word, Excel).</li>
+                        <li>Well-organized and detail-oriented.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Admin%20Executive%20-%20Guru%20Integrated%20Services"
+                        class="btn btn-primary rounded-pill px-4 w-100">Apply for this Role</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Field Executive -->
+    <div class="modal fade" id="jobModal2" tabindex="-1" aria-labelledby="jobModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header job-modal-header">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="jobModal2Label">Field Executive</h5>
+                        <div class="d-flex flex-wrap gap-3 mt-2 small text-white-50">
+                            <span><i class="fa-solid fa-location-dot me-1"></i>Bangalore</span>
+                            <span><i class="fa-solid fa-clock me-1"></i>0-1 Year Experience</span>
+                            <span><i class="fa-solid fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold mb-2">About the Role</h6>
+                    <p class="text-muted">We're hiring a Field Executive to oversee on-site landscaping and horticulture
+                        project execution, ensuring quality and timely delivery at client sites.</p>
+
+                    <h6 class="fw-bold mb-2 mt-4">Key Responsibilities</h6>
+                    <ul class="text-muted">
+                        <li>Visit client sites to monitor ongoing landscaping/maintenance work.</li>
+                        <li>Coordinate with the ground team and supervisors on daily tasks.</li>
+                        <li>Ensure work quality matches company standards and client expectations.</li>
+                        <li>Report site progress and issues to the reporting manager.</li>
+                        <li>Support material and manpower planning for assigned sites.</li>
+                    </ul>
+
+                    <h6 class="fw-bold mb-2 mt-4">Requirements</h6>
+                    <ul class="text-muted">
+                        <li>Any Degree; background in horticulture/agriculture is a plus.</li>
+                        <li>0-1 year of experience; freshers welcome.</li>
+                        <li>Willingness to travel between sites within the city.</li>
+                        <li>Basic reporting and coordination skills.</li>
+                        <li>Two-wheeler license preferred.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Field%20Executive%20-%20Guru%20Integrated%20Services"
+                        class="btn btn-primary rounded-pill px-4 w-100">Apply for this Role</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: HR Executive -->
+    <div class="modal fade" id="jobModal3" tabindex="-1" aria-labelledby="jobModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header job-modal-header">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="jobModal3Label">HR Executive</h5>
+                        <div class="d-flex flex-wrap gap-3 mt-2 small text-white-50">
+                            <span><i class="fa-solid fa-location-dot me-1"></i>Chennai</span>
+                            <span><i class="fa-solid fa-clock me-1"></i>0-1 Year Experience</span>
+                            <span><i class="fa-solid fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold mb-2">About the Role</h6>
+                    <p class="text-muted">We're looking for an HR Executive to support recruitment, onboarding, and
+                        employee relations for our Chennai branch and its site teams.</p>
+
+                    <h6 class="fw-bold mb-2 mt-4">Key Responsibilities</h6>
+                    <ul class="text-muted">
+                        <li>Manage end-to-end recruitment for field and office roles.</li>
+                        <li>Handle onboarding, documentation, and induction for new hires.</li>
+                        <li>Maintain employee records and attendance systems.</li>
+                        <li>Support payroll coordination and statutory compliance (PF/ESI).</li>
+                        <li>Address day-to-day employee queries and grievances.</li>
+                    </ul>
+
+                    <h6 class="fw-bold mb-2 mt-4">Requirements</h6>
+                    <ul class="text-muted">
+                        <li>Any Degree; MBA/PGDM in HR is a plus.</li>
+                        <li>0-1 year of experience; freshers welcome.</li>
+                        <li>Familiarity with basic labour law and compliance is an advantage.</li>
+                        <li>Good interpersonal and communication skills.</li>
+                        <li>Proficiency in MS Office.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20HR%20Executive%20-%20Guru%20Integrated%20Services"
+                        class="btn btn-primary rounded-pill px-4 w-100">Apply for this Role</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Digital Marketing Executive -->
+    <div class="modal fade" id="jobModal4" tabindex="-1" aria-labelledby="jobModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header job-modal-header">
+                    <div>
+                        <h5 class="modal-title fw-bold" id="jobModal4Label">Digital Marketing Executive</h5>
+                        <div class="d-flex flex-wrap gap-3 mt-2 small text-white-50">
+                            <span><i class="fa-solid fa-location-dot me-1"></i>Bangalore</span>
+                            <span><i class="fa-solid fa-clock me-1"></i>1+ Years Experience</span>
+                            <span><i class="fa-solid fa-briefcase me-1"></i>Full-time</span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <h6 class="fw-bold mb-2">About the Role</h6>
+                    <p class="text-muted">We're looking for a Digital Marketing Executive with at least 1 year of
+                        hands-on experience to grow our online presence across social media, search, and content —
+                        helping more clients discover Guru Integrated Services.</p>
+
+                    <h6 class="fw-bold mb-2 mt-4">Key Responsibilities</h6>
+                    <ul class="text-muted">
+                        <li>Plan and execute campaigns across Instagram, Facebook, LinkedIn, and Google.</li>
+                        <li>Manage the content calendar and coordinate with the design team for creatives.</li>
+                        <li>Run and optimize paid ad campaigns (Meta Ads, Google Ads) within budget.</li>
+                        <li>Track performance using analytics tools and report on key metrics (reach, leads, CTR,
+                            conversions).</li>
+                        <li>Support SEO efforts for the company website and manage basic on-page updates.</li>
+                        <li>Coordinate influencer/partner collaborations and manage the brand's online reputation.</li>
+                    </ul>
+
+                    <h6 class="fw-bold mb-2 mt-4">Requirements</h6>
+                    <ul class="text-muted">
+                        <li>Any Degree; background in Marketing, Mass Communication, or related field preferred.</li>
+                        <li>Minimum 1 year of hands-on digital marketing experience.</li>
+                        <li>Working knowledge of Meta Ads Manager, Google Ads, and Google Analytics.</li>
+                        <li>Basic understanding of SEO and content marketing principles.</li>
+                        <li>Familiarity with Canva or similar tools for quick creative edits is a plus.</li>
+                        <li>Strong written communication skills for captions, ad copy, and blogs.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <a href="mailto:hr@gurugroup.co.in?subject=Application%20for%20Digital%20Marketing%20Executive%20-%20Guru%20Integrated%20Services"
+                        class="btn btn-primary rounded-pill px-4 w-100">Apply for this Role</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer-corp">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <img alt="guru integrated services" loading="lazy" src="../assets/guru.png" height="48" class="mb-3">
-                    <p class="small text-white-50 mb-3">We are an ISO 9001-2015 certified integrated facility management company, dedicated to providing exceptional landscaping, horticulture, and property services across India.</p>
+                    <img alt="guru integrated services" loading="lazy" src="../assets/guru.png" height="48"
+                        class="mb-3">
+                    <p class="small text-white-50 mb-3">We are an ISO 9001-2015 certified integrated facility management
+                        company, dedicated to providing exceptional landscaping, horticulture, and property services
+                        across India.</p>
                     <div class="d-flex gap-2">
-                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100092637406934&mibextid=ZbWKwL" class="social-icon-corp" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://www.instagram.com/guru_integrated_services/" class="social-icon-corp" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank"
+                            href="https://www.facebook.com/profile.php?id=100092637406934&mibextid=ZbWKwL"
+                            class="social-icon-corp" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/guru_integrated_services/"
+                            class="social-icon-corp" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="social-icon-corp" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2">
                     <h6 class="text-white fw-bold mb-3">Quick Links</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
-                        <li class="mb-2"><a href="../who-we-are/aboutus.html" class="text-white-50 text-decoration-none">Who We Are</a></li>
-                        <li class="mb-2"><a href="../services/services.html" class="text-white-50 text-decoration-none">Our Services</a></li>
-                        <li class="mb-2"><a href="../clients/clients.html" class="text-white-50 text-decoration-none">Clients</a></li>
-                        <li class="mb-2"><a href="../gallery/gallery.html" class="text-white-50 text-decoration-none">Gallery</a></li>
-                        <li class="mb-2"><a href="../career/career.html" class="text-white-50 text-decoration-none">Career</a></li>
-                        <li class="mb-2"><a href="../contact/contact.html" class="text-white-50 text-decoration-none">Contact Us</a></li>
+                        <li class="mb-2"><a href="../index.html" class="text-white-50 text-decoration-none">Home</a>
+                        </li>
+                        <li class="mb-2"><a href="../who-we-are/aboutus.html"
+                                class="text-white-50 text-decoration-none">Who We Are</a></li>
+                        <li class="mb-2"><a href="../services/services.html"
+                                class="text-white-50 text-decoration-none">Our Services</a></li>
+                        <li class="mb-2"><a href="../clients/clients.html"
+                                class="text-white-50 text-decoration-none">Clients</a></li>
+                        <li class="mb-2"><a href="../gallery/gallery.html"
+                                class="text-white-50 text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="../career/career.html"
+                                class="text-white-50 text-decoration-none">Career</a></li>
+                        <li class="mb-2"><a href="../contact/contact.html"
+                                class="text-white-50 text-decoration-none">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-lg-3">
                     <h6 class="text-white fw-bold mb-3">Our Services</h6>
                     <ul class="list-unstyled small">
-                        <li class="mb-2"><a href="../services/services.html?view=horticulture-section" class="text-white-50 text-decoration-none">Horticulture Services</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=evdot-section" class="text-white-50 text-decoration-none">EVDot</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=planters-section" class="text-white-50 text-decoration-none">Garden Boutique</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=pest-section" class="text-white-50 text-decoration-none">Pest Control Services</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=ren-section" class="text-white-50 text-decoration-none">Renovation &amp; Remodelling</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=tools-section" class="text-white-50 text-decoration-none">Tools &amp; Equipment</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=horticulture-section"
+                                class="text-white-50 text-decoration-none">Horticulture Services</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=evdot-section"
+                                class="text-white-50 text-decoration-none">EVDot</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=planters-section"
+                                class="text-white-50 text-decoration-none">Garden Boutique</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=pest-section"
+                                class="text-white-50 text-decoration-none">Pest Control Services</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=ren-section"
+                                class="text-white-50 text-decoration-none">Renovation &amp; Remodelling</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=tools-section"
+                                class="text-white-50 text-decoration-none">Tools &amp; Equipment</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h6 class="text-white fw-bold mb-3">Working Hours</h6>
-                    <div class="d-flex align-items-center gap-2 mb-2 text-white-50 small"><i class="fa-regular fa-clock text-warning"></i>Mon - Sat: 09:30 - 19:30</div>
-                    <div class="d-flex align-items-center gap-2 mb-3 text-white-50 small"><i class="fa-solid fa-calendar-check text-warning"></i>Sunday: Closed</div>
-                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
+                    <div class="d-flex align-items-center gap-2 mb-2 text-white-50 small"><i
+                            class="fa-regular fa-clock text-warning"></i>Mon - Sat: 09:30 - 19:30</div>
+                    <div class="d-flex align-items-center gap-2 mb-3 text-white-50 small"><i
+                            class="fa-solid fa-calendar-check text-warning"></i>Sunday: Closed</div>
+                    <div class="d-flex align-items-center gap-3 p-3 rounded-3"
+                        style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
                         <i class="fa-solid fa-headset fs-2 text-warning"></i>
-                        <div><span class="text-white-50 small d-block">Toll-Free Helpline</span><strong class="text-white">1800 123 2434</strong></div>
+                        <div><span class="text-white-50 small d-block">Toll-Free Helpline</span><strong
+                                class="text-white">1800 123 2434</strong></div>
                     </div>
                 </div>
             </div>
             <div class="border-top border-white border-opacity-10 mt-5 pt-4 text-center">
-                <p class="small text-white-50 mb-0">Copyright &copy; 2011 Guru Integrated Services India Pvt Ltd. All Rights Reserved.</p>
+                <p class="small text-white-50 mb-0">Copyright &copy; 2011 Guru Integrated Services India Pvt Ltd. All
+                    Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
     <div class="scroll-to-top"><a href="#tophere"><i class="fa-solid fa-chevron-up"></i></a></div>
 </body>
+
 </html>
