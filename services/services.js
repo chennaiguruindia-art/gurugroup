@@ -79,6 +79,7 @@ $(document).ready(function () {
     ".tools-section": ".toool",
     ".pest-section": ".pest",
     ".sol-section": ".sol",
+    ".planters-section": ".hor",
   };
 
   function switchSection(section, text) {
@@ -111,13 +112,15 @@ $(document).ready(function () {
     switchSection(".sol-section", "Solar Energy");
   });
 
-  /* Mega menu links */
-  $(".mega-menu-link").click(function (e) {
+  /* Mega menu links on services page */
+  $(document).on("click", ".mega-menu-link", function (e) {
+    if (!$(".services-page").length) return;
     e.preventDefault();
     const target = $(this).data("section");
     const text = $(this).data("label") || $(this).find("strong").text().trim();
     if (target) switchSection(target, text);
     $(".nav-mega-item").removeClass("mega-open");
+    document.body.classList.remove("mega-menu-open");
   });
 
   /* View toggles */
@@ -164,15 +167,4 @@ $(document).ready(function () {
   $(".one").click(() => $(".assesment_container").hide().filter(".ass1").show());
   $(".two").click(() => $(".assesment_container").hide().filter(".ass2").show());
   $(".three").click(() => $(".assesment_container").hide().filter(".ass3").show());
-
-  /* Mega menu hover (desktop) */
-  const megaItem = $(".nav-mega-item");
-  let megaTimer;
-  megaItem.on("mouseenter", function () {
-    clearTimeout(megaTimer);
-    $(this).addClass("mega-open");
-  });
-  megaItem.on("mouseleave", function () {
-    megaTimer = setTimeout(() => $(this).removeClass("mega-open"), 200);
-  });
 });

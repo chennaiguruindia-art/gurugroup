@@ -26,6 +26,7 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.js"
         integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script defer src="js/navbar.js"></script>
     <script defer src="js/script.js"></script>
     <script defer src="counter.js"></script>
     <script type="application/ld+json">
@@ -46,78 +47,19 @@
     <script>AOS.init();</script>
     <div id="tophere"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-main">
-        <div class="container">
-            <a class="navbar-brand" href="#"><img alt="guru integrated services" loading="lazy" src="assets/guru.png"
-                    height="48"></a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars fs-4"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-1">
-                    <li class="nav-item"><a class="nav-link active" href=""><i
-                                class="fa-solid fa-house nav-icon"></i>Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./who-we-are/aboutus.html"><i
-                                class="fa-solid fa-user-tie nav-icon"></i>Who We Are</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="./services/services.html" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-screwdriver-wrench nav-icon"></i>What We Do
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end dropdown-mega">
-                            <li><a class="dropdown-item" href="./services/services.html?view=horticulture-section"><img
-                                        src="./assets/gallery/icon/hartidot.jpg" alt="Horticulture"
-                                        class="img-fluid me-2"
-                                        style="width: 24px; height: 24px; border-radius: 50%;">Horticulture</a></li>
-                            <li><a class="dropdown-item" href="./services/services.html?view=evdot-section"><img
-                                        src="./assets/gallery/icon/evdot.jpg" alt="EVDot" class="img-fluid me-2"
-                                        style="width: 24px; height: 24px; border-radius: 50%;">EVDot</a></li>
-                            <li><a class="dropdown-item" href="./services/services.html?view=sol-section"><img
-                                        src="./assets/gallery/icon/solardot.jpg" alt="Solar Energy"
-                                        class="img-fluid me-2"
-                                        style="width: 24px; height: 24px; border-radius: 50%;">Solar Energy</a></li>
-                            <li><a class="dropdown-item" href="./services/services.html?view=pest-section"><img
-                                        src="./assets/gallery/icon/pest.jpg" alt="Pest Control" class="img-fluid me-2"
-                                        style="width: 24px; height: 24px; border-radius: 50%;">Pest Control</a></li>
-                            <li><a class="dropdown-item" href="./services/services.html?view=tools-section"><img
-                                        src="./assets/gallery/icon/tools.jpg" alt="Tools" class="img-fluid me-2"
-                                        style="width: 24px; height: 24px; border-radius: 50%;">Tools</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="./services/services.html"><i
-                                        class="fa-solid fa-arrow-right me-2"></i>All Services</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="./clients/clients.html"><i
-                                class="fa-solid fa-users nav-icon"></i>Clients</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./gallery/gallery.html"><i
-                                class="fa-regular fa-image nav-icon"></i>Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./career/career.html"><i
-                                class="fa-solid fa-briefcase nav-icon"></i>Career</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contact/contact.html"><i
-                                class="fa-solid fa-phone nav-icon"></i>Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<div id="site-navbar"></div>
 
     <!-- Hero -->
     <section class="hero-section position-relative overflow-hidden">
         <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel">
             <div class="carousel-inner h-100">
-                <div class="carousel-item active h-100"><img src="assets/banners/update 1.png"
+                <div class="carousel-item active h-100"><img src="assets/banners/newbanner1.jpg"
                         class="w-100 h-100 object-fit-cover" alt="Guru Integrated Services banner"></div>
-                <div class="carousel-item h-100"><img
-                        src="assets/banners/Green and White Creative Green Energy Presentation.jpg"
-                        class="w-100 h-100 object-fit-cover" alt="Green energy landscape"></div>
-                <div class="carousel-item h-100"><img src="assets/banners/updated 3.png"
+                <div class="carousel-item h-100"><img src="assets/banners/newbanner2.jpg"
                         class="w-100 h-100 object-fit-cover" alt="Landscape design"></div>
-                <div class="carousel-item h-100"><img src="assets/banners/banner5.jpg"
+                <div class="carousel-item h-100"><img src="assets/banners/newbanner3.jpg"
                         class="w-100 h-100 object-fit-cover" alt="Garden services"></div>
-                <div class="carousel-item h-100"><img src="assets/banners/updated 5.png"
+                <div class="carousel-item h-100"><img src="assets/banners/newbanner4.jpg"
                         class="w-100 h-100 object-fit-cover" alt="Horticulture services"></div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
@@ -137,7 +79,9 @@
                             Services</span>
                         <h1 class="hero-title-corp">Transforming Spaces Into <span class="text-warning">Living
                                 Assets</span></h1>
-                        <strong><p class="hero-subtitle-corp">India's Green Transformation Partner</p></strong>
+                        <strong>
+                            <p class="hero-subtitle-corp">India's Green Transformation Partner</p>
+                        </strong>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
                             <a href="./contact/contact.html" class="btn btn-primary-corp">Get In Touch <i
                                     class="fa-solid fa-arrow-right ms-2"></i></a>
