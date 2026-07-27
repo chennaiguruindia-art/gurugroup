@@ -327,6 +327,17 @@ li {
     font-size: 20px !important;
 }
 
+.pest_main_services i {
+    font-size: 92px;
+    color: #2e707d;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.pest_main_services div {
+    text-align: center;
+}
+
 .planter-card-title {
     color: var(--blue);
     white-space: nowrap;
