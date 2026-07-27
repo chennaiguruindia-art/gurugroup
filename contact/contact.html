@@ -36,171 +36,114 @@
 
     <!-- Banner -->
     <div class="page-banner" style="background:linear-gradient(135deg,#0f2c59,#1e40af);">
-        <div class="container d-flex align-items-center justify-content-center text-center"
-            style="min-height:300px;">
+        <div class="container d-flex align-items-center justify-content-center text-center" style="min-height:300px;">
             <h1 class="text-white fw-bold display-5">CONTACT US</h1>
         </div>
     </div>
 
     <!-- Main Content -->
-    <div class="container my-4 my-md-5">
-        <div class="row g-4">
-            <!-- Form -->
-            <div class="col-12 col-lg-7">
-                <div class="bg-white rounded-4 shadow-sm p-3 p-md-4 h-100">
-                    <h1 class="headings title fs-3 fs-md-2">Get In Touch</h1>
-                    <p class="text-muted">We're here to help! Reach out to our corporate team or request support from
-                        any of our branch offices.</p>
-                    <form action="https://formsubmit.co/ceo@gurugroup.co.in" method="POST">
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Name</label>
-                            <input type="text" name="Name" class="form-control" placeholder="Enter Your Name"
-                                maxlength="25">
+    <section class="contact-main">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Form -->
+                <div class="col-lg-7">
+                    <div class="contact-form-card">
+                        <div class="form-header">
+                            <span class="form-badge">Get In Touch</span>
+                            <h2>Let's Discuss Your Project</h2>
+                            <p>Reach out to our corporate team for inquiries, partnerships, or service support.</p>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Email</label>
-                            <input type="email" name="Email" class="form-control" placeholder="Enter Email ID">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Phone Number</label>
-                            <input type="text" name="Phone Number" class="form-control" placeholder="Enter Phone Number"
-                                maxlength="25">
-                        </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Message</label>
-                            <textarea name="Message" class="form-control" rows="5" placeholder="Type Here..."
-                                maxlength="250"></textarea>
-                        </div>
-                        <input type="hidden" name="_template" value="box">
-                        <input type="hidden" name="_next" value="">
-                        <button type="submit" class="btn btn-primary rounded-pill px-4 py-2 fw-bold send-btn-cta">Send
-                            Message</button>
-                    </form>
+                        <form action="https://formsubmit.co/ceo@gurugroup.co.in" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" name="Name" class="corp-input" placeholder="Your name" maxlength="25" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" name="Email" class="corp-input" placeholder="your@email.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="text" name="Phone Number" class="corp-input" placeholder="+91 XXXXX XXXXX" maxlength="25">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" name="Subject" class="corp-input" placeholder="Service / Query / Partnership">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea name="Message" class="corp-input" rows="4" placeholder="Tell us about your requirement..." maxlength="250"></textarea>
+                                </div>
+                            </div>
+                            <input type="hidden" name="_template" value="box">
+                            <input type="hidden" name="_next" value="">
+                            <button type="submit" class="btn-submit">Send Enquiry <i class="fa-solid fa-arrow-right ms-2"></i></button>
+                        </form>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Office Info -->
-            <div class="col-12 col-lg-5">
-                <div class="d-grid gap-4 h-100">
-                    <div class="brand-gradient text-white rounded-4 p-4 shadow-sm">
-                        <span
-                            class="badge rounded-pill bg-white bg-opacity-25 border border-light border-opacity-25 text-uppercase mb-3">Head
-                            Office</span>
-                        <h3 class="fw-bold">Bengaluru</h3>
-                        <p class="mb-3">Guru Integrated Services India Pvt Ltd<br>Corporate Office • Bengaluru,
-                            Karnataka</p>
-                        <div class="d-flex flex-wrap gap-3">
-                            <a href="tel:9003145222" class="text-white text-decoration-none fw-semibold"><i
-                                    class="fa-solid fa-phone me-2"></i>+91 90031 45222</a>
-                            <a href="mailto:care@gurugroup.co.in" class="text-white text-decoration-none fw-semibold"><i
-                                    class="fa-solid fa-envelope me-2"></i>care@gurugroup.co.in</a>
+                <!-- Contact Info -->
+                <div class="col-lg-5">
+                    <div class="contact-info-card">
+                        <div class="info-head">
+                            <span class="info-badge"><i class="fa-solid fa-building"></i> Corporate Office</span>
+                            <h3>Bengaluru</h3>
+                            <p>Guru Integrated Services India Pvt Ltd</p>
                         </div>
-                    </div>
-                    <div class="bg-white rounded-4 shadow-sm p-4">
-                        <h2 class="fs-4 fw-bold brand-text mb-3">Corporate Contacts</h2>
-                        <div class="d-grid gap-3">
-                            <a href="whatsapp:contact=9176512434@s.whatsapp.com"
-                                class="brand-text text-decoration-none fw-semibold"><i
-                                    class="fa-brands fa-whatsapp me-2"></i>+91 91765 12434</a>
-                            <a href="tel:9003145222" class="brand-text text-decoration-none fw-semibold"><i
-                                    class="fa-solid fa-phone me-2"></i>+91 90031 45222</a>
-                            <a href="mailto:care@gurugroup.co.in" class="brand-text text-decoration-none fw-semibold"><i
-                                    class="fa-solid fa-envelope me-2"></i>care@gurugroup.co.in</a>
-                            <a href="tel:18001232434" class="brand-text text-decoration-none fw-semibold"><i
-                                    class="fa-solid fa-headset me-2"></i>1800 123 2434</a>
-                        </div>
-                    </div>
-                    <div class="rounded-4 overflow-hidden shadow-sm office-image-wrap">
-                        <img alt="guru integrated services" src="../assets/contact-image.jpeg"
-                            class="w-100 h-100 object-fit-cover">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pan India Presence -->
-        <div class="mt-5">
-            <h1 class="headings title fs-3 fs-md-2">Pan India Presence</h1>
-            <p class="text-muted" style="max-width:620px;">We operate across India, delivering integrated facility
-                management solutions from our offices nationwide.</p>
-            <div class="row g-3 mt-1">
-                <div class="col-12 col-md-6">
-                    <div class="brand-gradient text-white rounded-4 p-4 h-100 shadow-sm">
-                        <span
-                            class="badge rounded-pill bg-white bg-opacity-25 border border-light border-opacity-25 text-uppercase mb-2">Main
-                            Office</span>
-                        <h4 class="fw-bold mb-1">Bengaluru</h4>
-                        <span class="small fw-semibold d-block">Corporate Office</span>
-                        <p class="mb-0 mt-2 small opacity-90"><i class="fa-solid fa-location-dot me-2"></i>Indiranagar,
-                            Bengaluru, Karnataka</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6">
-                    <div class="bg-white rounded-4 shadow-sm p-4 h-100">
-                        <span class="badge rounded-pill text-uppercase mb-2"
-                            style="background:rgba(15,44,89,0.08);color:var(--primary);">Administrative Office</span>
-                        <h4 class="fw-bold mb-1" style="color:var(--primary);">Chennai</h4>
-                        <span class="text-muted small fw-semibold d-block">Regional Administration</span>
-                        <p class="mb-0 mt-2 small" style="color:var(--primary);"><i
-                                class="fa-solid fa-location-dot me-2"></i>Anna Nagar East, Near East Metro, Chennai</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-white rounded-4 shadow-sm p-4 p-md-5 mt-3">
-                <div class="row align-items-start">
-                    <div class="col-lg-7">
-                        <h3 class="fw-bold mb-3" style="color:var(--primary);">Pan India Presence</h3>
-                        <p class="text-muted mb-3">From metropolitan cities to rapidly growing urban centers, Guru Integrated Services has established a strong operational presence across India. With 10+ branch offices strategically located in major cities, we deliver consistent, high-quality services across North, South, East, and West India.</p>
-                        <p class="text-muted mb-4">Our extensive network enables us to mobilize skilled manpower, specialized equipment, and dedicated project teams quickly, ensuring timely execution and seamless facility management for clients with single or multiple locations.</p>
-                        <!-- <h5 class="fw-bold mb-3" style="color:var(--primary);">Why Choose Us</h5> -->
-                        <!-- <div class="row g-2">
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">10+ Branch Offices Across India</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">PAN India Project Execution</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">Rapid Response Teams</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">Standardized Quality &amp; Safety</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">Dedicated Regional Teams</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">Scalable Workforce Deployment</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">24x7 Customer Support</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center gap-2 p-2 rounded-3" style="background:rgba(15,44,89,0.04);"><i class="fa-solid fa-check-circle" style="color:var(--primary);"></i><span class="small fw-semibold">Single Point of Contact</span></div></div>
-                        </div> -->
-                    </div>
-                    <div class="col-lg-5 mt-4 mt-lg-0">
-                        <div class="brand-gradient text-white rounded-4 p-4 h-100 d-flex flex-column justify-content-center">
-                            <h4 class="fw-bold mb-3">Ready to Partner With Us?</h4>
-                            <p class="mb-4 opacity-90">Wherever your business grows, Guru Integrated Services is ready to support you with dependable, professional, and integrated solutions across India.</p>
-                            <div class="d-flex flex-column gap-2">
-                                <a href="tel:18001232434" class="btn btn-light rounded-pill px-4 py-2 fw-bold"><i class="fa-solid fa-phone me-2"></i>1800 123 2434</a>
-                                <a href="mailto:care@gurugroup.co.in" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold"><i class="fa-solid fa-envelope me-2"></i>care@gurugroup.co.in</a>
+                        <div class="info-details">
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <span class="info-label">Phone</span>
+                                    <a href="tel:9003145222">+91 90031 45222</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <span class="info-label">Email</span>
+                                    <a href="mailto:care@gurugroup.co.in">care@gurugroup.co.in</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-solid fa-headset"></i></div>
+                                <div>
+                                    <span class="info-label">Toll-Free</span>
+                                    <a href="tel:18001232434">1800 123 2434</a>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div>
+                                    <span class="info-label">WhatsApp</span>
+                                    <a href="whatsapp:contact=9176512434@s.whatsapp.com">+91 91765 12434</a>
+                                </div>
                             </div>
                         </div>
+                        <div class="info-cta">
+                            <a href="tel:18001232434" class="cta-phone"><i class="fa-solid fa-phone me-2"></i>1800 123 2434</a>
+                            <a href="mailto:care@gurugroup.co.in" class="cta-email"><i class="fa-solid fa-envelope me-2"></i>care@gurugroup.co.in</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Office Maps -->
-        <div class="row g-4 mt-4">
-            <div class="col-12 col-md-6">
-                <div class="rounded-4 overflow-hidden shadow-sm map-wrap" style="height:350px;">
-                    <h5 class="fw-bold p-3 mb-0" style="color:var(--primary);"><i
-                            class="fa-solid fa-building me-2"></i>Main Office - Bengaluru</h5>
-                    <iframe class="w-100 h-100 border-0"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.958!2d77.6408!3d12.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae147e4c6b5a3b%3A0xd4a7c5c5e5e5e5e5!2sIndiranagar%2C+Bengaluru%2C+Karnataka!5e0!3m2!1sen!2sin!4v1700000000000"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Pan India Presence Highlight -->
+    <section class="pan-strip">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <p class="pan-strip-text">Strategically positioned across <strong>10+ cities</strong> with an integrated operational network spanning <strong>North, South, East &amp; West India</strong> — enabling rapid mobilisation, standardised service delivery, and scalable workforce deployment for multi-location client engagements.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <span class="pan-strip-badge"><i class="fa-solid fa-location-dot me-1"></i> Pan India Footprint</span>
                 </div>
             </div>
-            <!-- <div class="col-12 col-md-6">
-                <div class="rounded-4 overflow-hidden shadow-sm map-wrap" style="height:350px;">
-                    <h5 class="fw-bold p-3 mb-0" style="color:var(--primary);"><i
-                            class="fa-solid fa-building me-2"></i>Administrative Office - Chennai</h5>
-                    <iframe class="w-100 h-100 border-0"
-                        src="https://www.google.com/maps?q=Guru%20Integrated%20Services%20(India)%20Pvt%20Limited,%20193/24,%20Bharathi%20Colony,%20Asiad%20Colony,%20Anna%20Nagar%20West%20Extension,%20Chennai,%20Tamil%20Nadu%20600101&output=embed"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div> -->
-            </div>
         </div>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer-corp">
@@ -218,7 +161,8 @@
                             class="social-icon-corp" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a target="_blank" href="https://www.instagram.com/guru_integrated_services/"
                             class="social-icon-corp" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a target="_blank" href="https://www.youtube.com/@GuruIndia-b8e" class="social-icon-corp" aria-label="Youtube"><i class="fab fa-youtube"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/@GuruIndia-b8e" class="social-icon-corp"
+                            aria-label="Youtube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 <div class="col-6 col-lg-2">
@@ -244,15 +188,13 @@
                     <h6 class="text-white fw-bold mb-3">Our Services</h6>
                     <ul class="list-unstyled small">
                         <li class="mb-2"><a href="../services/services.html?view=horticulture-section"
-                                class="text-white-50 text-decoration-none">Horticulture Services</a></li>
+                                class="text-white-50 text-decoration-none">HortiDot</a></li>
                         <li class="mb-2"><a href="../services/services.html?view=evdot-section"
                                 class="text-white-50 text-decoration-none">EVDot</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=planters-section"
-                                class="text-white-50 text-decoration-none">Garden Boutique</a></li>
+                        <li class="mb-2"><a href="../services/services.html?view=sol-section"
+                                class="text-white-50 text-decoration-none">SolarDot</a></li>
                         <li class="mb-2"><a href="../services/services.html?view=pest-section"
                                 class="text-white-50 text-decoration-none">Pest Control Services</a></li>
-                        <li class="mb-2"><a href="../services/services.html?view=ren-section"
-                                class="text-white-50 text-decoration-none">Renovation &amp; Remodelling</a></li>
                         <li class="mb-2"><a href="../services/services.html?view=tools-section"
                                 class="text-white-50 text-decoration-none">Tools &amp; Equipment</a></li>
                     </ul>

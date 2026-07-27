@@ -28,9 +28,9 @@
     const { root, svc, assets } = getPaths();
 
     const services = [
-      ["horticulture-section", "Horticulture", assets + "gallery/icon/hartidot.jpg", "Landscaping, Garden Design & Plant Care", "horti"],
+      ["horticulture-section", "HartiDot", assets + "gallery/icon/hartidot.jpg", "Landscaping, Garden Design & Plant Care", "horti"],
       ["evdot-section", "EVDot", assets + "gallery/icon/evdot.jpg", "Smart EV Charging Solutions by Guru Living Assets", "evdot"],
-      ["sol-section", "Solar Energy", assets + "gallery/icon/solardot.jpg", "Clean Power for Homes, Industry & Agriculture", "solar"],
+      ["sol-section", "SolarDot", assets + "gallery/icon/solardot.jpg", "Clean Power for Homes, Industry & Agriculture", "solar"],
       ["pest-section", "Pest Control", assets + "gallery/icon/pest_control.png", "Safe, Effective Pest Management Solutions", "pest"],
       ["tools-section", "Tools", assets + "gallery/icon/tools.png", "Professional Garden & Landscaping Equipment", "tools"],
     ]

@@ -13,7 +13,7 @@ $(document).ready(function () {
     "evdot-section": { cls: ".evdot", text: "EVDot" },
     "tools-section": { cls: ".toool", text: "Tools" },
     "pest-section": { cls: ".pest", text: "Pest Control" },
-    "sol-section": { cls: ".sol", text: "Solar Energy" },
+    "sol-section": { cls: ".sol", text: "SolarDot" },
     "planters-section": { cls: ".hor", text: "Plants & Planters" },
     "interior-section": { cls: ".hor", text: "Horticulture" },
     "ren-section": { cls: ".hor", text: "Horticulture" },

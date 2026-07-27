@@ -838,9 +838,9 @@ body.mega-menu-open .mega-menu-backdrop {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero-section { height: calc(100vh - 64px); height: calc(100dvh - 64px); min-height: 600px; margin-top: 64px; }
+  .hero-section { height: 75vh; min-height: 420px; margin-top: 64px; }
   .hero-section .carousel-item img { height: calc(100vh - 64px); height: calc(100dvh - 64px); min-height: 600px; object-position: left center; }
-  .hero-section .carousel-item.mobile-banner-slide img { object-position: left top; }
+  .hero-section .carousel-item img { height: 75vh; min-height: 420px; object-position: left center; }
   .hero-title-corp { font-size: clamp(24px, 6vw, 32px); }
   .hero-badge-corp { font-size: 11px; padding: 6px 14px; }
   .btn-primary-corp, .btn-outline-corp { padding: 10px 20px; font-size: 13px; }

@@ -89,6 +89,211 @@ body {
   line-height: 1.6;
 }
 
+/* Solardot Cards */
+.sol-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sol-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(249,115,22,0.12);
+  border-color: #f97316;
+}
+.sol-card h5 {
+  color: #0f2c59;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.sol-card p {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Why Choose Solardot */
+.sol-why {
+  margin: 30px 0;
+}
+.sol-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 20px;
+}
+.sol-why-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sol-why-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(249,115,22,0.12);
+  border-color: #f97316;
+}
+.sol-why-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+.sol-why-item h4 {
+  color: #0f2c59;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.sol-why-item p {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 5-Year Target */
+.sol-target {
+  background: linear-gradient(135deg,#0f2c59,#1e40af);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 30px 20px;
+  text-align: center;
+}
+.sol-target .section-title {
+  background: none;
+  padding-top: 0;
+}
+.sol-target-text {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* 5-Year Growth Roadmap Table */
+.sol-roadmap-table-container {
+  margin: 30px 20px;
+  overflow-x: auto;
+}
+.sol-roadmap-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.sol-roadmap-table thead {
+  background: linear-gradient(135deg, #0f2c59, #1e40af);
+}
+.sol-roadmap-table thead th {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 16px;
+  text-align: left;
+}
+.sol-roadmap-table tbody td {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sol-roadmap-table tbody tr:hover {
+  background: #fff7ed;
+}
+.sol-roadmap-table tbody td:first-child {
+  font-weight: 700;
+  color: #f97316;
+}
+.sol-roadmap-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Our Value Proposition */
+.sol-value {
+  margin: 30px 0;
+}
+.sol-value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0 20px;
+}
+.sol-value-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+.sol-value-item:hover {
+  transform: translateY(-2px);
+}
+.sol-value-item h4 {
+  color: #f97316;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.sol-value-item p {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Client Segments */
+.sol-client {
+  margin: 30px 0;
+}
+.sol-client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 0 20px;
+}
+.sol-client-item {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-left: 4px solid #0f2c59;
+  transition: transform 0.2s;
+}
+.sol-client-item:hover {
+  transform: translateY(-2px);
+  border-left-color: #f97316;
+}
+.sol-client-item h4 {
+  color: #0f2c59;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+.sol-client-item p {
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+
 /* 🔹 Responsive */
 @media (max-width: 900px) {
   .info-grid {
