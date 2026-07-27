@@ -60,8 +60,13 @@
     <section class="hero-section position-relative overflow-hidden">
         <div id="heroCarousel" class="carousel slide h-100" data-bs-ride="carousel">
             <div class="carousel-inner h-100">
-                <div class="carousel-item active h-100"><img src="assets/banners/newbanner1.jpg"
-                        class="w-100 h-100 object-fit-cover" alt="Guru Integrated Services banner"></div>
+                <div class="carousel-item active h-100 mobile-banner-slide">
+                    <picture class="d-block w-100 h-100">
+                        <source media="(max-width: 768px)" srcset="assets/mobile-banner1.jpg">
+                        <img src="assets/banners/newbanner1.jpg" class="w-100 h-100 object-fit-cover"
+                            alt="Guru Integrated Services banner">
+                    </picture>
+                </div>
                 <div class="carousel-item h-100"><img src="assets/banners/newbanner2.jpg"
                         class="w-100 h-100 object-fit-cover" alt="Landscape design"></div>
                 <div class="carousel-item h-100"><img src="assets/banners/newbanner3.jpg"
