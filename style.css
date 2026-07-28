@@ -331,9 +331,9 @@ body.mega-menu-open .mega-menu-backdrop {
 
 /* Hero */
 .hero-section {
-  height: 92vh;
+  height: 90vh;
   min-height: 500px;
-  max-height: 800px;
+  max-height: 750px;
   margin-top: 76px;
   overflow: hidden;
 }
@@ -348,6 +348,7 @@ body.mega-menu-open .mega-menu-backdrop {
   height: 100%; 
   width: 100%; 
   object-fit: cover; 
+  object-position: center center;
   filter: brightness(0.75); 
 }
 
@@ -840,7 +841,7 @@ body.mega-menu-open .mega-menu-backdrop {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero-section { height: 70vh; min-height: 400px; margin-top: 64px; }
+  .hero-section { height: 65vh; min-height: 350px; margin-top: 64px; }
   .hero-section .carousel-item img,
   .hero-section .carousel-item picture img { height: 100%; width: 100%; object-fit: cover; object-position: center center; }
   .hero-title-corp { font-size: clamp(24px, 6vw, 32px); }
