@@ -166,16 +166,60 @@ li {
 }
 
 .guruday {
-    padding-bottom: 30px;
+    padding: 50px 20px 60px;
+    background: linear-gradient(180deg, #f8faff 0%, #eef3fc 100%);
+    margin-top: 30px;
+}
+
+.guruday-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.guruday-header h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    color: #0f2c59;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 14px;
+}
+
+.guruday-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #0f2c59, #f59e0b);
+    border-radius: 2px;
+}
+
+.guruday-header p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-top: 18px;
+    font-weight: 400;
 }
 
 .guruday section {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .guruday section img {
-    height: 220px;
+    height: 200px;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.guruday section img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 40px rgba(15, 44, 89, 0.15);
 }
 
 #sample_ideas {
@@ -230,9 +274,12 @@ li {
 
     .projects,
     .interior_ideas,
-    .sample_ideas,
-    .guruday section {
+    .sample_ideas {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .guruday section {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
@@ -259,7 +306,10 @@ li {
     .gallery .shuffle-item,
     .projects,
     .interior_ideas,
-    .sample_ideas,
+    .sample_ideas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .guruday section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -270,8 +320,15 @@ li {
 
     .projects img,
     .interior_ideas img,
-    .sample_ideas img,
-    .guruday section img {
+    .sample_ideas img {
         height: 180px;
+    }
+
+    .guruday section img {
+        height: 160px;
+    }
+
+    .guruday-header p {
+        font-size: 0.9rem;
     }
 }
