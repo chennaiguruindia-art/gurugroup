@@ -1011,6 +1011,92 @@ p, li {
     line-height: 1.7;
 }
 
+.timeline-content h4 i {
+    color: var(--gold);
+    margin-right: 8px;
+    font-size: 0.9em;
+}
+
+.timeline-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.1), rgba(22, 163, 74, 0.05));
+    color: var(--green-dark);
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-top: 10px;
+    letter-spacing: 0.02em;
+}
+
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.88rem;
+    color: var(--gray-600);
+    margin-bottom: 5px;
+    line-height: 1.6;
+}
+
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.timeline-future .timeline-content {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%) !important;
+    border: 2px solid var(--gold) !important;
+    position: relative;
+}
+
+.timeline-future .timeline-content h4 {
+    color: var(--white) !important;
+}
+
+.timeline-future .timeline-content h4 i {
+    color: var(--gold-light);
+}
+
+.future-dot {
+    background: var(--gold) !important;
+    box-shadow: 0 0 0 4px var(--navy), 0 0 0 7px var(--gold) !important;
+    width: 24px !important;
+    height: 24px !important;
+    animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 4px var(--navy), 0 0 0 7px var(--gold); }
+    50% { box-shadow: 0 0 0 4px var(--navy), 0 0 0 12px rgba(201, 168, 76, 0.3); }
+}
+
+.future-year {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+    animation: pulse-year 2s infinite;
+}
+
+@keyframes pulse-year {
+    0%, 100% { box-shadow: 0 2px 8px rgba(201, 168, 76, 0.3); }
+    50% { box-shadow: 0 2px 16px rgba(201, 168, 76, 0.5); }
+}
+
+.timeline-future .timeline-content p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
 /* ===== SERVICES BADGE ROW ===== */
 .services-badge-row {
     display: flex;
