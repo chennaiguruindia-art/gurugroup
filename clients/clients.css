@@ -172,6 +172,36 @@ p, li {
     font-size: 0.82rem;
 }
 
+/* ===== Uniform Logo Sizes ===== */
+.col-6.col-md-4.col-lg-2 > div > img.img-fluid {
+    height: 64px;
+    width: 100%;
+    object-fit: contain;
+    padding: 6px;
+    background: #f8fafc;
+    border: 1px solid #eef2f7;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+    .col-6.col-md-4.col-lg-2 > div > img.img-fluid {
+        height: 54px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .col-6.col-md-4.col-lg-2 > div > img.img-fluid {
+        height: 48px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-6.col-md-4.col-lg-2 > div > img.img-fluid {
+        height: 40px;
+    }
+}
+
 /* ===== CTA ===== */
 .clients-cta {
     text-align: center;
