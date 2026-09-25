@@ -356,26 +356,37 @@ body.mega-menu-open .mega-menu-backdrop {
 
 /* Hero */
 .hero-section {
-  height: 90vh;
-  min-height: 500px;
-  max-height: 750px;
+  /* Remove fixed height — let the banner image drive its own height */
+  height: auto;
+  min-height: unset;
+  max-height: unset;
   margin-top: var(--navbar-height);
   overflow: hidden;
+  position: relative;
 }
 
+/* Carousel takes its height from the images */
 .hero-section .carousel,
-.hero-section .carousel-inner { height: 100%; }
-
-.hero-section .carousel-item { height: 100%; }
-
-.hero-section .carousel-item img,
-.hero-section .carousel-item picture img { 
-  height: 100%; 
-  width: 100%; 
-  object-fit: cover; 
-  object-position: center center;
-  filter: brightness(0.75); 
+.hero-section .carousel-inner {
+  height: auto;
 }
+
+.hero-section .carousel-item {
+  height: auto;
+}
+
+/* Full-width image — show the full banner, never crop */
+.hero-section .carousel-item img,
+.hero-section .carousel-item picture img {
+  width: 100%;
+  height: auto;          /* natural height = full image always visible */
+  display: block;
+  object-fit: contain;   /* never crop — scale to fit width */
+  object-position: center center;
+  filter: brightness(0.80);
+}
+
+/* Keep the text overlay flush with the bottom of the image */
 
 .hero-overlay-corp {
   position: absolute;
@@ -384,9 +395,17 @@ body.mega-menu-open .mega-menu-backdrop {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 40%, transparent 70%);
+  background: linear-gradient(to top, rgba(0,0,0,0.60) 0%, rgba(0,0,0,0.20) 45%, transparent 75%);
   padding: 0 0 48px 0;
+  pointer-events: none; /* allow clicks through the gradient overlay */
 }
+
+/* Buttons inside overlay must be clickable */
+.hero-overlay-corp a,
+.hero-overlay-corp button {
+  pointer-events: auto;
+}
+
 
 .hero-badge-corp {
   display: inline-flex;
@@ -866,9 +885,20 @@ body.mega-menu-open .mega-menu-backdrop {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .hero-section { height: 75vh; min-height: 400px; margin-top: 64px; }
+  .hero-section {
+    height: auto;
+    min-height: unset;
+    max-height: unset;
+    margin-top: var(--navbar-height);
+  }
   .hero-section .carousel-item img,
-  .hero-section .carousel-item picture img { height: 100%; width: 100%; object-fit: cover; object-position: center center; }
+  .hero-section .carousel-item picture img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
+  }
+  .hero-overlay-corp { padding: 0 0 28px 0; }
   .hero-title-corp { font-size: clamp(24px, 6vw, 32px); }
   .hero-badge-corp { font-size: 11px; padding: 6px 14px; }
   .btn-primary-corp, .btn-outline-corp { padding: 10px 20px; font-size: 13px; }
