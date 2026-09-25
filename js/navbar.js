@@ -38,14 +38,15 @@
       .join("");
 
     return (
+      `<div class="mega-menu-backdrop" id="megaBackdrop" aria-hidden="true"></div>` +
       `<nav class="navbar navbar-expand-lg fixed-top navbar-main">` +
       `<div class="container-fluid">` +
-      `<a class="navbar-brand" href="${root}index.html">` +
-      `<img alt="Guru Living Assets" loading="lazy" src="${assets}guru.png" height="48"></a>` +
+      `<a class="navbar-brand me-lg-2" href="${root}index.html">` +
+      `<img class="navbar-brand-logo" alt="Guru Living Assets" loading="lazy" src="${assets}guru.png"></a>` +
       `<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">` +
       `<i class="fa-solid fa-bars fs-4"></i></button>` +
       `<div class="collapse navbar-collapse" id="mainNav">` +
-      `<ul class="navbar-nav ms-auto align-items-lg-center gap-1">` +
+      `<ul class="navbar-nav ms-auto align-items-lg-center gap-1 me-lg-3 me-xl-4">` +
       `<li class="nav-item"><a class="nav-link" href="${root}index.html">Home</a></li>` +
       `<li class="nav-item nav-mega-item" id="aboutMegaItem">` +
       `<a class="nav-link nav-mega-trigger" href="${root}who-we-are/aboutus.html">About Us <i class="fa-solid fa-chevron-down mega-chevron"></i></a>` +
@@ -75,8 +76,14 @@
       `</div></div></div></li>` +
       `<li class="nav-item"><a class="nav-link" href="${root}clients/clients.html">Clients</a></li>` +
       `<li class="nav-item"><a class="nav-link" href="${root}contact/contact.html">Contact</a></li>` +
-      `</ul></div></div></nav>` +
-      `<div class="mega-menu-backdrop" id="megaBackdrop" aria-hidden="true"></div>`
+      `</ul>` +
+      `<div class="navbar-social-group d-flex align-items-center gap-2">` +
+      `<a href="https://www.instagram.com/guru_integrated_services/" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-instagram" aria-label="Instagram" title="Follow on Instagram"><i class="fa-brands fa-instagram"></i></a>` +
+      `<a href="https://www.facebook.com/gurugroupofcompanies" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-facebook" aria-label="Facebook" title="Follow on Facebook"><i class="fa-brands fa-facebook-f"></i></a>` +
+      `<a href="https://www.youtube.com/@GuruIndia-b8e" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-youtube" aria-label="YouTube" title="Subscribe on YouTube"><i class="fa-brands fa-youtube"></i></a>` +
+      `<a href="https://wa.me/+919176512434" target="_blank" rel="noopener noreferrer" class="nav-social-btn nav-social-whatsapp" aria-label="WhatsApp" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>` +
+      `</div>` +
+      `</div></div></nav>`
     );
   }
 

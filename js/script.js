@@ -31,6 +31,10 @@ function initMegaMenu() {
   const megaItems = document.querySelectorAll('.nav-mega-item');
   const backdrop = document.getElementById('megaBackdrop');
   if (!megaItems.length) return;
+  // initNavbar runs on both DOMContentLoaded and navbar:ready — avoid double-binding
+  // (double-bound click toggles would open-then-instantly-close the menu).
+  if (backdrop && backdrop.dataset.megaBound === 'true') return;
+  if (backdrop) backdrop.dataset.megaBound = 'true';
 
   const isDesktop = () => window.matchMedia('(min-width: 992px)').matches;
 
@@ -75,7 +79,7 @@ function initMegaMenu() {
 
     function scheduleClose() {
       clearTimeout(closeTimer);
-      closeTimer = setTimeout(closeThis, 180);
+      closeTimer = setTimeout(closeThis, 250);
     }
 
     megaItem.addEventListener('mouseenter', () => {
@@ -102,7 +106,19 @@ function initMegaMenu() {
         if (!isDesktop()) {
           e.preventDefault();
           megaItem.classList.contains('mega-open') ? closeThis() : openThis();
+        } else {
+          // Desktop: first click opens the menu (instead of navigating away),
+          // second click follows the link. Inner links stay clickable because
+          // the panel now paints above the backdrop.
+          if (!megaItem.classList.contains('mega-open')) {
+            e.preventDefault();
+            openThis();
+          }
         }
+      });
+
+      trigger.addEventListener('focus', () => {
+        if (isDesktop()) openThis();
       });
     }
   });
