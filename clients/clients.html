@@ -24,7 +24,7 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../style.css?v=3">
-    <link rel="stylesheet" href="clients.css">
+    <link rel="stylesheet" href="clients.css?v=5">
     <script defer src="../js/navbar.js?v=3"></script>
     <script defer src="../js/script.js"></script>
 </head>
@@ -34,418 +34,316 @@
 
     <div id="site-navbar"></div>
 
-    <!-- Banner -->
-    <div class="page-banner" style="background:linear-gradient(135deg,#0f2c59,#1e40af);">
-        <div class="container d-flex flex-column align-items-center justify-content-center text-center"
-            style="min-height:300px;">
-            <h1 class="text-white fw-bold display-5">OUR MAJOR CLIENTS</h1>
-            <p class="text-white-50 mt-2" style="max-width:600px;">Trusted by industry leaders across real estate,
-                hospitality, infrastructure, and more.</p>
+    <!-- Hero Banner -->
+    <section class="clients-hero">
+        <div class="container">
+            <span class="clients-hero-eyebrow"><i class="fa-solid fa-handshake"></i>Trusted Partnerships</span>
+            <h1>OUR MAJOR <span class="hero-accent">CLIENTS</span></h1>
+            <p class="clients-hero-sub">Trusted by industry leaders across real estate, hospitality, infrastructure,
+                banking and more — delivering excellence every single day.</p>
+            <div class="clients-hero-stats">
+                <div class="client-stat">
+                    <span class="stat-num">60<span>+</span></span>
+                    <span class="stat-label">Major Clients</span>
+                </div>
+                <div class="client-stat">
+                    <span class="stat-num">14<span>+</span></span>
+                    <span class="stat-label">Years of Service</span>
+                </div>
+                <div class="client-stat">
+                    <span class="stat-num">5<span>+</span></span>
+                    <span class="stat-label">Industry Sectors</span>
+                </div>
+                <div class="client-stat">
+                    <span class="stat-num">100<span>%</span></span>
+                    <span class="stat-label">Commitment</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-curve">
+            <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0,70 L0,40 C240,0 480,0 720,20 C960,40 1200,40 1440,10 L1440,70 Z" fill="#f6f8fc"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Category Pill Nav -->
+    <div class="client-nav-wrap">
+        <div class="container">
+            <nav class="client-nav" id="clientNav" aria-label="Client categories">
+                <a href="#sec-estate"><i class="fa-solid fa-building"></i>Real Estate & IT</a>
+                <a href="#sec-malls"><i class="fa-solid fa-store"></i>Malls & Commercial</a>
+                <a href="#sec-hotels"><i class="fa-solid fa-hotel"></i>Hospitality</a>
+                <a href="#sec-corp"><i class="fa-solid fa-briefcase"></i>Corporate</a>
+                <a href="#sec-bank"><i class="fa-solid fa-landmark"></i>Banking & Public Sector</a>
+            </nav>
         </div>
     </div>
 
     <!-- Clients Content -->
-    <section class="py-5">
+    <main class="clients-main">
+
+        <!-- Real Estate & Builders -->
+        <section class="client-section" id="sec-estate" data-theme="estate">
+            <div class="container">
+                <div class="client-section-head">
+                    <div class="head-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="head-text">
+                        <h3>Real Estate, Builders &amp; IT Sectors</h3>
+                        <span class="head-count">27 Partners</span>
+                    </div>
+                </div>
+                <div class="client-grid">
+                    <div class="client-tile"><img alt="Larsen & Toubro" loading="lazy"
+                            src="../assets/clients/LnT1.jpg"><span class="tile-name">Larsen &amp; Toubro</span></div>
+                    <div class="client-tile"><img alt="Embassy Group" loading="lazy"
+                            src="../assets/clients/Embassy Group.png"><span class="tile-name">Embassy Group</span></div>
+                    <div class="client-tile"><img alt="K. Raheja Corp" loading="lazy"
+                            src="../assets/clients/Raheja_corp.png"><span class="tile-name">K. Raheja Corp</span></div>
+                    <div class="client-tile"><img alt="Brigade Group" loading="lazy"
+                            src="../assets/clients/brigade1.jpg"><span class="tile-name">Brigade Group</span></div>
+                    <div class="client-tile"><img alt="Brigade Tech Gardens" loading="lazy"
+                            src="../assets/clients/Brigade Tech Gardens.png"><span class="tile-name">Brigade
+                            Tech</span></div>
+                    <div class="client-tile"><img alt="Brigade Deccan Heights" loading="lazy"
+                            src="../assets/clients/brigade_deccan_hights.jpg"><span class="tile-name">Brigade Deccan
+                            Heights</span></div>
+                    <div class="client-tile"><img alt="Brigade Padmini" loading="lazy"
+                            src="../assets/clients/brigade_padmini.jpg"><span class="tile-name">Brigade
+                            Padmini</span></div>
+                    <div class="client-tile"><img alt="Prestige Group" loading="lazy"
+                            src="../assets/clients/Prestige Group.png"><span class="tile-name">Prestige Group</span></div>
+                    <div class="client-tile"><img alt="Mantri" loading="lazy" src="../assets/clients/mantri1.jpg"><span
+                            class="tile-name">Mantri</span></div>
+                    <div class="client-tile"><img alt="KMB Group" loading="lazy" src="../assets/clients/KMB Group.png"><span
+                            class="tile-name">KMB Group</span></div>
+                    <div class="client-tile"><img alt="DLF Foundation" loading="lazy"
+                            src="../assets/clients/dlf_logo.jpg"><span class="tile-name">DLF Foundation</span></div>
+                    <div class="client-tile"><img alt="DLF Downtown" loading="lazy"
+                            src="../assets/clients/dlf_logo.jpg"><span class="tile-name">DLF Downtown</span></div>
+                    <div class="client-tile"><img alt="DLF Cybercity" loading="lazy"
+                            src="../assets/clients/cyber_city_logo.jpg"><span class="tile-name">DLF Cybercity</span></div>
+                    <div class="client-tile"><img alt="LAT Construction" loading="lazy"
+                            src="../assets/clients/LAT Construction.png"><span class="tile-name">LAT
+                            Construction</span></div>
+                    <div class="client-tile"><img alt="DivyaSree" loading="lazy" src="../assets/clients/DivyaSree.png"><span
+                            class="tile-name">DivyaSree</span></div>
+                    <div class="client-tile"><img alt="Sobha" loading="lazy" src="../assets/clients/Sobha.png"><span
+                            class="tile-name">Sobha</span></div>
+                    <div class="client-tile"><img alt="Puravankara" loading="lazy"
+                            src="../assets/clients/Puravankara.png"><span class="tile-name">Puravankara</span></div>
+                    <div class="client-tile"><img alt="Commerzone" loading="lazy"
+                            src="../assets/clients/Commerzone.jpg"><span class="tile-name">Commerzone</span></div>
+                    <div class="client-tile"><img alt="Epsilon" loading="lazy" src="../assets/clients/Epsilon.png"><span
+                            class="tile-name">Epsilon</span></div>
+                    <div class="client-tile"><img alt="Featherlite" loading="lazy"
+                            src="../assets/clients/Featherlite.jpg"><span class="tile-name">Featherlite</span></div>
+                    <div class="client-tile"><img alt="WTC Kochi" loading="lazy"
+                            src="../assets/clients/World Trade Center (WTC) Kochi.jpg"><span class="tile-name">WTC
+                            Kochi</span></div>
+                    <div class="client-tile"><img alt="WTC Chennai" loading="lazy"
+                            src="../assets/clients/World Trade Center (WTC) chennai.jpg"><span class="tile-name">WTC
+                            Chennai</span></div>
+                    <div class="client-tile"><img alt="Alliance Group" loading="lazy"
+                            src="../assets/clients/Alliance Group.png"><span class="tile-name">Alliance Group</span></div>
+                    <div class="client-tile"><img alt="Futura Tech Park" loading="lazy"
+                            src="../assets/clients/future_tech_park.jpg"><span class="tile-name">Futura Tech
+                            Park</span></div>
+                    <div class="client-tile"><img alt="L&T MindTree" loading="lazy"
+                            src="../assets/clients/L&T_maintanance.png"><span class="tile-name">L&amp;T
+                            MindTree</span></div>
+                    <div class="client-tile"><img alt="Jeyath IT Park" loading="lazy"
+                            src="../assets/clients/jeyath_it_park.jpg"><span class="tile-name">Jeyath IT Park</span></div>
+                    <div class="client-tile"><img alt="Shell IT Park" loading="lazy"
+                            src="../assets/clients/shell_it_parl.png"><span class="tile-name">Shell IT Park</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Malls & Commercial -->
+        <section class="client-section" id="sec-malls" data-theme="malls">
+            <div class="container">
+                <div class="client-section-head">
+                    <div class="head-icon"><i class="fa-solid fa-store"></i></div>
+                    <div class="head-text">
+                        <h3>Malls &amp; Commercial Spaces</h3>
+                        <span class="head-count">10 Partners</span>
+                    </div>
+                </div>
+                <div class="client-grid">
+                    <div class="client-tile"><img alt="Nexus Chennai" loading="lazy"
+                            src="../assets/clients/nexus.jpg"><span class="tile-name">Nexus Chennai</span></div>
+                    <div class="client-tile"><img alt="Nexus Koramangala" loading="lazy"
+                            src="../assets/clients/nexus_koramangala.png"><span class="tile-name">Nexus
+                            Koramangala</span></div>
+                    <div class="client-tile"><img alt="Nexus Mangalore" loading="lazy"
+                            src="../assets/clients/nexus_mangalore.jpg"><span class="tile-name">Nexus
+                            Mangalore</span></div>
+                    <div class="client-tile"><img alt="Nexus Shantiniketan" loading="lazy"
+                            src="../assets/clients/nexus_shantiniketan.png"><span class="tile-name">Nexus
+                            Shantiniketan</span></div>
+                    <div class="client-tile"><img alt="VR Chennai" loading="lazy"
+                            src="../assets/clients/vr-che1A.jpg"><span class="tile-name">VR Chennai</span></div>
+                    <div class="client-tile"><img alt="VR Bangalore" loading="lazy"
+                            src="../assets/clients/vr_ban1.jpg"><span class="tile-name">VR Bangalore</span></div>
+                    <div class="client-tile"><img alt="Orion Mall" loading="lazy"
+                            src="../assets/clients/orion1B.jpg"><span class="tile-name">Orion Mall</span></div>
+                    <div class="client-tile"><img alt="Inorbit Mall" loading="lazy"
+                            src="../assets/clients/inorbit1A.jpg"><span class="tile-name">Inorbit Mall</span></div>
+                    <div class="client-tile"><img alt="LuLu Mall" loading="lazy"
+                            src="../assets/clients/LuLu Mall.png"><span class="tile-name">LuLu Mall</span></div>
+                    <div class="client-tile"><img alt="Prozone" loading="lazy" src="../assets/clients/Prozone.png"><span
+                            class="tile-name">Prozone</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hospitality -->
+        <section class="client-section" id="sec-hotels" data-theme="hotels">
+            <div class="container">
+                <div class="client-section-head">
+                    <div class="head-icon"><i class="fa-solid fa-hotel"></i></div>
+                    <div class="head-text">
+                        <h3>Hospitality &amp; Hotels</h3>
+                        <span class="head-count">13 Partners</span>
+                    </div>
+                </div>
+                <div class="client-grid">
+                    <div class="client-tile"><img alt="Fairfield by Marriott" loading="lazy"
+                            src="../assets/clients/Fairfield by Marriott.png"><span class="tile-name">Fairfield by
+                            Marriott</span></div>
+                    <div class="client-tile"><img alt="Courtyard by Marriott" loading="lazy"
+                            src="../assets/clients/Courtyard by Marriott.png"><span class="tile-name">Courtyard by
+                            Marriott</span></div>
+                    <div class="client-tile"><img alt="Aloft Hotels" loading="lazy"
+                            src="../assets/clients/aloft_hotel.png"><span class="tile-name">Aloft Hotels</span></div>
+                    <div class="client-tile"><img alt="Zuri Hotels" loading="lazy"
+                            src="../assets/clients/zuri1.jpg"><span class="tile-name">Zuri Hotels</span></div>
+                    <div class="client-tile"><img alt="Lemon Tree Hotels" loading="lazy"
+                            src="../assets/clients/lth1.jpg"><span class="tile-name">Lemon Tree Hotel Groups</span></div>
+                    <div class="client-tile"><img alt="Keys Hotels" loading="lazy"
+                            src="../assets/clients/Keys Hotels.jpg"><span class="tile-name">Keys Hotels</span></div>
+                    <div class="client-tile"><img alt="Ibis" loading="lazy" src="../assets/clients/Ibis.png"><span
+                            class="tile-name">Ibis</span></div>
+                    <div class="client-tile"><img alt="Fortune Select" loading="lazy"
+                            src="../assets/clients/Fortune Select.png"><span class="tile-name">Fortune
+                            Select</span></div>
+                    <div class="client-tile"><img alt="Welcomhotel" loading="lazy"
+                            src="../assets/clients/Welcomhotel.jpg"><span class="tile-name">Welcome Hotel</span></div>
+                    <div class="client-tile"><img alt="Novotel" loading="lazy" src="../assets/clients/novotel.png"><span
+                            class="tile-name">Novotel</span></div>
+                    <div class="client-tile"><img alt="Fortune Trinity" loading="lazy"
+                            src="../assets/clients/fortune_trinity.jpg"><span class="tile-name">Fortune
+                            Trinity</span></div>
+                    <div class="client-tile"><img alt="The Den" loading="lazy"
+                            src="../assets/clients/the_den_hotel.png"><span class="tile-name">The Den</span></div>
+                    <div class="client-tile"><img alt="FabHotel" loading="lazy"
+                            src="../assets/clients/Fab_marriott.png"><span class="tile-name">FabHotel</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate -->
+        <section class="client-section" id="sec-corp" data-theme="corp">
+            <div class="container">
+                <div class="client-section-head">
+                    <div class="head-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="head-text">
+                        <h3>Corporate &amp; Professional Services</h3>
+                        <span class="head-count">4 Partners</span>
+                    </div>
+                </div>
+                <div class="client-grid">
+                    <div class="client-tile"><img alt="Cushman & Wakefield" loading="lazy"
+                            src="../assets/clients/cushman_logo.jpg"><span class="tile-name">Cushman &amp;
+                            Wakefield</span></div>
+                    <div class="client-tile"><img alt="CBRE" loading="lazy"
+                            src="../assets/clients/cbre_logo.jpg"><span class="tile-name">CBRE</span></div>
+                    <div class="client-tile"><img alt="JLL" loading="lazy"
+                            src="../assets/clients/JLL (Jones Lang LaSalle).png"><span class="tile-name">JLL</span></div>
+                    <div class="client-tile"><img alt="Knight Frank" loading="lazy"
+                            src="../assets/clients/Knight Frank.png"><span class="tile-name">Knight Frank</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banking & Public Sector -->
+        <section class="client-section" id="sec-bank" data-theme="bank">
+            <div class="container">
+                <div class="client-section-head">
+                    <div class="head-icon"><i class="fa-solid fa-landmark"></i></div>
+                    <div class="head-text">
+                        <h3>Banking, Public Sector &amp; Institutions</h3>
+                        <span class="head-count">8 Partners</span>
+                    </div>
+                </div>
+                <div class="client-grid">
+                    <div class="client-tile"><img alt="Bank of Baroda" loading="lazy"
+                            src="../assets/clients/bank of baroda.png"><span class="tile-name">Bank of Baroda</span></div>
+                    <div class="client-tile"><img alt="Indian Air Force" loading="lazy"
+                            src="../assets/clients/Indian Air Force.png"><span class="tile-name">Indian Air
+                            Force</span></div>
+                    <div class="client-tile"><img alt="HAL" loading="lazy" src="../assets/clients/HAL-LOGO1.jpg"><span
+                            class="tile-name">HAL</span></div>
+                    <div class="client-tile"><img alt="Hyundai" loading="lazy"
+                            src="../assets/clients/Hyundai.jpg"><span class="tile-name">Hyundai</span></div>
+                    <div class="client-tile"><img alt="Income Tax Department" loading="lazy"
+                            src="../assets/clients/income_tax.png"><span class="tile-name">Income Tax
+                            Department</span></div>
+                    <div class="client-tile"><img alt="GST" loading="lazy" src="../assets/clients/gst.png"><span
+                            class="tile-name">GST</span></div>
+                    <div class="client-tile"><img alt="VELS" loading="lazy" src="../assets/clients/vels.jpg"><span
+                            class="tile-name">VELS</span></div>
+                    <div class="client-tile"><img alt="Church of Christ" loading="lazy"
+                            src="../assets/clients/church_of_christ.jpg"><span class="tile-name">Church of
+                            Christ</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee Trust Band -->
+        <section class="client-marquee-section">
+            <div class="client-marquee">
+                <div class="marquee-track">
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>L&amp;T</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>DLF</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Embassy Group</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Brigade Group</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Prestige Group</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Sobha</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>VR Chennai</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Orion Mall</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Marriott Hotels</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>CBRE</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>JLL</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Bank of Baroda</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>L&amp;T</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>DLF</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Embassy Group</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Brigade Group</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Prestige Group</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Sobha</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>VR Chennai</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Orion Mall</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Marriott Hotels</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>CBRE</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>JLL</span>
+                    <span class="marquee-chip"><i class="fa-solid fa-medal"></i>Bank of Baroda</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Band -->
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="section-tag-corp">Our Partners in Excellence</span>
-                <h2 class="fw-bold mb-2">Meet Our Valued Clients</h2>
-                <p class="text-muted">We are proud to partner with some of the most respected names across industries.
-                </p>
-            </div>
-
-            <!-- Real Estate & Builders -->
-            <div class="mb-5">
-                <h5 class="fw-bold mb-3"><i class="fa-solid fa-building me-2" style="color:var(--primary);"></i>Real
-                    Estate & Builders & IT Sectors</h5>
-                <div class="row g-3">
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Larsen & Toubro" loading="lazy" src="../assets/clients/LnT1.jpg"><small
-                                class="d-block text-muted">Larsen & Toubro</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Embassy Group" loading="lazy" src="../assets/clients/Embassy Group.png"><small
-                                class="d-block text-muted">Embassy Group</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="K. Raheja Corp" loading="lazy" src="../assets/clients/Raheja_corp.png"><small
-                                class="d-block text-muted">K. Raheja Corp</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Brigade Group" loading="lazy" src="../assets/clients/brigade1.jpg"><small
-                                class="d-block text-muted">Brigade Group</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Brigade Tech Gardens" loading="lazy"
-                                src="../assets/clients/Brigade Tech Gardens.png"><small
-                                class="d-block text-muted">Brigade Tech</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Brigade Deccan Heights" loading="lazy"
-                                src="../assets/clients/brigade_deccan_hights.jpg"><small
-                                class="d-block text-muted">Brigade Deccan Heights</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Brigade Padmini" loading="lazy" src="../assets/clients/brigade_padmini.jpg"><small
-                                class="d-block text-muted">Brigade Padmini</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Prestige Group" loading="lazy" src="../assets/clients/Prestige Group.png"><small
-                                class="d-block text-muted">Prestige Group</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Mantri" loading="lazy" src="../assets/clients/mantri1.jpg"><small
-                                class="d-block text-muted">Mantri</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="KMB Group" loading="lazy" src="../assets/clients/KMB Group.png"><small
-                                class="d-block text-muted">KMB Group</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="DLF Foundation" loading="lazy" src="../assets/clients/dlf_logo.jpg"><small
-                                class="d-block text-muted">DLF Foundation</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="DLF Downtown" loading="lazy" src="../assets/clients/dlf_logo.jpg"><small
-                                class="d-block text-muted">DLF Downtown</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="DLF Cybercity" loading="lazy" src="../assets/clients/cyber_city_logo.jpg"><small
-                                class="d-block text-muted">DLF Cybercity</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="LAT Construction" loading="lazy"
-                                src="../assets/clients/LAT Construction.png"><small class="d-block text-muted">LAT
-                                Construction</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="DivyaSree" loading="lazy" src="../assets/clients/DivyaSree.png"><small
-                                class="d-block text-muted">DivyaSree</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Sobha" loading="lazy" src="../assets/clients/Sobha.png"><small
-                                class="d-block text-muted">Sobha</small>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Puravankara" loading="lazy" src="../assets/clients/Puravankara.png"><small
-                                class="d-block text-muted">Puravankara</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Commerzone" loading="lazy" src="../assets/clients/Commerzone.jpg"><small
-                                class="d-block text-muted">Commerzone</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Epsilon" loading="lazy" src="../assets/clients/Epsilon.png"><small
-                                class="d-block text-muted">Epsilon</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Featherlite" loading="lazy" src="../assets/clients/Featherlite.jpg"><small
-                                class="d-block text-muted">Featherlite</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="WTC Kochi" loading="lazy"
-                                src="../assets/clients/World Trade Center (WTC) Kochi.jpg"><small
-                                class="d-block text-muted">WTC Kochi</small>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="WTC chennai" loading="lazy"
-                                src="../assets/clients/World Trade Center (WTC) chennai.jpg"><small
-                                class="d-block text-muted">WTC Chennai</small>
-                        </div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Alliance Group" loading="lazy" src="../assets/clients/Alliance Group.png"><small
-                                class="d-block text-muted">Alliance Group</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Futura Tech Park" loading="lazy"
-                                src="../assets/clients/future_tech_park.jpg"><small class="d-block text-muted">Futura
-                                Tech Park</small>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="L&T Maintenance" loading="lazy" src="../assets/clients/L&T_maintanance.png"><small
-                                class="d-block text-muted">L&T MindTree</small>
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Jeyath IT Park" loading="lazy" src="../assets/clients/jeyath_it_park.jpg"><small
-                                class="d-block text-muted">Jeyath IT Park</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Jeyath IT Park" loading="lazy" src="../assets/clients/shell_it_parl.png"><small
-                                class="d-block text-muted">Jeyath IT Park</small></div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <!-- Malls & Commercial -->
-            <div class="mb-5">
-                <h5 class="fw-bold mb-3"><i class="fa-solid fa-store me-2" style="color:var(--primary);"></i>Malls &
-                    Commercial Spaces</h5>
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Nexus Malls" loading="lazy" src="../assets/clients/nexus.jpg"><small
-                                class="d-block text-muted">Nexus Chennai</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Nexus Koramangala" loading="lazy"
-                                src="../assets/clients/nexus_koramangala.png"><small class="d-block text-muted">Nexus
-                                Koramangala</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Nexus Mangalore" loading="lazy" src="../assets/clients/nexus_mangalore.jpg"><small
-                                class="d-block text-muted">Nexus Mangalore</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Nexus Shantiniketan" loading="lazy"
-                                src="../assets/clients/nexus_shantiniketan.png"><small class="d-block text-muted">Nexus
-                                Shantiniketan</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="VR Chennai" loading="lazy" src="../assets/clients/vr-che1A.jpg"><small
-                                class="d-block text-muted">VR Chennai</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="VR Bangalore" loading="lazy" src="../assets/clients/vr_ban1.jpg"><small
-                                class="d-block text-muted">VR Bangalore</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Orion Mall" loading="lazy" src="../assets/clients/orion1B.jpg"><small
-                                class="d-block text-muted">Orion Mall</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Inorbit Mall" loading="lazy" src="../assets/clients/inorbit1A.jpg"><small
-                                class="d-block text-muted">Inorbit Mall</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="LuLu Mall" loading="lazy" src="../assets/clients/LuLu Mall.png"><small
-                                class="d-block text-muted">LuLu Mall</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Prozone" loading="lazy" src="../assets/clients/Prozone.png"><small
-                                class="d-block text-muted">Prozone</small></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hospitality -->
-            <div class="mb-5">
-                <h5 class="fw-bold mb-3"><i class="fa-solid fa-hotel me-2" style="color:var(--primary);"></i>Hospitality
-                    & Hotels</h5>
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Fairfield by Marriott" loading="lazy"
-                                src="../assets/clients/Fairfield by Marriott.png"><small
-                                class="d-block text-muted">Fairfield by Marriott</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Fairfield by Marriott" loading="lazy"
-                                src="../assets/clients/Courtyard by Marriott.png"><small
-                                class="d-block text-muted">Courtyard by Marriott</small></div>
-                    </div>
-
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Aloft Hotels" loading="lazy" src="../assets/clients/aloft_hotel.png"><small
-                                class="d-block text-muted">Aloft Hotels</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="WTC Kochi" loading="lazy" src="../assets/clients/zuri1.jpg"><small
-                                class="d-block text-muted">WTC Kochi</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Lemon Tree Hotels" loading="lazy" src="../assets/clients/lth1.jpg"><small
-                                class="d-block text-muted">Lemon Tree Hotel Groups</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Keys Hotels" loading="lazy" src="../assets/clients/Keys Hotels.jpg"><small
-                                class="d-block text-muted">Keys Hotels</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Ibis" loading="lazy" src="../assets/clients/Ibis.png"><small
-                                class="d-block text-muted">Ibis</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Fortune Select" loading="lazy" src="../assets/clients/Fortune Select.png"><small
-                                class="d-block text-muted">Fortune Select</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Welcomhotel" loading="lazy" src="../assets/clients/Welcomhotel.jpg"><small
-                                class="d-block text-muted">Welcome hotel</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Novotel" loading="lazy" src="../assets/clients/novotel.png"><small
-                                class="d-block text-muted">Novotel</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Fortune Trinity" loading="lazy" src="../assets/clients/fortune_trinity.jpg"><small
-                                class="d-block text-muted">Fortune Trinity</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="The Den" loading="lazy" src="../assets/clients/the_den_hotel.png"><small
-                                class="d-block text-muted">The Den</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="FabHotel" loading="lazy" src="../assets/clients/Fab_marriott.png"><small
-                                class="d-block text-muted">FabHotel</small></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Corporate -->
-            <div class="mb-5">
-                <h5 class="fw-bold mb-3"><i class="fa-solid fa-briefcase me-2"
-                        style="color:var(--primary);"></i>Corporate & Professional Services</h5>
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Cushman & Wakefield" loading="lazy" src="../assets/clients/cushman_logo.jpg"><small
-                                class="d-block text-muted">Cushman & Wakefield</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="CBRE" loading="lazy" src="../assets/clients/cbre_logo.jpg"><small
-                                class="d-block text-muted">CBRE</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="JLL" loading="lazy" src="../assets/clients/JLL (Jones Lang LaSalle).png"><small
-                                class="d-block text-muted">JLL</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Knight Frank" loading="lazy" src="../assets/clients/Knight Frank.png"><small
-                                class="d-block text-muted">Knight Frank</small></div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Banking & Public Sector -->
-            <div>
-                <h5 class="fw-bold mb-3"><i class="fa-solid fa-landmark me-2" style="color:var(--primary);"></i>Banking,
-                    Public Sector & Institutions</h5>
-                <div class="row g-3">
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Bank of Baroda" loading="lazy" src="../assets/clients/bank of baroda.png"><small
-                                class="d-block text-muted">Bank of Baroda</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Indian Air Force" loading="lazy"
-                                src="../assets/clients/Indian Air Force.png"><small class="d-block text-muted">Indian
-                                Air Force</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="HAL" loading="lazy" src="../assets/clients/HAL-LOGO1.jpg"><small
-                                class="d-block text-muted">HAL</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Hyundai" loading="lazy" src="../assets/clients/Hyundai.jpg"><small
-                                class="d-block text-muted">Hyundai</small></div>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Income Tax Department" loading="lazy" src="../assets/clients/income_tax.png"><small
-                                class="d-block text-muted">Income Tax Department</small></div>
-                        </small>
-                    </div>
-
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Income Tax Department" loading="lazy" src="../assets/clients/gst.png"><small
-                                class="d-block text-muted">Gst</small></div>
-                        </small>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="VELS" loading="lazy" src="../assets/clients/vels.jpg"><small
-                                class="d-block text-muted">VELS</small></div>
-                    </div>
-                    <div class="col-6 col-md-4 col-lg-2">
-                        <div class="p-3 text-center bg-white rounded-3 shadow-sm h-100"><img class="img-fluid mb-2"
-                                alt="Church of Christ" loading="lazy"
-                                src="../assets/clients/church_of_christ.jpg"><small class="d-block text-muted">Church of
-                                Christ</small></div>
-                    </div>
-
-                    
-                </div>
-
-                
+            <div class="client-cta">
+                <h3>Want Your Name On This Wall?</h3>
+                <p>Join the growing list of industry leaders who trust Guru Integrated Services for facility management
+                    excellence.</p>
+                <a href="../contact/contact.html" class="btn-cta-white">Become a Partner <i
+                        class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer-corp">
@@ -522,6 +420,22 @@
     </footer>
 
     <div class="scroll-to-top"><a href="#tophere"><i class="fa-solid fa-chevron-up"></i></a></div>
+
+    <script>
+        // Highlight active pill while scrolling
+        (function () {
+            const links = document.querySelectorAll('.client-nav a');
+            const sections = [...document.querySelectorAll('.client-section')];
+            function setActive() {
+                const pos = window.scrollY + 180;
+                let current = '';
+                sections.forEach(s => { if (s.offsetTop <= pos) current = s.id; });
+                links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+            }
+            window.addEventListener('scroll', setActive, { passive: true });
+            setActive();
+        })();
+    </script>
 </body>
 
 </html>
