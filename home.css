@@ -443,19 +443,33 @@ html, body { overflow-x: clip; }
 .svc-card:hover::after { transform: scale(1.25); }
 
 .svc-icon {
-    width: 58px;
-    height: 58px;
-    border-radius: 17px;
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    color: #fff;
-    background: linear-gradient(135deg, var(--sc), color-mix(in srgb, var(--sc) 62%, #0a192f));
-    box-shadow: 0 10px 22px color-mix(in srgb, var(--sc) 35%, transparent);
+    padding: 9px;
+    background: linear-gradient(150deg, #ffffff, color-mix(in srgb, var(--sc) 9%, #ffffff));
+    border: 1.5px solid color-mix(in srgb, var(--sc) 30%, #ffffff);
+    box-shadow: 0 12px 26px color-mix(in srgb, var(--sc) 24%, transparent), inset 0 1px 0 rgba(255, 255, 255, 0.8);
     margin-bottom: 18px;
     position: relative;
     z-index: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.svc-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 6px;
+}
+
+.svc-card:hover .svc-icon {
+    transform: translateY(-4px) scale(1.06) rotate(-3deg);
+    box-shadow: 0 18px 34px color-mix(in srgb, var(--sc) 36%, transparent);
 }
 
 .svc-card h5 {
@@ -585,7 +599,7 @@ html, body { overflow-x: clip; }
 @media (max-width: 768px) {
     .svc-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
     .svc-card { padding: 24px 18px 20px; border-radius: 18px; }
-    .svc-icon { width: 50px; height: 50px; font-size: 19px; border-radius: 14px; }
+    .svc-icon { width: 52px; height: 52px; border-radius: 14px; padding: 7px; }
     .cred-chip { font-size: 11px; padding: 8px 14px; }
 }
 
