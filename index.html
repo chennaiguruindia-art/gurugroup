@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="home.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -365,61 +366,55 @@
             <div class="text-center mb-5">
                 <span class="section-tag-corp">What We Do</span>
                 <h2 class="fw-bold mb-2">Our Services</h2>
+                <p class="text-muted">Five integrated service lines delivered with ISO-certified quality across India</p>
             </div>
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <h4 class="fw-bold mb-3">What Exactly We Do?</h4>
-                    <ul class="list-unstyled mb-4">
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>Garden and Landscape Design.
-                        </li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>We Create Garden and
-                            Landscape.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>We Create Ornamental Roof
-                            Garden with Lawn and Flowering Plants.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>We Create Vertical Garden /
-                            Bio Walls.</li>
-                        <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i>We Create Vegetable Garden
-                            on Roof/Terrace.</li>
-                    </ul>
-                    <div class="d-flex flex-wrap gap-2">
-                        <a href="services/services.html?view=horticulture-section"
-                            class="btn btn-sm btn-outline-primary rounded-pill px-3">Horticulture</a>
-                        <a href="services/services.html?view=sol-section"
-                            class="btn btn-sm btn-outline-primary rounded-pill px-3">SolarDot</a>
-                        <a href="services/services.html?view=evdot-section"
-                            class="btn btn-sm btn-outline-primary rounded-pill px-3">EvDot</a>
-                        <a href="services/services.html?view=pest-section"
-                            class="btn btn-sm btn-outline-primary rounded-pill px-3">Pest Control</a>
-                    </div>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="row g-3">
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">ADVANCE TECHNOLOGY & LATEST CONCEPT</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">EXPERTISE OVER 20 YEARS</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">15K+ CLIENTS</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">PAN INDIA PRESENCE</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">ACROSS INDUSTRIES</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">24/7 HELPLINE</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">TRAINING CENTER,R&D</div>
-                        </div>
-                        <div class="col-6 col-md-4">
-                            <div class="service-badge-corp">ISO 45001:2018 CERTIFIED</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="svc-grid">
+                <a class="svc-card svc-green" data-aos="fade-up" href="services/services.html?view=horticulture-section">
+                    <div class="svc-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <h5>HortiDot</h5>
+                    <span class="svc-tag">Horticulture Services</span>
+                    <p>Garden &amp; landscape design, green walls, terrace gardens and long-term AMC — green spaces, delivered and maintained.</p>
+                    <span class="svc-link">Explore HortiDot <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="svc-card svc-sky" data-aos="fade-up" data-aos-delay="100" href="services/services.html?view=evdot-section">
+                    <div class="svc-icon"><i class="fa-solid fa-charging-station"></i></div>
+                    <h5>EVDot</h5>
+                    <span class="svc-tag">EV Charging Solutions</span>
+                    <p>Smart, safe and future-ready EV charging for homes, workplaces, fleets and public spaces.</p>
+                    <span class="svc-link">Explore EVDot <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="svc-card svc-amber" data-aos="fade-up" data-aos-delay="200" href="services/services.html?view=sol-section">
+                    <div class="svc-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                    <h5>SolarDot</h5>
+                    <span class="svc-tag">Solar Energy</span>
+                    <p>Rooftop solar EPC, BESS, pumps and O&amp;M — powering the future sustainably with PM Surya Ghar support.</p>
+                    <span class="svc-link">Explore SolarDot <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="svc-card svc-red" data-aos="fade-up" data-aos-delay="300" href="services/services.html?view=pest-section">
+                    <div class="svc-icon"><i class="fa-solid fa-bug-slash"></i></div>
+                    <h5>Pest Control</h5>
+                    <span class="svc-tag">Pest Management</span>
+                    <p>Hygienic, odourless and hassle-free treatments for hotels, hospitals, offices and homes.</p>
+                    <span class="svc-link">Explore Pest Control <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a class="svc-card svc-slate" data-aos="fade-up" data-aos-delay="400" href="services/services.html?view=tools-section">
+                    <div class="svc-icon"><i class="fa-solid fa-toolbox"></i></div>
+                    <h5>Tools &amp; Equipment</h5>
+                    <span class="svc-tag">Professional Equipment</span>
+                    <p>Outdoor power equipment and hand tools — brush cutters, tillers, augers, sprayers and more.</p>
+                    <span class="svc-link">Explore Tools <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="cred-strip">
+                <span class="cred-chip"><i class="fa-solid fa-microchip"></i>Advance Technology &amp; Latest Concept</span>
+                <span class="cred-chip"><i class="fa-solid fa-award"></i>Expertise Over 20 Years</span>
+                <span class="cred-chip"><i class="fa-solid fa-users"></i>15K+ Clients</span>
+                <span class="cred-chip"><i class="fa-solid fa-map-location-dot"></i>Pan India Presence</span>
+                <span class="cred-chip"><i class="fa-solid fa-industry"></i>Across Industries</span>
+                <span class="cred-chip"><i class="fa-solid fa-headset"></i>24/7 Helpline</span>
+                <span class="cred-chip"><i class="fa-solid fa-flask"></i>Training Center &amp; R&amp;D</span>
+                <span class="cred-chip"><i class="fa-solid fa-certificate"></i>ISO 45001:2018 Certified</span>
             </div>
         </div>
     </section>

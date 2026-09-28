@@ -1,0 +1,599 @@
+/* ============================================================
+   GURU INTEGRATED SERVICES — HOMEPAGE · PREMIUM LAYER v1
+   Loads after style.css and upgrades the home sections to the
+   site-wide premium design system (navy #0f2c59 / emerald / gold,
+   grid textures, glass chips, lifted cards). Other pages, which
+   do not load this file, are unaffected.
+   ============================================================ */
+
+:root {
+    --h-deep: #0a192f;
+    --h-navy: #0f2c59;
+    --h-emerald: #16a34a;
+    --h-gold: #f59e0b;
+    --h-page: #f6f8fc;
+}
+
+body {
+    background: var(--h-page);
+}
+
+/* AOS entrance transforms (fade-left/right) must never cause horizontal scroll */
+html, body { overflow-x: clip; }
+
+/* ============ HERO ============ */
+
+/* Melt the banner photo into the light page instead of a hard black fade */
+.hero-overlay-corp {
+    background: linear-gradient(to top,
+            rgba(246, 248, 252, 0.98) 0%,
+            rgba(246, 248, 252, 0.55) 22%,
+            rgba(10, 25, 47, 0.25) 55%,
+            rgba(10, 25, 47, 0.15) 100%);
+    padding-bottom: 56px;
+    align-items: flex-end;
+}
+
+.hero-overlay-corp .btn-primary-corp {
+    background: linear-gradient(120deg, #b45309, #f59e0b);
+    box-shadow: 0 12px 28px rgba(245, 158, 11, 0.4);
+    font-weight: 700;
+}
+
+.hero-overlay-corp .btn-primary-corp:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(245, 158, 11, 0.5);
+    color: #fff;
+}
+
+.hero-overlay-corp .btn-outline-corp {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: rgba(255, 255, 255, 0.9);
+    color: var(--h-navy);
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.hero-overlay-corp .btn-outline-corp:hover {
+    background: #fff;
+    border-color: #fff;
+    color: var(--h-navy);
+    transform: translateY(-3px);
+}
+
+/* Carousel arrows — premium glass rounds */
+.hero-section .carousel-control-prev,
+.hero-section .carousel-control-next {
+    width: 46px;
+    height: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 18px;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 1;
+    transition: all 0.25s;
+}
+
+.hero-section .carousel-control-prev:hover,
+.hero-section .carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.32);
+}
+
+/* ============ SECTION HEADINGS & TAGS ============ */
+.section-tag-corp {
+    background: rgba(22, 163, 74, 0.09);
+    border: 1px solid rgba(22, 163, 74, 0.22);
+    color: #15803d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    padding: 7px 18px;
+}
+
+.section-tag-corp.light {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #fbbf24;
+}
+
+.section-padding h2 {
+    color: var(--h-navy);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+/* ============ VISION & MISSION ============ */
+.vision-card,
+.mission-card {
+    border-radius: 26px;
+    padding: 42px 38px;
+    box-shadow: 0 20px 55px rgba(10, 25, 47, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vision-card {
+    background:
+        radial-gradient(ellipse 70% 60% at 90% 0%, rgba(245, 158, 11, 0.16), transparent 60%),
+        linear-gradient(135deg, var(--h-deep) 0%, var(--h-navy) 60%, #123a75 100%);
+}
+
+.mission-card {
+    background:
+        radial-gradient(ellipse 70% 60% at 90% 0%, rgba(245, 158, 11, 0.14), transparent 60%),
+        linear-gradient(135deg, #052e16 0%, #14532d 55%, #166534 100%);
+}
+
+/* grid texture on both cards */
+.vision-card::after,
+.mission-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 42px 42px;
+    -webkit-mask-image: radial-gradient(ellipse at 70% 0%, black 20%, transparent 75%);
+    mask-image: radial-gradient(ellipse at 70% 0%, black 20%, transparent 75%);
+    pointer-events: none;
+}
+
+.vision-card h3,
+.mission-card h3 { position: relative; z-index: 1; }
+
+.vision-card .badge,
+.mission-card .badge {
+    position: relative;
+    z-index: 1;
+    padding: 7px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #fbbf24 !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.vision-card ul li i,
+.mission-card ul li i { color: #34d399 !important; }
+
+.divider-icon {
+    background: linear-gradient(135deg, var(--h-navy), #1e40af);
+    border: 3px solid #fff;
+    box-shadow: 0 10px 26px rgba(15, 44, 89, 0.3);
+}
+
+/* ============ FEATURE CARDS ============ */
+.feature-card {
+    border-radius: 20px;
+    border: 1px solid rgba(15, 44, 89, 0.07);
+    box-shadow: 0 10px 28px rgba(15, 44, 89, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3.5px;
+    background: linear-gradient(90deg, var(--h-navy), var(--h-gold), var(--h-emerald));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.feature-card:hover::before { opacity: 1; }
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 22px 48px rgba(15, 44, 89, 0.13);
+    border-color: rgba(22, 163, 74, 0.25);
+}
+
+.feature-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.12), rgba(15, 44, 89, 0.08));
+    border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.feature-icon svg path { fill: #15803d; }
+
+.feature-card h6 { color: var(--h-navy); font-size: 15.5px; }
+
+/* ============ PROMISE CARDS ============ */
+.promise-card {
+    border-radius: 20px;
+    border: 1px solid rgba(15, 44, 89, 0.07);
+    box-shadow: 0 10px 28px rgba(15, 44, 89, 0.06);
+}
+
+.promise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(15, 44, 89, 0.12);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.promise-card p { color: var(--h-navy); }
+
+/* ============ STATS BAND (bg-primary-corp) ============ */
+.bg-primary-corp {
+    background:
+        radial-gradient(ellipse 60% 90% at 90% 10%, rgba(245, 158, 11, 0.16), transparent 60%),
+        linear-gradient(130deg, var(--h-deep), var(--h-navy) 60%, #123a75) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-primary-corp::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+}
+
+.bg-primary-corp .container { position: relative; z-index: 1; }
+
+.bg-primary-corp .bg-white.bg-opacity-10 {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.bg-primary-corp .bg-white.bg-opacity-10:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+    transform: translateY(-4px);
+}
+
+.bg-primary-corp span[style*="font-size:32px"] {
+    background: linear-gradient(100deg, #fbbf24, #fde68a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px !important;
+}
+
+/* ============ SERVICES OVERVIEW ============ */
+.service-badge-corp {
+    background: #fff;
+    color: var(--h-navy);
+    border: 1px solid rgba(15, 44, 89, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(15, 44, 89, 0.06);
+    font-size: 11.5px;
+    letter-spacing: 0.4px;
+}
+
+.service-badge-corp:hover {
+    transform: translateY(-4px);
+    border-color: rgba(22, 163, 74, 0.35);
+    box-shadow: 0 14px 30px rgba(22, 163, 74, 0.14);
+    background: rgba(22, 163, 74, 0.03);
+}
+
+/* checklist styling */
+.section-padding .fa-check { color: var(--h-emerald) !important; }
+
+/* pill filter buttons */
+.btn-outline-primary {
+    --bs-btn-color: var(--h-navy);
+    --bs-btn-border-color: rgba(15, 44, 89, 0.25);
+    --bs-btn-hover-bg: var(--h-navy);
+    --bs-btn-hover-border-color: var(--h-navy);
+    --bs-btn-hover-color: #fff;
+    font-weight: 700;
+}
+
+/* ============ GURU INDIA CTA ============ */
+.cta-card {
+    border-radius: 28px;
+    background:
+        radial-gradient(ellipse 65% 90% at 88% 8%, rgba(245, 158, 11, 0.2), transparent 60%),
+        radial-gradient(ellipse 60% 80% at 8% 95%, rgba(22, 163, 74, 0.24), transparent 60%),
+        linear-gradient(130deg, var(--h-deep), #123a75);
+    box-shadow: 0 24px 60px rgba(10, 25, 47, 0.28);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 44px 44px;
+    pointer-events: none;
+}
+
+.cta-card > * { position: relative; z-index: 1; }
+
+.btn-light-corp {
+    background: linear-gradient(120deg, #b45309, #f59e0b);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(245, 158, 11, 0.35);
+}
+
+.btn-light-corp:hover {
+    background: linear-gradient(120deg, #92400e, #d97706);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(245, 158, 11, 0.45);
+}
+
+/* ============ COUNTER CARDS ============ */
+.counter-card {
+    border-radius: 18px;
+    border: 1px solid rgba(15, 44, 89, 0.07);
+    box-shadow: 0 8px 24px rgba(15, 44, 89, 0.06);
+}
+
+.counter-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(15, 44, 89, 0.12);
+    border-color: rgba(22, 163, 74, 0.25);
+}
+
+.counter-card h3 {
+    background: linear-gradient(120deg, var(--h-navy), #1e40af);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============ CLIENTS SECTION ============ */
+.clients-section-corp {
+    background:
+        radial-gradient(ellipse 70% 90% at 90% 10%, rgba(245, 158, 11, 0.14), transparent 60%),
+        radial-gradient(ellipse 60% 80% at 8% 90%, rgba(22, 163, 74, 0.2), transparent 60%),
+        linear-gradient(130deg, var(--h-deep), #123a75);
+}
+
+.clients-section-corp::before {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+    background-position: center;
+    opacity: 1;
+}
+
+.client-logo {
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.client-logo:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+/* ============ OUR SERVICES — BRAND CARD GRID ============ */
+.svc-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.svc-card {
+    --sc: var(--h-emerald);
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(15, 44, 89, 0.08);
+    border-radius: 22px;
+    padding: 30px 24px 26px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.svc-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sc), color-mix(in srgb, var(--sc) 55%, #fff));
+}
+
+.svc-card::after {
+    content: '';
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    right: -70px;
+    top: -70px;
+    background: radial-gradient(circle, color-mix(in srgb, var(--sc) 14%, transparent), transparent 70%);
+    pointer-events: none;
+    transition: transform 0.4s;
+}
+
+.svc-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(15, 44, 89, 0.14);
+    border-color: color-mix(in srgb, var(--sc) 35%, #fff);
+}
+
+.svc-card:hover::after { transform: scale(1.25); }
+
+.svc-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--sc), color-mix(in srgb, var(--sc) 62%, #0a192f));
+    box-shadow: 0 10px 22px color-mix(in srgb, var(--sc) 35%, transparent);
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.svc-card h5 {
+    color: var(--h-navy);
+    font-size: 17px;
+    font-weight: 800;
+    margin: 0 0 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.svc-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--sc);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.svc-card p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.65;
+    margin: 0 0 16px;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.svc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--sc);
+    font-size: 13px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.svc-link i { font-size: 11px; transition: transform 0.25s; }
+
+.svc-card:hover .svc-link i { transform: translateX(5px); }
+
+.svc-green { --sc: #16a34a; }
+.svc-sky   { --sc: #0ea5e9; }
+.svc-amber { --sc: #f59e0b; }
+.svc-red   { --sc: #dc2626; }
+.svc-slate { --sc: #475569; }
+
+/* credibility chips under the grid */
+.cred-strip {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.cred-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid rgba(15, 44, 89, 0.1);
+    color: var(--h-navy);
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(15, 44, 89, 0.05);
+    transition: all 0.25s;
+}
+
+.cred-chip i { color: var(--h-emerald); font-size: 12px; }
+
+.cred-chip:hover {
+    transform: translateY(-2px);
+    border-color: rgba(22, 163, 74, 0.35);
+    box-shadow: 0 8px 20px rgba(22, 163, 74, 0.12);
+}
+
+/* ============ SCROLLBAR (subtle, page-level polish) ============ */
+::selection { background: rgba(245, 158, 11, 0.25); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 991px) {
+    .hero-overlay-corp { padding-bottom: 44px; }
+    .vision-card, .mission-card { padding: 32px 26px; }
+    .bg-primary-corp span[style*="font-size:32px"] { font-size: 30px !important; }
+}
+
+@media (max-width: 768px) {
+    /* hero photo is natural-height on mobile — tighten the melt */
+    .hero-overlay-corp {
+        background: linear-gradient(to top,
+                rgba(246, 248, 252, 0.98) 0%,
+                rgba(246, 248, 252, 0.6) 16%,
+                rgba(10, 25, 47, 0.2) 48%,
+                rgba(10, 25, 47, 0.12) 100%);
+        padding-bottom: 34px;
+    }
+
+    .hero-overlay-corp .btn-primary-corp,
+    .hero-overlay-corp .btn-outline-corp {
+        padding: 12px 24px;
+        font-size: 13.5px;
+    }
+
+    .hero-section .carousel-control-prev,
+    .hero-section .carousel-control-next {
+        display: none;
+    }
+
+    .vision-card, .mission-card { border-radius: 22px; }
+    .cta-card { border-radius: 22px; }
+}
+
+@media (max-width: 1100px) {
+    .svc-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .svc-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .svc-card { padding: 24px 18px 20px; border-radius: 18px; }
+    .svc-icon { width: 50px; height: 50px; font-size: 19px; border-radius: 14px; }
+    .cred-chip { font-size: 11px; padding: 8px 14px; }
+}
+
+@media (max-width: 480px) {
+    .section-padding { padding: 44px 0; }
+    .feature-card, .promise-card, .counter-card { border-radius: 16px; }
+    .client-logo { min-width: 104px; width: 104px; padding: 10px; }
+
+    .svc-grid { grid-template-columns: 1fr; }
+    .cred-strip { gap: 8px; }
+}
