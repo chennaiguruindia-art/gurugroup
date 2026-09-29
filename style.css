@@ -1010,3 +1010,15 @@ body.mega-menu-open .mega-menu-backdrop {
 /* Preloader (legacy) */
 .preloader { position: fixed; height: 100vh; width: 100vw; display: flex; align-items: center; justify-content: center; z-index: 100; top: 0; background-color: rgba(0,0,0,0.712); }
 .dark-footer { background-color: rgba(128,128,128,0.37); }
+
+/* Footer toll-free click-to-call */
+.footer-tel {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+  transition: color 0.25s;
+}
+.footer-tel:hover, .footer-tel:focus-visible { color: var(--warn, #f59e0b); }
+.footer-tel i { margin-left: 2px; font-size: 13px; transition: transform 0.25s; }
+.footer-tel:hover i { transform: translateX(2px); }
