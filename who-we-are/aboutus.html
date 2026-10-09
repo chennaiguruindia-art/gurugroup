@@ -239,6 +239,176 @@
                 font-size: 1.6rem;
             }
         }
+
+        /* ---------- CEO section ---------- */
+        .ceo-band {
+            margin-top: 54px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 28px;
+            padding: 48px 46px;
+            background:
+                radial-gradient(ellipse 60% 90% at 88% 10%, rgba(245, 158, 11, 0.18), transparent 60%),
+                radial-gradient(ellipse 55% 80% at 8% 95%, rgba(22, 163, 74, 0.22), transparent 60%),
+                linear-gradient(130deg, #0a192f, #123a75);
+        }
+
+        .ceo-band::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 44px 44px;
+            pointer-events: none;
+        }
+
+        .ceo-title {
+            position: relative;
+            text-align: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 27px;
+            color: #fff;
+            margin-bottom: 38px;
+        }
+
+        .ceo-title::after {
+            content: "";
+            display: block;
+            width: 56px;
+            height: 3px;
+            background: #f59e0b;
+            margin: 0.9rem auto 0;
+            border-radius: 2px;
+        }
+
+        .ceo-inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 44px;
+        }
+
+        .ceo-photo {
+            flex: 0 0 214px;
+            text-align: center;
+        }
+
+        .ceo-portrait-wrap {
+            width: 214px;
+            height: 214px;
+            margin: 0 auto;
+            border-radius: 50%;
+            padding: 6px;
+            background: linear-gradient(160deg, #f5c76b 0%, #b98b2e 55%, #16a34a 100%);
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .ceo-portrait-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            border-radius: 50%;
+            border: 4px solid #0a192f;
+            display: block;
+            background: #123a75;
+        }
+
+        .ceo-content {
+            position: relative;
+        }
+
+        .ceo-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 18px;
+            border-radius: 999px;
+            background: rgba(245, 158, 11, 0.14);
+            border: 1px solid rgba(245, 158, 11, 0.45);
+            color: #fcd34d;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+        }
+
+        .ceo-eyebrow i {
+            font-size: 10px;
+        }
+
+        .ceo-name {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: clamp(28px, 3.4vw, 40px);
+            line-height: 1.15;
+            color: #fff;
+            margin: 16px 0 12px;
+        }
+
+        .ceo-divider {
+            width: 66px;
+            height: 3px;
+            border-radius: 3px;
+            background: linear-gradient(90deg, #f59e0b, rgba(245, 158, 11, 0));
+            margin-bottom: 16px;
+        }
+
+        .ceo-role {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 9px 20px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .ceo-role i {
+            color: #f59e0b;
+        }
+
+        .ceo-org {
+            display: block;
+            margin-top: 14px;
+            color: rgba(255, 255, 255, 0.72);
+            font-size: 15.5px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 767px) {
+            .ceo-band {
+                padding: 34px 22px 32px;
+                border-radius: 22px;
+            }
+
+            .ceo-title {
+                font-size: 21px;
+            }
+
+            .ceo-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: 24px;
+            }
+
+            .ceo-portrait-wrap {
+                width: 176px;
+                height: 176px;
+            }
+
+            .ceo-divider {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     </style>
 </head>
 
@@ -250,7 +420,8 @@
     <!-- Hero Banner -->
     <section class="about-hero">
         <div class="container">
-            <span class="about-hero-eyebrow"><i class="fa-solid fa-leaf"></i>ISO Certified · Since 1992 · PAN India</span>
+            <span class="about-hero-eyebrow"><i class="fa-solid fa-leaf"></i>ISO Certified · Since 1992 · PAN
+                India</span>
             <h1>WHO WE <span class="hero-accent">ARE</span></h1>
             <p class="about-hero-sub">Rooted in three decades of experience, growing a greener tomorrow — together.</p>
         </div>
@@ -297,7 +468,8 @@
                     <p>FOUNDER</p>
                 </div>
                 <div>
-                    <div class="founder-photo"><img style="background-color: white;" src="../assets/founder (2).png" alt="Thangakumar Gurusamy"></div>
+                    <div class="founder-photo"><img style="background-color: white;" src="../assets/founder (2).png"
+                            alt="Thangakumar Gurusamy"></div>
                     <h4>THANGAKUMAR GURUSAMY</h4>
                     <p>CO-FOUNDER</p>
                 </div>
@@ -361,47 +533,73 @@
             </div>
         </section>
 
+        <!-- CEO -->
+        <section class="ceo-band">
+            <div class="ceo-inner">
+                <div class="ceo-photo">
+                    <div class="ceo-portrait-wrap">
+                        <img loading="lazy" src="../assets/gallery/CEO.png"
+                            alt="Anitha Rajesah - Executive Director &amp; CEO">
+                    </div>
+                </div>
+                <div class="ceo-content">
+                    <span class="ceo-eyebrow"><i class="fa-solid fa-user-tie"></i> Leadership</span>
+                    <h4 class="ceo-name">Anitha Rajesh</h4>
+                    <div class="ceo-divider"></div>
+                    <span class="ceo-role"><i class="fa-solid fa-building-columns"></i> Executive Director
+                        / CEO</span>
+                    <span class="ceo-org">Guru Integrated Services India Pvt. Ltd.</span>
+                </div>
+            </div>
+        </section>
+
         <!-- Company About -->
         <section class="company-band">
             <span class="about-eyebrow"><i class="fa-solid fa-award"></i>The Company</span>
-        <div class="company-about">
-            <div class="company-logo">
+            <div class="company-about">
+                <div class="company-logo">
 
-                <img loading="lazy" class="certificate" src="../assets/guru.png">
-            </div>
-            <div class="company-about-content">
-                <p># GURU INTEGRATED SERVICES INDIA PVT. LTD.</p>
-                <h1>Engineering Sustainable Landscapes. Creating Green Legacies.</h1>
-                <p>Guru Integrated Services India Pvt. Ltd. is one of India's leading and award-winning landscape
-                    engineering companies, delivering innovative, sustainable, and technically advanced landscape
-                    solutions for more than 25 years. We specialize in <strong>Landscape Design, Landscape Execution,
-                        Horticulture Development, Irrigation Systems, Water Features, Green Infrastructure, and Annual
-                        Maintenance (AMC)</strong>, providing complete turnkey solutions from concept to long-term
-                    maintenance.</p>
-                <p>Our expertise combines <strong>engineering precision, horticultural science, environmental
-                        sustainability, and architectural aesthetics</strong> to transform outdoor spaces into vibrant,
-                    functional, and environmentally responsible landscapes.</p>
-                <p>With a proven track record across India, Guru has successfully executed projects for
-                    <strong>Corporate Campuses, IT Parks, Residential Townships, Commercial Developments, Government
-                        Infrastructure, Educational Institutions, Healthcare Facilities, Hospitality Projects,
-                        Industrial Parks, Smart Cities, Public Parks, and High-End Residential Properties.</strong>
-                </p>
-                <h3>Why Guru?</h3>
-                <div class="why-grid">
-                    <div class="why-item"><i class="fa-solid fa-check"></i>25+ Years of Industry Excellence</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>Award-Winning Landscape Specialists</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>10+ Branch Offices Across India</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>PAN India Project Execution</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>Rapid Response Teams</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>Single Point of Contact</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>International Quality Standards</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>Strong Project Management &amp; Quality Assurance</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>Dedicated Post-Completion AMC Services</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>Trusted by Leading Developers, Industries &amp; Institutions</div>
-                    <div class="why-item"><i class="fa-solid fa-check"></i>24x7 Customer Support</div>
+                    <img loading="lazy" class="certificate" src="../assets/guru.png">
+                </div>
+                <div class="company-about-content">
+                    <p># GURU INTEGRATED SERVICES INDIA PVT. LTD.</p>
+                    <h1>Engineering Sustainable Landscapes. Creating Green Legacies.</h1>
+                    <p>Guru Integrated Services India Pvt. Ltd. is one of India's leading and award-winning landscape
+                        engineering companies, delivering innovative, sustainable, and technically advanced landscape
+                        solutions for more than 25 years. We specialize in <strong>Landscape Design, Landscape
+                            Execution,
+                            Horticulture Development, Irrigation Systems, Water Features, Green Infrastructure, and
+                            Annual
+                            Maintenance (AMC)</strong>, providing complete turnkey solutions from concept to long-term
+                        maintenance.</p>
+                    <p>Our expertise combines <strong>engineering precision, horticultural science, environmental
+                            sustainability, and architectural aesthetics</strong> to transform outdoor spaces into
+                        vibrant,
+                        functional, and environmentally responsible landscapes.</p>
+                    <p>With a proven track record across India, Guru has successfully executed projects for
+                        <strong>Corporate Campuses, IT Parks, Residential Townships, Commercial Developments, Government
+                            Infrastructure, Educational Institutions, Healthcare Facilities, Hospitality Projects,
+                            Industrial Parks, Smart Cities, Public Parks, and High-End Residential Properties.</strong>
+                    </p>
+                    <h3>Why Guru?</h3>
+                    <div class="why-grid">
+                        <div class="why-item"><i class="fa-solid fa-check"></i>25+ Years of Industry Excellence</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>Award-Winning Landscape Specialists</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>10+ Branch Offices Across India</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>PAN India Project Execution</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>Rapid Response Teams</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>Single Point of Contact</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>International Quality Standards</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>Strong Project Management &amp; Quality
+                            Assurance</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>Dedicated Post-Completion AMC Services
+                        </div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>Trusted by Leading Developers, Industries
+                            &amp; Institutions</div>
+                        <div class="why-item"><i class="fa-solid fa-check"></i>24x7 Customer Support</div>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
 
         <!-- Core Values -->
@@ -470,7 +668,6 @@
                         <span class="timeline-year">2006</span>
                         <h4><i class="fa-solid fa-briefcase"></i> Guru Management Services</h4>
                         <ul class="timeline-list">
-                            <li>Computer Sales &amp; Services</li>
                             <li>Property Management Services</li>
                             <li>Business Support Services</li>
                         </ul>
@@ -481,7 +678,7 @@
                     <div class="timeline-content">
                         <span class="timeline-year">2011</span>
                         <h4><i class="fa-solid fa-landmark"></i> Guru Integrated Services Pvt. Ltd.</h4>
-                        <p>Chennai – Private Limited Company</p>
+                        <p>Chennai – Private Limited Company in Horticulture </p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -490,6 +687,7 @@
                         <span class="timeline-year">2015</span>
                         <h4><i class="fa-solid fa-earth-asia"></i> Guru Integrated Services India Pvt. Ltd.</h4>
                         <p>Bengaluru – Corporate Office</p>
+                        <p>Horticulture & Landscaping</p>
                         <span class="timeline-tag">Pan India Commercial Operations</span>
                     </div>
                 </div>
@@ -499,7 +697,6 @@
                         <span class="timeline-year">2025</span>
                         <h4><i class="fa-solid fa-seedling"></i> Green Transformation</h4>
                         <ul class="timeline-list">
-                            <li>Green Asset Management</li>
                             <li>Landscape &amp; Horticulture</li>
                             <li>SolarDot – Solar EPC</li>
                             <li>EVDot – EV Charging Solutions</li>
@@ -523,10 +720,14 @@
             <div class="team-presence-card">
                 <div class="tp-icon"><i class="fa-solid fa-users"></i></div>
                 <h3>OUR TEAM</h3>
-                <p> <strong>A. Gurusamy</strong> is the Principle and Founder of the Company under whom a total team of around 100 plus
-                    professionals with various distinctions are contributing along with <b> 500 +</b> team for maintenance
-                    service, other than site level force, all put together <b>1000 +</b> work force at any given point of time.
-                    We have our strong presence in a range of diversified projects, from Star Hotels and Resorts, IT Parks,
+                <p> <strong>A. Gurusamy</strong> is the Principle and Founder of the Company under whom a total team of
+                    around 100 plus
+                    professionals with various distinctions are contributing along with <b> 500 +</b> team for
+                    maintenance
+                    service, other than site level force, all put together <b>1000 +</b> work force at any given point
+                    of time.
+                    We have our strong presence in a range of diversified projects, from Star Hotels and Resorts, IT
+                    Parks,
                     Campus development, Condominiums, Townships, Industrial parks, Institutions, Beach Homes and Villas,
                     Malls &amp; Commercial spaces, Green Field Projects, Airports, Consulates &amp; Embassies, etc.</p>
             </div>
@@ -570,9 +771,8 @@
                         company, dedicated to providing exceptional landscaping, horticulture, and property services
                         across India.</p>
                     <div class="d-flex gap-2">
-                        <a target="_blank"
-                            href="https://www.facebook.com/gurugroupofcompanies"
-                            class="social-icon-corp" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/gurugroupofcompanies" class="social-icon-corp"
+                            aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a target="_blank" href="https://www.instagram.com/guru_integrated_services/"
                             class="social-icon-corp" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a target="_blank" href="https://www.youtube.com/@GuruIndia-b8e" class="social-icon-corp"
@@ -623,7 +823,7 @@
                         style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);">
                         <i class="fa-solid fa-headset fs-2 text-warning"></i>
                         <div><span class="text-white-50 small d-block">Toll-Free Helpline</span><strong><a
-                                class="footer-tel" href="tel:18001232434">1800 123 2434</a></strong></div>
+                                    class="footer-tel" href="tel:18001232434">1800 123 2434</a></strong></div>
                     </div>
                 </div>
             </div>
