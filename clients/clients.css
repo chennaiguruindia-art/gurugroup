@@ -284,6 +284,7 @@ p, li { font-weight: 500; }
 .client-section[data-theme="hotels"] .head-icon { background: linear-gradient(135deg, #b45309, #f59e0b); }
 .client-section[data-theme="corp"]   .head-icon { background: linear-gradient(135deg, #0e7490, #06b6d4); }
 .client-section[data-theme="bank"]   .head-icon { background: linear-gradient(135deg, #14532d, #16a34a); }
+.client-section[data-theme="retail"] .head-icon { background: linear-gradient(135deg, #be123c, #fb7185); }
 
 /* ============ LOGO WALL GRID ============ */
 .client-grid {
